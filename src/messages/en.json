@@ -1439,5 +1439,9 @@
       "tryAgain": "Try again",
       "backToDashboard": "Back to dashboard"
     }
+  },
+  "planos": {
+    "title": "Unlock your Premium access",
+    "subtitle": "Your account is ready. To use the tools and games, activate Premium."
   }
 }

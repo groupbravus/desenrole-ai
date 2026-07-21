@@ -435,6 +435,48 @@ ou do endpoint no dashboard), `STRIPE_MONTHLY_PRICE_ID`
 Customer Portal, cron de reconciliação, refund/dispute completos (S5),
 Termos/Privacidade, e IA real das 2 ferramentas.
 
+## FASE STRIPE — S4a: GATE DE ASSINATURA (correção crítica de autorização)
+
+**Bug encontrado:** conta autenticada acessava painel/ferramentas sem
+assinatura. Causa: o controle de acesso parava na autenticação —
+`middleware` e `(app)/layout` só checavam sessão; `hasPremiumAccess()`
+existia mas não era chamado como gate em nenhuma rota. Banco/leitura já
+eram seguros (signup não cria entitlement; sem linha → sem acesso).
+
+**Correção (sem tocar schema/RLS):**
+- `src/lib/auth/require-premium.ts` — `requirePremium()` (páginas: redireciona
+  para `/planos`) e `premiumApiGuard()` (route handlers: 401 `AUTH_REQUIRED`
+  / 403 `SUBSCRIPTION_REQUIRED`). Critério único: `hasPremiumAccess()`.
+- Route group `(app)/(premium)/` com `layout.tsx` que chama `requirePremium()`.
+  `painel`, `ferramentas`, `jogos`, `historico` movidos para dentro — **URLs
+  inalteradas** (route group é transparente; confirmado no build). Gate
+  centralizado → nenhuma rota premium escapa.
+- `(app)/planos/page.tsx` — página de planos (auth-only, FORA do premium):
+  destino de quem está logado sem assinatura; se já premium → painel.
+- `middleware.ts` — `/planos` adicionado a `PROTECTED_PREFIXES` (visitante →
+  login). Middleware segue na camada de auth; o gate de assinatura é
+  server-side (não-burlável) + RLS de backstop.
+- i18n `planos.*` nos 6 locales.
+
+**Fluxo final:** quiz → cadastro+confirmação → cai em `/painel` → gate →
+`/planos` → checkout → webhook/syncSubscription concede entitlement →
+`/painel` liberado.
+
+**Rotas premium (gate):** painel, ferramentas, jogos, historico.
+**Auth-only (sem assinatura):** planos, configuracoes, perfil, suporte, checkout.
+
+**Validado:** tsc/eslint limpos; `next build` OK (URLs premium preservadas);
+11 testes de lógica de acesso passando. Não há API premium hoje (ferramentas
+são mock client-side) — `premiumApiGuard` fica pronto para o endpoint real da IA.
+Testes A/B/G (redirect) e F (webhook duplicado) são cobertos por
+middleware+gate e pela dedup da S3; E2E completo depende de Supabase/Stripe
+reais. O preview local desta máquina serve o outro projeto (lara-web), então
+a validação foi por build/tsc/testes, não pelo preview.
+
+**Produção:** `NEXT_PUBLIC_APP_URL` deve ser a URL pública HTTPS na Vercel
+(ex.: `https://desenrole-ai-jq8i.vercel.app`) — nunca localhost. Documentado
+em `.env.example`. O código já prefere essa env e cai no host da request.
+
 ## CONTEXTO HISTÓRICO — visão original da integração (pré-S2/S3)
 
 > Nota: S2/S3 já foram implementadas (ver seção acima). O texto abaixo é o

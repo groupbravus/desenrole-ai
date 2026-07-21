@@ -1439,5 +1439,9 @@
       "tryAgain": "Tentar de novo",
       "backToDashboard": "Voltar ao painel"
     }
+  },
+  "planos": {
+    "title": "Libere seu acesso Premium",
+    "subtitle": "Sua conta está criada. Para usar as ferramentas e os jogos, ative o Premium."
   }
 }

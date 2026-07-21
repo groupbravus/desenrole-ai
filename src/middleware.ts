@@ -14,6 +14,7 @@ const PROTECTED_PREFIXES = [
   "/historico",
   "/perfil",
   "/configuracoes",
+  "/planos",
   "/suporte",
   "/admin",
   // Chega-se aqui pelo link de recuperação, que já cria sessão.
