@@ -1,6 +1,8 @@
 import "server-only";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import type Stripe from "stripe";
 import { getStripe } from "@/lib/stripe";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 /**
  * ============================================================
@@ -81,4 +83,45 @@ export async function validateCheckoutForSignup(
     customerId,
     subscriptionId,
   };
+}
+
+/**
+ * true SOMENTE se já existe uma conta REAL (com senha) para o e-mail. Uma
+ * conta criada via OTP mas ainda sem senha (usuário no meio do próprio
+ * fluxo de /criar-conta) não conta — isso evita bloquear a própria pessoa
+ * que está terminando o cadastro. Ver RPC `email_has_account` (SQL) para
+ * o critério exato (encrypted_password).
+ */
+export async function emailHasAccount(email: string): Promise<boolean> {
+  const admin = createAdminClient();
+  const { data, error } = await admin.rpc("email_has_account", {
+    _email: email,
+  });
+  if (error) throw new Error("email_has_account_failed");
+  return Boolean(data);
+}
+
+export type ClaimResult = { claimed: boolean; ownerUserId: string | null };
+
+/**
+ * Reivindicação ATÔMICA da Checkout Session (RPC `claim_checkout_session`,
+ * INSERT ... ON CONFLICT DO NOTHING no banco). Duas chamadas concorrentes
+ * para o mesmo sessionId: só uma vence; a outra lê o dono real. Chamar de
+ * novo com o MESMO userId que já é dono é seguro (retomada idempotente).
+ */
+export async function claimCheckoutSession(
+  admin: SupabaseClient,
+  sessionId: string,
+  userId: string,
+): Promise<ClaimResult> {
+  const { data, error } = await admin
+    .rpc("claim_checkout_session", { _session_id: sessionId, _user_id: userId })
+    .single<{ claimed: boolean; owner_user_id: string | null }>();
+  if (error || !data) throw new Error("claim_checkout_session_failed");
+  return { claimed: data.claimed, ownerUserId: data.owner_user_id };
+}
+
+/** true se `userId` é (ou acabou de se tornar) o dono legítimo da sessão. */
+export function ownsClaim(claim: ClaimResult, userId: string): boolean {
+  return claim.claimed || claim.ownerUserId === userId;
 }

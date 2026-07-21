@@ -371,7 +371,12 @@
       "no_email": "We couldn't get the checkout email.",
       "created_login_failed": "Account created, but automatic login failed. Please log in.",
       "email_mismatch": "This subscription belongs to a different email.",
-      "not_authenticated": "Log in to continue."
+      "not_authenticated": "Log in to continue.",
+      "rate_limited": "Too many attempts. Wait a moment before trying again.",
+      "otp_expired": "The code has expired. Request a new one.",
+      "otp_invalid": "Invalid code. Check it and try again.",
+      "CHECKOUT_ALREADY_CLAIMED": "This checkout has already been used to create an account.",
+      "sync_failed": "Payment confirmed, but syncing failed. Please try again shortly."
     },
     "reset": {
       "eyebrow": "New password",
@@ -1490,7 +1495,8 @@
       "eyebrow": "Different account",
       "title": "You're on another account",
       "subtitle": "This subscription belongs to a different email. Sign out and use the email that paid.",
-      "backHome": "Back to home"
+      "backHome": "Back to home",
+      "signOut": "Sign out and try another account"
     },
     "invalid": {
       "eyebrow": "Oops",
@@ -1503,6 +1509,20 @@
       "subtitle": "Connect this payment to your account and open the dashboard.",
       "cta": "Link and enter",
       "linking": "Linking..."
+    },
+    "otp": {
+      "eyebrow": "Confirm your email",
+      "title": "We'll send you a code",
+      "subtitle": "Let's confirm this email is yours before creating the account.",
+      "sendCta": "Send code",
+      "sending": "Sending...",
+      "verifyTitle": "Enter the code",
+      "verifySubtitle": "We sent a code to {email}.",
+      "codeLabel": "Code",
+      "codePlaceholder": "000000",
+      "verifyCta": "Confirm code",
+      "verifying": "Confirming...",
+      "resend": "Resend code"
     }
   }
 }

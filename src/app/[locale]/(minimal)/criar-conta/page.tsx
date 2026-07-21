@@ -3,30 +3,36 @@ import { cookies } from "next/headers";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { createAdminClient } from "@/lib/supabase/admin";
 import {
   validateCheckoutForSignup,
+  emailHasAccount,
   PENDING_CHECKOUT_COOKIE,
 } from "@/lib/stripe/checkout-account";
 import { AuthCard } from "@/components/auth/auth-card";
+import { AccountMismatch } from "@/components/auth/account-mismatch";
 import { CreateAccountForm } from "@/components/auth/create-account-form";
 import { LinkCheckout } from "@/components/auth/link-checkout";
 import { BeginLinkButton } from "@/components/auth/begin-link-button";
+import { OtpFlow } from "@/components/auth/otp-flow";
 
 export const metadata: Metadata = {
   title: "Criar conta — Desenrole.ai",
 };
 
 /**
- * /criar-conta — única porta de criação de conta. Só funciona a partir de
- * uma Checkout Session PAGA (validada direto na Stripe). Estados:
- *  - sessão inválida/não paga → mensagem de erro;
- *  - logado com o mesmo e-mail → vincula assinatura e entra;
- *  - logado com outro e-mail → bloqueia (não vincula a conta errada);
- *  - sessão já consumida → pede login;
- *  - caso novo → formulário nome/senha.
- * O session_id vem da URL (retorno do checkout) ou de um cookie httpOnly
- * (quando volta do login para vincular).
+ * /criar-conta — única porta de criação de conta, e SÓ a partir de uma
+ * Checkout Session PAGA (revalidada direto na Stripe a cada render).
+ *
+ * Decisão determinística (reload-safe, sem inferir estado do React):
+ *  1. sessão inválida/não paga -> erro.
+ *  2. autenticado com e-mail DIFERENTE do que pagou -> bloqueia (sair).
+ *  3. `emailHasAccount` (true só p/ conta com SENHA real, nunca uma
+ *     conta OTP ainda sem senha — por isso não trava o próprio usuário
+ *     no meio do fluxo):
+ *       - true + autenticado  -> vincular (LinkCheckout).
+ *       - true + visitante    -> "já tem conta" (login).
+ *       - false + autenticado -> definir nome/senha (CreateAccountForm).
+ *       - false + visitante   -> confirmar e-mail por OTP (OtpFlow).
  */
 export default async function CriarContaPage({
   params,
@@ -69,36 +75,14 @@ export default async function CriarContaPage({
     data: { user },
   } = await supabase.auth.getUser();
 
-  // Logado: vincula (se o e-mail bater) ou bloqueia (se for outro).
-  if (user) {
-    if ((user.email ?? "").toLowerCase() === v.email) {
-      return <LinkCheckout sessionId={v.sessionId} />;
-    }
-    return (
-      <AuthCard
-        eyebrow={t("mismatch.eyebrow")}
-        title={t("mismatch.title")}
-        subtitle={t("mismatch.subtitle")}
-      >
-        <Link
-          href="/"
-          className="block text-center text-sm font-medium text-accent hover:underline"
-        >
-          {t("mismatch.backHome")}
-        </Link>
-      </AuthCard>
-    );
+  if (user && (user.email ?? "").toLowerCase() !== v.email) {
+    return <AccountMismatch />;
   }
 
-  // Não logado: sessão já usada por uma conta → pedir login para vincular.
-  const admin = createAdminClient();
-  const { data: existing } = await admin
-    .from("checkout_sessions")
-    .select("user_id")
-    .eq("stripe_checkout_session_id", v.sessionId)
-    .maybeSingle();
+  const hasAccount = await emailHasAccount(v.email);
 
-  if (existing) {
+  if (hasAccount) {
+    if (user) return <LinkCheckout sessionId={v.sessionId} />;
     return (
       <AuthCard
         eyebrow={t("emailExists.eyebrow")}
@@ -110,6 +94,6 @@ export default async function CriarContaPage({
     );
   }
 
-  // Caso novo: formulário de criação (e-mail vem da Stripe, só leitura).
-  return <CreateAccountForm sessionId={v.sessionId} email={v.email} />;
+  if (user) return <CreateAccountForm sessionId={v.sessionId} email={v.email} />;
+  return <OtpFlow sessionId={v.sessionId} email={v.email} />;
 }

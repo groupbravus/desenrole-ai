@@ -8,17 +8,17 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import { AuthCard } from "./auth-card";
 import { AuthError } from "./auth-error";
-import { BeginLinkButton } from "./begin-link-button";
 import { FormField } from "@/components/ui/form-field";
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/password-input";
 import { Button } from "@/components/ui/button";
-import { createAccountFromCheckoutAction } from "@/lib/stripe/account-actions";
+import { finalizeAccountAction } from "@/lib/stripe/account-actions";
 
 /**
- * Formulário de criação de conta pós-checkout. O e-mail vem da Stripe
- * (somente leitura); o usuário escolhe nome e senha. Se o e-mail já
- * existir, troca para o fluxo de login + vínculo.
+ * Passo final: nome + senha. Só é renderizado depois que o e-mail já foi
+ * confirmado por OTP e a sessão já foi reivindicada (ver /criar-conta).
+ * O e-mail vem do servidor só para exibição — a action recebe apenas
+ * sessionId/nome/senha.
  */
 export function CreateAccountForm({
   sessionId,
@@ -31,7 +31,6 @@ export function CreateAccountForm({
   const tCommon = useTranslations("common");
   const router = useRouter();
   const [errorCode, setErrorCode] = useState<string | null>(null);
-  const [emailExists, setEmailExists] = useState(false);
 
   const schema = z
     .object({
@@ -53,7 +52,7 @@ export function CreateAccountForm({
 
   async function onSubmit(values: FormValues) {
     setErrorCode(null);
-    const result = await createAccountFromCheckoutAction({
+    const result = await finalizeAccountAction({
       sessionId,
       name: values.name,
       password: values.password,
@@ -64,23 +63,7 @@ export function CreateAccountForm({
       router.refresh();
       return;
     }
-    if (result.code === "email_exists") {
-      setEmailExists(true);
-      return;
-    }
     setErrorCode(result.code);
-  }
-
-  if (emailExists) {
-    return (
-      <AuthCard
-        eyebrow={t("emailExists.eyebrow")}
-        title={t("emailExists.title")}
-        subtitle={t("emailExists.subtitle")}
-      >
-        <BeginLinkButton sessionId={sessionId} label={t("emailExists.cta")} />
-      </AuthCard>
-    );
   }
 
   return (

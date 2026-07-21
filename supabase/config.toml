@@ -274,6 +274,13 @@ content_path = "./supabase/templates/recovery.html"
 subject = "Confirme seu novo e-mail — Desenrole.ai"
 content_path = "./supabase/templates/email-change.html"
 
+# Usado por signInWithOtp (fluxo de código pós-checkout em /criar-conta).
+# Precisa de {{ .Token }} para o usuário digitar o código — sem isso, o
+# usuário só receberia um link, não um código.
+[auth.email.template.magic_link]
+subject = "Seu código de verificação — Desenrole.ai"
+content_path = "./supabase/templates/otp.html"
+
 [auth.sms]
 # Allow/disallow new user signups via SMS to your project.
 enable_signup = false
