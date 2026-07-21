@@ -170,12 +170,22 @@ export async function POST(request: NextRequest) {
     });
 
     if (!result.ok) {
+      // Assinatura ainda SEM conta no app (fluxo de checkout externo: a
+      // conta só é criada em /criar-conta, quando o usuário volta). Isso
+      // NÃO é falha — o webhook não provisiona conta. Registramos como
+      // `skipped` e devolvemos 200 para a Stripe não ficar re-tentando.
+      // Quando a conta for criada, /criar-conta chama syncSubscription e o
+      // estado converge; eventos futuros (renovação etc.) já acham o mapa.
+      const notYetLinked = result.reason === "user_not_identified";
       await admin.rpc("mark_webhook_event", {
         _event_id: event.id,
-        _status: "error",
+        _status: notYetLinked ? "skipped" : "error",
         _error: result.reason,
       });
-      // 500 → a Stripe reenvia; o dedup evita efeitos duplicados.
+      if (notYetLinked) {
+        return NextResponse.json({ received: true, pending: "no_account_yet" });
+      }
+      // Falha real → 500, a Stripe reenvia; o dedup evita efeito duplicado.
       return NextResponse.json({ error: result.reason }, { status: 500 });
     }
 

@@ -363,7 +363,15 @@
       "invalidInput": "Please check the information you entered.",
       "unknown": "Something went wrong. Try again in a moment.",
       "wrongCurrentPassword": "The current password is incorrect.",
-      "reauthNeeded": "For security, sign in again before changing your password."
+      "reauthNeeded": "For security, sign in again before changing your password.",
+      "invalid_session": "We couldn't find a valid checkout.",
+      "not_paid": "The payment hasn't been confirmed yet.",
+      "no_subscription": "No subscription is tied to this checkout.",
+      "no_customer": "Checkout customer not found.",
+      "no_email": "We couldn't get the checkout email.",
+      "created_login_failed": "Account created, but automatic login failed. Please log in.",
+      "email_mismatch": "This subscription belongs to a different email.",
+      "not_authenticated": "Log in to continue."
     },
     "reset": {
       "eyebrow": "New password",
@@ -1448,5 +1456,53 @@
   "planos": {
     "title": "Your subscription is not active",
     "subtitle": "To access the dashboard and tools, activate Premium."
+  },
+  "createAccount": {
+    "eyebrow": "Payment confirmed",
+    "title": "Create your account",
+    "subtitle": "Almost there: set a name and password to get in.",
+    "emailLine": "Account for {email}",
+    "nameLabel": "Your name",
+    "namePlaceholder": "What should we call you",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "At least 8 characters",
+    "confirmLabel": "Confirm password",
+    "confirmPlaceholder": "Repeat the password",
+    "submit": "Create account and enter",
+    "submitting": "Creating...",
+    "errors": {
+      "invalidInput": "Check the details you entered.",
+      "weakPassword": "Use at least 8 characters.",
+      "passwordsMismatch": "Passwords don't match.",
+      "invalid_session": "We couldn't find a valid checkout. Return via the payment link.",
+      "not_paid": "The payment hasn't been confirmed yet.",
+      "no_subscription": "No subscription is tied to this checkout.",
+      "no_customer": "Checkout customer not found.",
+      "no_email": "We couldn't get the checkout email."
+    },
+    "emailExists": {
+      "eyebrow": "Already registered",
+      "title": "This email already has an account",
+      "subtitle": "Log in to link your subscription to your account.",
+      "cta": "Log in to link"
+    },
+    "mismatch": {
+      "eyebrow": "Different account",
+      "title": "You're on another account",
+      "subtitle": "This subscription belongs to a different email. Sign out and use the email that paid.",
+      "backHome": "Back to home"
+    },
+    "invalid": {
+      "eyebrow": "Oops",
+      "title": "Invalid link",
+      "backHome": "Back to home"
+    },
+    "link": {
+      "eyebrow": "Almost there",
+      "title": "Link your subscription",
+      "subtitle": "Connect this payment to your account and open the dashboard.",
+      "cta": "Link and enter",
+      "linking": "Linking..."
+    }
   }
 }

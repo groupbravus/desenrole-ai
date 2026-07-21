@@ -363,7 +363,15 @@
       "invalidInput": "Confira os dados informados.",
       "unknown": "Algo deu errado. Tente novamente em instantes.",
       "wrongCurrentPassword": "A senha atual está incorreta.",
-      "reauthNeeded": "Por segurança, entre novamente antes de trocar a senha."
+      "reauthNeeded": "Por segurança, entre novamente antes de trocar a senha.",
+      "invalid_session": "Não encontramos um checkout válido.",
+      "not_paid": "O pagamento ainda não foi confirmado.",
+      "no_subscription": "Nenhuma assinatura associada a este checkout.",
+      "no_customer": "Cliente do checkout não encontrado.",
+      "no_email": "Não foi possível obter o e-mail do checkout.",
+      "created_login_failed": "Conta criada, mas o login automático falhou. Faça login.",
+      "email_mismatch": "Esta assinatura pertence a outro e-mail.",
+      "not_authenticated": "Faça login para continuar."
     },
     "reset": {
       "eyebrow": "Nova senha",
@@ -1448,5 +1456,53 @@
   "planos": {
     "title": "Sua assinatura não está ativa",
     "subtitle": "Para acessar o painel e as ferramentas, ative o Premium."
+  },
+  "createAccount": {
+    "eyebrow": "Pagamento confirmado",
+    "title": "Crie sua conta",
+    "subtitle": "Falta pouco: defina nome e senha para acessar.",
+    "emailLine": "Conta para {email}",
+    "nameLabel": "Seu nome",
+    "namePlaceholder": "Como quer ser chamado(a)",
+    "passwordLabel": "Senha",
+    "passwordPlaceholder": "Mínimo 8 caracteres",
+    "confirmLabel": "Confirmar senha",
+    "confirmPlaceholder": "Repita a senha",
+    "submit": "Criar conta e acessar",
+    "submitting": "Criando...",
+    "errors": {
+      "invalidInput": "Confira os dados informados.",
+      "weakPassword": "Use ao menos 8 caracteres.",
+      "passwordsMismatch": "As senhas não coincidem.",
+      "invalid_session": "Não encontramos um checkout válido. Volte pelo link do pagamento.",
+      "not_paid": "O pagamento ainda não foi confirmado.",
+      "no_subscription": "Nenhuma assinatura associada a este checkout.",
+      "no_customer": "Cliente do checkout não encontrado.",
+      "no_email": "Não foi possível obter o e-mail do checkout."
+    },
+    "emailExists": {
+      "eyebrow": "Já tem conta",
+      "title": "Este e-mail já tem conta",
+      "subtitle": "Faça login para vincular sua assinatura à sua conta.",
+      "cta": "Entrar para vincular"
+    },
+    "mismatch": {
+      "eyebrow": "Conta diferente",
+      "title": "Você está em outra conta",
+      "subtitle": "Esta assinatura pertence a outro e-mail. Saia e entre com o e-mail que fez o pagamento.",
+      "backHome": "Voltar ao início"
+    },
+    "invalid": {
+      "eyebrow": "Ops",
+      "title": "Link inválido",
+      "backHome": "Voltar ao início"
+    },
+    "link": {
+      "eyebrow": "Quase lá",
+      "title": "Vincular sua assinatura",
+      "subtitle": "Conecte este pagamento à sua conta e acesse o painel.",
+      "cta": "Vincular e acessar",
+      "linking": "Vinculando..."
+    }
   }
 }

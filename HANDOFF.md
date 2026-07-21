@@ -505,18 +505,51 @@ painel. Cliente existente: Home → "Entrar" → login → painel (se entitlemen
 removidos das rotas; i18n paridade 440/440. (E2E clicável impossível aqui — o
 preview local serve o outro projeto `lara-web`.)
 
-### ⚠️ PENDENTE — S4c: PROVISIONAMENTO DE CONTA PÓS-PAGAMENTO (não implementado)
-O teste "usuário pago cria conta após checkout" **não está feito** e é um
-subsistema novo, sensível, que **contradiz** o checkout atual (hoje
-`createCheckoutSessionAction` exige usuário autenticado). Exige, com design
-aprovado: o quiz/checkout EXTERNO coletar e-mail sem conta; o webhook
-`checkout.session.completed` criar o usuário via **Supabase admin API**
-(service_role) + enviar convite/magic-link para definir senha; e
-`syncSubscription` passar a identificar/criar o usuário sem `user_id` prévio.
-Bloqueado também pelo link do quiz externo (ainda não fornecido). **Enquanto
-não for construído, não há caminho de criação de conta** (coerente com "sem
-cadastro grátis", mas o novo cliente só entra quando S4c + link externo
-existirem). Propor design antes de implementar.
+### S4c: CRIAÇÃO DE CONTA PÓS-CHECKOUT (implementado)
+
+**Decisão do dono:** o webhook NÃO cria contas. A conta nasce só quando o
+usuário volta do checkout, em `/criar-conta`, validando a sessão direto na
+Stripe. O webhook segue só sincronizando customer/subscription/entitlement.
+
+- **Webhook** (`api/webhooks/stripe`): quando `syncSubscription` devolve
+  `user_not_identified` (assinatura externa antes da conta existir), agora
+  marca `skipped` e responde **200** (não é erro; sem retry-storm). Converge
+  quando a conta é criada. Nunca cria usuário/senha/magic-link/convite.
+- `src/lib/stripe/checkout-account.ts` — `validateCheckoutForSignup()`: relê
+  a Stripe e exige session existente, `mode=subscription`, `status=complete`,
+  `payment_status=paid`, subscription, customer e e-mail do cliente.
+- `src/lib/stripe/account-actions.ts`:
+  - `createAccountFromCheckoutAction` — cria o usuário via **Supabase admin
+    API** com o e-mail DA STRIPE (autoritativo) + senha escolhida
+    (`email_confirm:true`); o trigger cria profile+papel; vincula
+    stripe_customer + registra `checkout_sessions` (unique → 1 conta por
+    sessão) + `syncSubscription`; autentica e entra. E-mail já existente →
+    `email_exists` (não duplica).
+  - `linkCheckoutToCurrentUserAction` — logado com o MESMO e-mail que pagou:
+    vincula + sincroniza. Segurança: só vincula se `user.email === session
+    email`.
+  - `beginLinkAction` — guarda o session_id num cookie httpOnly e vai ao
+    login (o `next` do login descarta query string).
+- `/criar-conta` (`(minimal)`, público): valida a sessão e decide o estado
+  (form / vínculo / e-mail já existe → login / e-mail divergente / inválido).
+- i18n `createAccount.*` + novos códigos em `auth.errors` (6 locales).
+
+**Anti-duplicidade:** e-mail único em `auth.users` + unique em
+`checkout_sessions.stripe_checkout_session_id` → uma sessão nunca cria duas
+contas; e-mail já existente cai no fluxo de login+vínculo.
+
+**Config externa (fora do nosso código):** o quiz/checkout EXTERNO deve usar
+como `success_url` `https://DOMINIO/{locale}/criar-conta?session_id={CHECKOUT_SESSION_ID}`.
+O checkout in-app (`/planos`, reassinatura de conta existente) continua indo
+para `/checkout/processando`.
+
+**Risco documentado:** o `session_id` é um bearer token (quem o tiver pode
+definir a senha primeiro). Ele só é exposto ao pagador (success_url). Aceito
+para este fluxo; endurecer depois se necessário.
+
+**Validado:** tsc/eslint/build OK; rota `/criar-conta` presente; i18n 484/484;
+11 testes de acesso passando. E2E clicável não roda aqui (preview serve o
+`lara-web`); depende de Stripe/Supabase reais.
 
 ## CONTEXTO HISTÓRICO — visão original da integração (pré-S2/S3)
 
