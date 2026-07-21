@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#0a0a0b;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0a0a0b;padding:40px 20px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background:#111113;border:1px solid #232328;border-radius:12px;padding:40px 32px;">
+            <tr>
+              <td>
+                <p style="margin:0 0 32px;font-size:20px;font-weight:700;color:#f5f5f4;letter-spacing:-0.02em;">
+                  desenrole<span style="color:#e6a23c;">.ai</span>
+                </p>
+
+                <h1 style="margin:0 0 16px;font-size:22px;font-weight:700;color:#f5f5f4;letter-spacing:-0.02em;">
+                  Confirme seu novo e-mail
+                </h1>
+
+                <p style="margin:0 0 28px;font-size:15px;line-height:1.6;color:#8f8f98;">
+                  Você pediu para alterar o e-mail da sua conta para
+                  <strong style="color:#f5f5f4;">{{ .NewEmail }}</strong>.
+                  Confirme abaixo para concluir a troca.
+                </p>
+
+                <table role="presentation" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="background:#e6a23c;border-radius:8px;">
+                      <a href="{{ .ConfirmationURL }}"
+                         style="display:inline-block;padding:13px 28px;font-size:15px;font-weight:600;color:#16120a;text-decoration:none;">
+                        Confirmar novo e-mail
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+                <p style="margin:28px 0 0;font-size:13px;line-height:1.6;color:#5d5d66;">
+                  Enquanto você não confirmar, o e-mail antigo continua ativo.
+                  Se não foi você, ignore esta mensagem.
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <p style="margin:24px 0 0;font-size:12px;color:#5d5d66;">
+            Desenrole.ai — conversas mais naturais, mais confiança.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

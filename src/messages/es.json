@@ -1,0 +1,1443 @@
+{
+  "nav": {
+    "howItWorks": "How it works",
+    "tools": "Tools",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Sign in",
+    "start": "Get started"
+  },
+  "landing": {
+    "hero": {
+      "badge": "AI conversation assistant",
+      "titleA": "Never run out of",
+      "titleHighlight": "the right thing to say",
+      "subtitle": "Desenrole.ai helps you start, keep, and grow conversations on Instagram and WhatsApp — naturally, in your own style, no memorized scripts.",
+      "cta": "Discover my profile",
+      "secondaryCta": "See how it works",
+      "disclaimer": "Takes 2 minutes. No credit card needed for the quiz.",
+      "demo": {
+        "header": "Conversation in progress",
+        "received": "I love traveling, just got back from the coast",
+        "suggestionLabel": "Desenrole suggestion",
+        "suggestion": "The coast in the middle of winter? Either you're brave or you know a secret beach I need to hear about",
+        "sent": "The coast in the middle of winter? Either you're brave or you know a secret beach I need to hear about",
+        "reply": "haha both! you won't believe the place I found"
+      }
+    },
+    "how": {
+      "title": "From frozen to flowing in three steps",
+      "subtitle": "No memorizing, no generic canned lines. The system understands the real context of your conversation.",
+      "step1": {
+        "title": "Share the context",
+        "description": "Paste the conversation or describe the situation: a story reply, a new match, a chat gone cold."
+      },
+      "step2": {
+        "title": "Get suggestions in your tone",
+        "description": "The AI generates reply options that sound like you — playful, direct, or more reserved."
+      },
+      "step3": {
+        "title": "Chat with confidence",
+        "description": "You pick, tweak, and send. Over time the freeze disappears — the skill becomes yours."
+      }
+    },
+    "tools": {
+      "title": "From screenshot to the right reply",
+      "subtitle": "You send the screenshot, Desenrole shows you exactly what to do.",
+      "conversa": {
+        "title": "Analyze conversation",
+        "description": "Send a WhatsApp or DM screenshot and find out exactly what to reply."
+      },
+      "story": {
+        "title": "Analyze her Story",
+        "description": "Send an Instagram Story screenshot and find the best way to catch her attention."
+      }
+    },
+    "proof": {
+      "title": "People who used canned lines now have real conversations",
+      "t1": {
+        "quote": "I used to freeze on the first message. Two weeks with the analyzer and I understood what I was doing wrong. Three dates this month.",
+        "initials": "LM",
+        "name": "Lucas M.",
+        "detail": "28 · São Paulo"
+      },
+      "t2": {
+        "quote": "What changed for me was the tone. The suggestions sound like me talking, just without the anxiety getting in the way.",
+        "initials": "RA",
+        "name": "Rodrigo A.",
+        "detail": "24 · Belo Horizonte"
+      },
+      "t3": {
+        "quote": "I thought it would be another pickup-lines app. It's the opposite: it taught me to notice signals I was completely missing.",
+        "initials": "FT",
+        "name": "Felipe T.",
+        "detail": "31 · Curitiba"
+      }
+    },
+    "pricing": {
+      "title": "Pick your pace",
+      "subtitle": "Cancel anytime, right from your dashboard. No hassle.",
+      "recommended": "Most popular",
+      "cta": "Get started",
+      "guarantee": "7-day guarantee: not for you? Full refund, no questions asked.",
+      "interval": {
+        "week": "week",
+        "month": "month"
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": {
+        "question": "Isn't this manipulation?",
+        "answer": "No — and that's a non-negotiable principle of the product. Desenrole.ai is about communication: clarity, timing, reading context, and reducing anxiety. Suggestions are always respectful and sound like you. No pressure tactics, no games."
+      },
+      "q2": {
+        "question": "Won't the messages sound artificial?",
+        "answer": "You set the tone — playful, direct, shy — and the AI adapts suggestions to how you talk. You can always edit before sending. The goal is to unblock you, not replace you."
+      },
+      "q3": {
+        "question": "Which apps does it work with?",
+        "answer": "Any of them: Instagram, WhatsApp, Tinder, Bumble. You bring the conversation context and use the suggestions wherever you want."
+      },
+      "q4": {
+        "question": "How do I cancel?",
+        "answer": "Two clicks, in the subscription area. Access continues until the end of the paid period. No phone calls, no retention emails, no tricks."
+      },
+      "q5": {
+        "question": "Are my conversations safe?",
+        "answer": "Yes. Your conversations are private, never shared, and you can delete your history anytime. Privacy is built into the architecture."
+      }
+    },
+    "finalCta": {
+      "title": "The next conversation can be different",
+      "subtitle": "Discover your communication profile in 2 minutes and see exactly where you're getting stuck.",
+      "cta": "Take the free quiz"
+    }
+  },
+  "plans": {
+    "weekly": {
+      "name": "Weekly",
+      "description": "For an intense trial run"
+    },
+    "monthly": {
+      "name": "Monthly",
+      "description": "Best value"
+    },
+    "features": {
+      "allTools": "Unlimited conversation and Story analyses",
+      "games": "All date-night games",
+      "history": "Full analysis history",
+      "priority": "Priority processing",
+      "savings": "Save 37% vs. weekly"
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Full access to every tool and game"
+    }
+  },
+  "footer": {
+    "tagline": "More natural conversations, more confidence, less anxiety.",
+    "product": "Product",
+    "tools": "Tools",
+    "pricing": "Pricing",
+    "legal": "Legal",
+    "terms": "Terms of use",
+    "privacy": "Privacy",
+    "support": "Support",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
+  },
+  "quiz": {
+    "back": "Back",
+    "questions": {
+      "q1": {
+        "title": "When a new conversation shows up — a match, someone who followed you, a story reply — what usually happens?",
+        "options": {
+          "a": "I think about the perfect message for so long I sometimes never send it",
+          "b": "I send something quick, even without being sure it's the right approach",
+          "c": "I wait for a clearer signal before acting",
+          "d": "I send a good opener, but freeze when I need to keep the chat going"
+        }
+      },
+      "q2": {
+        "title": "After you send a message, what goes through your head while you wait for a reply?",
+        "options": {
+          "a": "I replay every word trying to guess if I said something wrong",
+          "b": "Nothing much — I go on with my day",
+          "c": "I analyze their reply pattern to gauge interest",
+          "d": "I wonder if I should have sent something more"
+        }
+      },
+      "q3": {
+        "title": "A conversation went cold — the reply took a while or got too short. You...",
+        "options": {
+          "a": "Wait, and only react if she picks it back up",
+          "b": "Send another message trying to revive it, even without knowing exactly how",
+          "c": "Assume she lost interest and give up",
+          "d": "Know you should send something light, but don't know what"
+        }
+      },
+      "q4": {
+        "title": "How do you usually decide it's time to ask someone out?",
+        "options": {
+          "a": "I go for it as soon as the conversation starts flowing",
+          "b": "I wait for a very obvious signal before risking the invite",
+          "c": "I overthink the perfect invite and end up postponing it",
+          "d": "I know when it's time, but freeze when it comes to phrasing the invite"
+        }
+      },
+      "q5": {
+        "title": "What trips you up most in a conversation today?",
+        "options": {
+          "a": "Reading the right signals — I'm not always sure the interest is real",
+          "b": "The anxiety between sending a message and getting a reply",
+          "c": "I come on too strong and end up scaring people off",
+          "d": "Keeping the momentum — I start well and lose the thread halfway"
+        }
+      },
+      "q6": {
+        "title": "If you could fix one thing right now, what would it be?",
+        "options": {
+          "a": "Being able to start without spending twenty minutes overthinking",
+          "b": "Understanding better what the other person is signaling",
+          "c": "Having more tact in the first messages",
+          "d": "Not freezing when it's time to move the conversation forward"
+        }
+      }
+    }
+  },
+  "result": {
+    "eyebrow": "Your communication profile",
+    "strengthsTitle": "Where you're already doing well",
+    "watchOutTitle": "Where this trips you up",
+    "toolTitle": "Start here",
+    "ctaPrimary": "Create my account",
+    "ctaSecondary": "Retake the quiz",
+    "profiles": {
+      "observador": {
+        "title": "The Cautious Reader",
+        "tagline": "You read the signals well, but wait too long for confirmation before acting.",
+        "description": "You have a real feel for conversational context — you pick up on tone, timing, and nuances most people miss. The issue isn't reading skill, it's over-caution: while you wait for a perfectly clear signal, the window sometimes closes.",
+        "strengths": [
+          "Picks up on nuances most people miss",
+          "Rarely comes across as forced or rushed",
+          "Nails the right tone for each conversation"
+        ],
+        "watchOuts": [
+          "Waits for signals so obvious the moment passes",
+          "Can come across as uninterested from being too cautious",
+          "Hesitates right when it's time to move things forward"
+        ]
+      },
+      "direto": {
+        "title": "The Unfiltered Direct One",
+        "tagline": "You've got initiative to spare — you just need to calibrate the tone.",
+        "description": "Freezing up isn't your problem — you act, start conversations, and propose next steps without hesitation. What's usually missing is calibration: reading the right moment before skipping steps, and adjusting your tone so it doesn't come off rushed or generic.",
+        "strengths": [
+          "Never freezes out of fear of taking the first step",
+          "Can start a conversation from scratch without hesitating",
+          "Has the confidence to propose the next step"
+        ],
+        "watchOuts": [
+          "Sometimes skips steps before it's time",
+          "Can come across as rushed or generic",
+          "Doesn't always read interest before pushing forward"
+        ]
+      },
+      "ansioso": {
+        "title": "The Anxious Perfectionist",
+        "tagline": "You know what you want to say — the anxiety is what gets in the way of sending it.",
+        "description": "You put real thought into every message — that's a strength. But chasing the perfect message, combined with the anxiety of waiting for a reply, throws off your timing: the delay sometimes cools down a conversation that was going well.",
+        "strengths": [
+          "Puts real thought into every message",
+          "Genuinely cares about getting the tone right",
+          "Has the potential to be very present in a conversation"
+        ],
+        "watchOuts": [
+          "Freezes up so much it sometimes never gets sent",
+          "The delay can cool the chat without you noticing",
+          "Reads silence as rejection too quickly"
+        ]
+      },
+      "quase-la": {
+        "title": "The Almost There",
+        "tagline": "You start strong — the challenge is keeping it going and closing it out.",
+        "description": "Your opener works: you start conversations naturally and have good timing. The blind spot shows up in the middle or the end — keeping the chat flowing, or taking the step to propose an actual date, which tends to freeze right at the key moment.",
+        "strengths": [
+          "Starts conversations naturally",
+          "Has good timing for making first contact",
+          "Already has the basics down — just needs to unblock the rest"
+        ],
+        "watchOuts": [
+          "Loses the thread of the conversation halfway through",
+          "Freezes right when it's time to propose meeting up",
+          "Lets good conversations die out from indecision"
+        ]
+      }
+    }
+  },
+  "auth": {
+    "cadastro": {
+      "eyebrow": "Create account",
+      "title": "Start figuring it out",
+      "subtitle": "Takes less than a minute.",
+      "nameLabel": "Name",
+      "namePlaceholder": "What should we call you",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@email.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "At least 8 characters",
+      "submit": "Create account",
+      "submitting": "Creating account...",
+      "haveAccount": "Already have an account?",
+      "login": "Sign in",
+      "termsAgreement": "By creating an account, you agree to the <terms>Terms of use</terms> and the <privacy>Privacy Policy</privacy>.",
+      "errors": {
+        "nameMin": "Enter at least 2 letters",
+        "emailInvalid": "Enter a valid email",
+        "passwordMin": "Password must be at least 8 characters"
+      },
+      "success": {
+        "title": "Check your email",
+        "description": "We sent a confirmation link to {email}.",
+        "cta": "Go to sign in"
+      }
+    },
+    "login": {
+      "eyebrow": "Sign in",
+      "title": "Welcome back",
+      "subtitle": "Pick up right where you left off.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@email.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Your password",
+      "forgot": "Forgot your password?",
+      "submit": "Sign in",
+      "submitting": "Signing in...",
+      "noAccount": "Don't have an account yet?",
+      "signup": "Create account",
+      "errors": {
+        "emailInvalid": "Enter a valid email",
+        "passwordRequired": "Enter your password"
+      },
+      "success": {
+        "title": "Signed in",
+        "description": "All good here.",
+        "cta": "Back to home"
+      }
+    },
+    "recover": {
+      "eyebrow": "Recover password",
+      "title": "Let's get you back in",
+      "subtitle": "We'll send a reset link to your email.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@email.com",
+      "submit": "Send link",
+      "submitting": "Sending...",
+      "backToLogin": "Back to sign in",
+      "errors": {
+        "emailInvalid": "Enter a valid email"
+      },
+      "success": {
+        "title": "Check your email",
+        "description": "If an account exists for that email, we sent a reset link.",
+        "cta": "Back to sign in"
+      }
+    },
+    "errors": {
+      "invalidCredentials": "Incorrect email or password.",
+      "emailTaken": "An account with that email already exists.",
+      "emailNotConfirmed": "Confirm your email before signing in. Check your inbox.",
+      "weakPassword": "Pick a stronger password (at least 8 characters).",
+      "samePassword": "The new password must be different from the current one.",
+      "sessionExpired": "Your session expired. Please sign in again.",
+      "notAuthenticated": "You need to be signed in to do that.",
+      "invalidInput": "Please check the information you entered.",
+      "unknown": "Something went wrong. Try again in a moment.",
+      "wrongCurrentPassword": "The current password is incorrect.",
+      "reauthNeeded": "For security, sign in again before changing your password."
+    },
+    "reset": {
+      "eyebrow": "New password",
+      "title": "Set your new password",
+      "subtitle": "Choose a password you don't use anywhere else.",
+      "passwordLabel": "New password",
+      "passwordPlaceholder": "At least 8 characters",
+      "confirmLabel": "Confirm new password",
+      "submit": "Save new password",
+      "submitting": "Saving...",
+      "errors": {
+        "passwordMin": "Password must be at least 8 characters",
+        "mismatch": "Passwords don't match"
+      }
+    }
+  },
+  "shell": {
+    "nav": {
+      "painel": "Dashboard",
+      "ferramentas": "Tools",
+      "jogos": "Games",
+      "historico": "History",
+      "perfil": "Profile",
+      "configuracoes": "Settings",
+      "suporte": "Support"
+    },
+    "userMenu": {
+      "trigger": "Open account menu",
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Sign out"
+    },
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "adminAccess": "Admin panel",
+    "backToApp": "Back to app"
+  },
+  "dashboard": {
+    "greeting": "Hi, {name}",
+    "subtitle": "Here's a summary of your week on Desenrole.",
+    "toolsTitle": "Your tools",
+    "gamesCard": {
+      "title": "Games",
+      "description": "Flirt Roulette, Sync Deck, and Truth or Dare — to get out of the chat and heat up the date."
+    },
+    "recentActivity": {
+      "title": "Recent activity",
+      "viewAll": "View history",
+      "empty": "You haven't used any tool yet. Get started now."
+    }
+  },
+  "tools": {
+    "eyebrow": "AI analysis",
+    "pageTitle": "Tools",
+    "pageSubtitle": "Upload a screenshot and get exactly what to say. That simple.",
+    "premium": "Premium",
+    "open": "Open tool",
+    "catalog": {
+      "conversa": {
+        "title": "Analyze conversation",
+        "description": "Send a WhatsApp or DM screenshot and find out exactly what to reply."
+      },
+      "story": {
+        "title": "Analyze her Story",
+        "description": "Send an Instagram Story screenshot and find the best way to catch her attention."
+      }
+    },
+    "workspace": {
+      "uploadLabel": "Upload screenshot",
+      "uploadHint": "PNG or JPG · click to choose an image",
+      "removeImage": "Remove image",
+      "previewAlt": "Uploaded screenshot",
+      "analyze": "Analyze screenshot",
+      "analyzing": "Analyzing...",
+      "loadingLabel": "Reading the screenshot and crafting the best replies...",
+      "emptyState": "Upload a screenshot and suggestions will show up here.",
+      "copy": "Copy reply",
+      "regenerate": "Generate again",
+      "examples": {
+        "conversa": [
+          "You tell that laughing, but I bet it wasn't funny at all that day. I want the full version.",
+          "Deal then: you pick the topic, I pick the place. Agreed?",
+          "That answer deserved more than a text. Tell me the rest in person?"
+        ],
+        "story": [
+          "That place is begging for a second visit — this time with better company.",
+          "Okay, that story wins best of the day. What do I get if I guess where it was?",
+          "You can't post that and expect nobody to ask. Tell me everything."
+        ]
+      }
+    }
+  },
+  "history": {
+    "pageTitle": "History",
+    "pageSubtitle": "Everything you've generated with Desenrole's tools.",
+    "empty": {
+      "title": "No analyses here yet",
+      "description": "Once you analyze a conversation or Story screenshot, the result shows up in this list."
+    },
+    "status": {
+      "pending": "Queued",
+      "processing": "Processing",
+      "completed": "Completed",
+      "failed": "Failed"
+    }
+  },
+  "profile": {
+    "editProfile": "Edit profile",
+    "memberSince": "Member since {date}",
+    "stats": {
+      "history": "Analyses in history",
+      "quiz": "Quiz completed"
+    },
+    "edit": {
+      "title": "Edit profile",
+      "subtitle": "Update your personal information.",
+      "avatarNote": "Profile photo upload will be available soon.",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "cancel": "Cancel",
+      "save": "Save changes",
+      "saving": "Saving...",
+      "errors": {
+        "nameMin": "Enter at least 2 letters",
+        "emailInvalid": "Enter a valid email"
+      },
+      "success": {
+        "title": "Profile updated",
+        "description": "Your information was saved successfully.",
+        "cta": "Back to profile",
+        "emailPending": "We sent a confirmation link to the new email. It only changes after you confirm."
+      }
+    }
+  },
+  "settings": {
+    "pageTitle": "Settings",
+    "pageSubtitle": "Manage your account, subscription, and preferences.",
+    "tabs": {
+      "account": "Account",
+      "subscription": "Subscription",
+      "notifications": "Notifications",
+      "language": "Language"
+    },
+    "account": {
+      "editProfile": "Edit profile",
+      "changePassword": "Change password",
+      "newPasswordLabel": "New password",
+      "updatePassword": "Update password",
+      "updating": "Updating...",
+      "errors": {
+        "newPasswordMin": "New password must be at least 8 characters",
+        "mismatch": "Passwords don't match",
+        "currentPasswordRequired": "Enter your current password"
+      },
+      "passwordSuccess": {
+        "title": "Password updated",
+        "description": "Your password was changed and your other sessions were signed out.",
+        "cta": "Close"
+      },
+      "dangerZone": {
+        "title": "Danger zone",
+        "description": "Deleting your account permanently removes your data. This action cannot be undone.",
+        "cta": "Delete account",
+        "confirmMessage": "Are you sure? This action is permanent.",
+        "cancel": "Cancel",
+        "confirmCta": "Confirm deletion",
+        "disabledNote": "Account deletion will be enabled once the database integration is live."
+      },
+      "confirmPasswordLabel": "Confirm new password",
+      "currentPasswordLabel": "Current password",
+      "securityNote": "We ask for your current password so a session opened by someone else can't change it. Your other sessions will be signed out."
+    },
+    "subscription": {
+      "notConfigured": "Subscription not set up yet",
+      "notConfiguredDescription": "Billing isn't active in this version. No subscription is linked to your account right now.",
+      "availablePlans": "Planned tiers",
+      "priceProvisional": "Provisional amounts — final pricing will come from Stripe once billing is enabled.",
+      "statusActive": "Active",
+      "endsOn": "Ends on {date}",
+      "renewsOn": "Renews on {date}",
+      "manageNote": "Your Premium subscription is active. Soon you'll be able to manage payment and cancellation right here.",
+      "premiumEyebrow": "Premium plan",
+      "subscribeCta": "Subscribe now",
+      "redirecting": "Redirecting…",
+      "hostedNote": "Payment is processed securely by Stripe. You'll be taken to the hosted checkout.",
+      "errors": {
+        "not_configured": "Payments are unavailable right now. Please try again later.",
+        "not_authenticated": "Sign in to subscribe.",
+        "already_premium": "You already have Premium active.",
+        "no_session_url": "We couldn't start checkout. Please try again."
+      }
+    },
+    "notifications": {
+      "productUpdates": {
+        "label": "Product updates",
+        "description": "Alerts about new tools and improvements."
+      },
+      "weeklyDigest": {
+        "label": "Weekly digest",
+        "description": "A summary of your activity for the week."
+      },
+      "toolReminders": {
+        "label": "Tool reminders",
+        "description": "Suggestions for when to use a tool based on your history."
+      },
+      "notPersistedNotice": "These preferences aren't saved yet — persistence comes in a later phase. The controls below are just a preview."
+    },
+    "language": {
+      "description": "Choose the language used across Desenrole.ai."
+    }
+  },
+  "support": {
+    "pageTitle": "Support",
+    "pageSubtitle": "Get answers or talk to us.",
+    "faqTitle": "Frequently asked questions",
+    "contactTitle": "Get in touch",
+    "faq": {
+      "account": "How do I change my email or password?",
+      "accountAnswer": "Go to Settings > Account. You can update your info and change your password anytime.",
+      "cancel": "How do I cancel my subscription?",
+      "cancelAnswer": "In Settings > Subscription. Access continues until the end of the paid period, no hassle.",
+      "tools": "How do I use the conversation tools?",
+      "toolsAnswer": "Pick a tool, upload a screenshot of the conversation or Story, and get ready-to-send suggestions. You can copy and tweak before sending.",
+      "privacy": "Is my data and conversations safe?",
+      "privacyAnswer": "Yes. Your conversations are private and never shared. You can delete your history anytime in Settings.",
+      "billing": "How does billing work?",
+      "billingAnswer": "The subscription is recurring, weekly or monthly, and can be canceled anytime right from the dashboard."
+    },
+    "contact": {
+      "subjectLabel": "Subject",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Describe your question or issue...",
+      "send": "Send message",
+      "sending": "Sending...",
+      "errors": {
+        "messageMin": "Write at least 10 characters"
+      },
+      "subjects": {
+        "billing": "Billing",
+        "technical": "Technical issue",
+        "account": "Account",
+        "other": "Other"
+      },
+      "success": {
+        "title": "Message sent",
+        "description": "Our team replies within 24h at your registered email.",
+        "cta": "Send another message"
+      }
+    }
+  },
+  "admin": {
+    "nav": {
+      "painel": "Dashboard",
+      "usuarios": "Users",
+      "suporte": "Support",
+      "planos": "Plans"
+    },
+    "dashboard": {
+      "title": "Admin dashboard",
+      "subtitle": "An overview of Desenrole.ai's operations.",
+      "stats": {
+        "totalUsers": "Total users",
+        "newUsers": "New in 30 days",
+        "quizCompletions": "Quizzes completed",
+        "openSupport": "Open tickets"
+      },
+      "noFinancialsNotice": "Financial metrics (subscriptions, revenue) will appear here once the Stripe integration is live.",
+      "recentUsers": "Recent users",
+      "viewAll": "View all"
+    },
+    "users": {
+      "pageTitle": "Users",
+      "pageSubtitle": "Registered accounts and their access roles.",
+      "searchPlaceholder": "Search by name or email...",
+      "allRoles": "All roles",
+      "empty": "No users found for these filters.",
+      "backToList": "Back to users",
+      "userId": "User ID",
+      "table": {
+        "user": "User",
+        "role": "Role",
+        "joined": "Joined"
+      },
+      "roles": {
+        "user": "User",
+        "admin": "Administrator"
+      }
+    },
+    "plans": {
+      "pageTitle": "Plans",
+      "pageSubtitle": "Pricing and features offered in each plan.",
+      "recommended": "Recommended",
+      "editPlan": "Edit plan",
+      "editNote": "Plan editing will be enabled once the Stripe integration is live."
+    },
+    "support": {
+      "pageTitle": "Support tickets",
+      "pageSubtitle": "Requests submitted by users.",
+      "empty": "No tickets recorded yet.",
+      "status": {
+        "open": "Open",
+        "in_progress": "In progress",
+        "resolved": "Resolved"
+      }
+    }
+  },
+  "games": {
+    "pageTitle": "Games",
+    "pageSubtitle": "To get out of the chat and heat up the date — together, no rush.",
+    "roleta": {
+      "title": "Flirt Roulette",
+      "description": "Spin and take on the challenge.",
+      "spin": "Spin the wheel",
+      "spinning": "Spinning...",
+      "challenges": [
+        {
+          "emoji": "💋",
+          "title": "Timed kiss",
+          "text": "Give a 10-second kiss."
+        },
+        {
+          "emoji": "🔥",
+          "title": "Confession",
+          "text": "Share a fantasy you've never told."
+        },
+        {
+          "emoji": "👀",
+          "title": "Eye to eye",
+          "text": "Hold eye contact for 30 seconds without laughing."
+        },
+        {
+          "emoji": "🤫",
+          "title": "Forbidden question",
+          "text": "Ask the question you never had the courage to ask."
+        },
+        {
+          "emoji": "📱",
+          "title": "Open gallery",
+          "text": "Show the latest favorite photo in your gallery."
+        },
+        {
+          "emoji": "👏",
+          "title": "Compliment swap",
+          "text": "Each of you gives a sincere compliment right now."
+        },
+        {
+          "emoji": "💋",
+          "title": "Different kiss",
+          "text": "Give a kiss somewhere unexpected."
+        },
+        {
+          "emoji": "🔥",
+          "title": "Hot memory",
+          "text": "Describe your hottest moment together."
+        },
+        {
+          "emoji": "👀",
+          "title": "Cold read",
+          "text": "Guess what the other person is thinking right now."
+        },
+        {
+          "emoji": "🤫",
+          "title": "Light secret",
+          "text": "Share something nobody else knows."
+        },
+        {
+          "emoji": "📱",
+          "title": "Last search",
+          "text": "Show the last thing you searched on your phone."
+        },
+        {
+          "emoji": "👏",
+          "title": "Impression",
+          "text": "Impersonate the other person for 30 seconds."
+        },
+        {
+          "emoji": "💋",
+          "title": "Movie kiss",
+          "text": "Recreate a kiss from a famous movie."
+        },
+        {
+          "emoji": "🔥",
+          "title": "Whisper",
+          "text": "Whisper something teasing in their ear."
+        },
+        {
+          "emoji": "👀",
+          "title": "First impression",
+          "text": "Share what you thought on the first date."
+        },
+        {
+          "emoji": "🤫",
+          "title": "Two truths",
+          "text": "Say two truths and one lie — the other person guesses."
+        },
+        {
+          "emoji": "📱",
+          "title": "Revealing playlist",
+          "text": "Show your most played song this month."
+        },
+        {
+          "emoji": "👏",
+          "title": "Quick dance",
+          "text": "Dance together for one minute, no music."
+        },
+        {
+          "emoji": "💋",
+          "title": "Holding hands",
+          "text": "Hold hands until the next round."
+        },
+        {
+          "emoji": "🔥",
+          "title": "The bet",
+          "text": "Propose a bet — the loser does something embarrassing."
+        },
+        {
+          "emoji": "👀",
+          "title": "X-ray",
+          "text": "Name three things that changed in the other person since you met."
+        },
+        {
+          "emoji": "🤫",
+          "title": "Old messages",
+          "text": "Read your very first conversation together."
+        },
+        {
+          "emoji": "📱",
+          "title": "Photo now",
+          "text": "Take a selfie making the most dramatic face possible."
+        },
+        {
+          "emoji": "👏",
+          "title": "Gratitude",
+          "text": "Thank them for something specific they did."
+        },
+        {
+          "emoji": "💋",
+          "title": "Surprise kiss",
+          "text": "Steal a kiss at some point during the next round."
+        },
+        {
+          "emoji": "🔥",
+          "title": "Three words",
+          "text": "Describe the other person in three words — spicy ones."
+        },
+        {
+          "emoji": "👀",
+          "title": "No words",
+          "text": "Communicate only with gestures until the next round."
+        },
+        {
+          "emoji": "🤫",
+          "title": "Jealousy confession",
+          "text": "Confess something that made you jealous."
+        },
+        {
+          "emoji": "📱",
+          "title": "Week's chats",
+          "text": "Show who you talked to most this week."
+        },
+        {
+          "emoji": "👏",
+          "title": "Physical compliment",
+          "text": "Compliment something physical you admire about them."
+        },
+        {
+          "emoji": "💋",
+          "title": "Forehead to forehead",
+          "text": "Stay forehead to forehead for 15 seconds in silence."
+        },
+        {
+          "emoji": "🔥",
+          "title": "The scene",
+          "text": "Describe the dream date in detail."
+        },
+        {
+          "emoji": "👀",
+          "title": "Mirror",
+          "text": "Copy everything the other person does for 30 seconds."
+        },
+        {
+          "emoji": "🤫",
+          "title": "Silly fear",
+          "text": "Confess a silly fear you have."
+        },
+        {
+          "emoji": "📱",
+          "title": "The stalking",
+          "text": "Confess: have you stalked them online? How far did you go?"
+        },
+        {
+          "emoji": "👏",
+          "title": "Vote of confidence",
+          "text": "Share something you admire but never said out loud."
+        },
+        {
+          "emoji": "💋",
+          "title": "Slow kiss",
+          "text": "Give the slowest kiss you can."
+        },
+        {
+          "emoji": "🔥",
+          "title": "Honest mode",
+          "text": "Answer without thinking: what attracts you most about them?"
+        },
+        {
+          "emoji": "👀",
+          "title": "Staring contest",
+          "text": "First to laugh owes a forfeit chosen by the other."
+        },
+        {
+          "emoji": "🤫",
+          "title": "The future",
+          "text": "Share a plan that includes the other person."
+        }
+      ]
+    },
+    "baralho": {
+      "title": "Sync Deck",
+      "description": "Missions to do together.",
+      "draw": "Draw a card",
+      "drawAgain": "Draw another card",
+      "levels": {
+        "all": "All",
+        "leve": "Light",
+        "romantico": "Romantic",
+        "quente": "Hot"
+      },
+      "cards": [
+        {
+          "level": "leve",
+          "text": "Tell each other the best thing about your week."
+        },
+        {
+          "level": "leve",
+          "text": "Pick together the next show to binge."
+        },
+        {
+          "level": "leve",
+          "text": "Each of you imitates how the other answers the phone."
+        },
+        {
+          "level": "leve",
+          "text": "Build your top 3 favorite foods together."
+        },
+        {
+          "level": "leve",
+          "text": "Describe each other as movie characters."
+        },
+        {
+          "level": "leve",
+          "text": "Play rock, paper, scissors — best of five."
+        },
+        {
+          "level": "leve",
+          "text": "Share your first impressions of each other."
+        },
+        {
+          "level": "leve",
+          "text": "Create a secret handshake for the two of you."
+        },
+        {
+          "level": "leve",
+          "text": "Each of you shares a useless talent."
+        },
+        {
+          "level": "leve",
+          "text": "Pick a song to be 'your song'."
+        },
+        {
+          "level": "leve",
+          "text": "Hold 10 seconds of eye contact without laughing."
+        },
+        {
+          "level": "leve",
+          "text": "Each of you tells the story of your own name."
+        },
+        {
+          "level": "leve",
+          "text": "Decide together: beach or mountains? Defend your pick."
+        },
+        {
+          "level": "leve",
+          "text": "Say which emoji defines the other and why."
+        },
+        {
+          "level": "leve",
+          "text": "Each of you shows the oldest photo on your phone."
+        },
+        {
+          "level": "leve",
+          "text": "Invent a duo name for the two of you."
+        },
+        {
+          "level": "leve",
+          "text": "Share an embarrassing story you've never told."
+        },
+        {
+          "level": "leve",
+          "text": "Each of you compliments the other's style."
+        },
+        {
+          "level": "leve",
+          "text": "Plan the perfect Saturday in one minute."
+        },
+        {
+          "level": "leve",
+          "text": "Guess the most used app on each other's phone."
+        },
+        {
+          "level": "leve",
+          "text": "Each of you teaches something you're good at."
+        },
+        {
+          "level": "leve",
+          "text": "Share the best trip you've ever taken."
+        },
+        {
+          "level": "leve",
+          "text": "Pick the movie the other absolutely must watch."
+        },
+        {
+          "level": "leve",
+          "text": "Each of you confesses a weird habit."
+        },
+        {
+          "level": "leve",
+          "text": "Define each other with a song title."
+        },
+        {
+          "level": "leve",
+          "text": "Say what you'd do with a completely free day."
+        },
+        {
+          "level": "leve",
+          "text": "Each of you reveals your favorite guilty pleasure."
+        },
+        {
+          "level": "romantico",
+          "text": "Share the moment you thought: 'I really like this person'."
+        },
+        {
+          "level": "romantico",
+          "text": "Each of you describes the perfect hug — then test it."
+        },
+        {
+          "level": "romantico",
+          "text": "Write together the caption for your first photo."
+        },
+        {
+          "level": "romantico",
+          "text": "Tell each other what you silently admire most."
+        },
+        {
+          "level": "romantico",
+          "text": "Each of you describes introducing the other to your family."
+        },
+        {
+          "level": "romantico",
+          "text": "Describe the dream date with the other person."
+        },
+        {
+          "level": "romantico",
+          "text": "Stay hugged for 30 seconds without saying anything."
+        },
+        {
+          "level": "romantico",
+          "text": "Each of you shares what you felt on the first kiss."
+        },
+        {
+          "level": "romantico",
+          "text": "Say three things that make the other person unique."
+        },
+        {
+          "level": "romantico",
+          "text": "Plan a trip together — destination, itinerary, and soundtrack."
+        },
+        {
+          "level": "romantico",
+          "text": "Each of you completes: 'I feel at home when you...'"
+        },
+        {
+          "level": "romantico",
+          "text": "Say which of the other's quirks you'd miss the most."
+        },
+        {
+          "level": "romantico",
+          "text": "Pick a photo of you two and tell the story behind it."
+        },
+        {
+          "level": "romantico",
+          "text": "Each of you shares a dream you'd like to split in two."
+        },
+        {
+          "level": "romantico",
+          "text": "Describe the other to a stranger in 20 seconds."
+        },
+        {
+          "level": "romantico",
+          "text": "Say the first thing you noticed about each other."
+        },
+        {
+          "level": "romantico",
+          "text": "Each of you creates a new nickname — with justification."
+        },
+        {
+          "level": "romantico",
+          "text": "Share a moment when the other person saved your day."
+        },
+        {
+          "level": "romantico",
+          "text": "Slow dance together, even without music."
+        },
+        {
+          "level": "romantico",
+          "text": "Each of you says how the other changed your routine."
+        },
+        {
+          "level": "romantico",
+          "text": "Write a tiny note for the other to read tomorrow."
+        },
+        {
+          "level": "romantico",
+          "text": "Share which memory of you two you'd repeat."
+        },
+        {
+          "level": "romantico",
+          "text": "Each of you says what you'd do on the last day of a trip together."
+        },
+        {
+          "level": "romantico",
+          "text": "Hold hands and share one gratitude from today."
+        },
+        {
+          "level": "romantico",
+          "text": "Describe your very first message exchange — from memory."
+        },
+        {
+          "level": "romantico",
+          "text": "Each of you says what you feel when the other smiles."
+        },
+        {
+          "level": "romantico",
+          "text": "Agree on a secret code just for you two to use at parties."
+        },
+        {
+          "level": "quente",
+          "text": "Whisper in each other's ear what just crossed your mind."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you gives a kiss where the other chooses."
+        },
+        {
+          "level": "quente",
+          "text": "Describe in detail your most memorable kiss together."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you confesses a thought you never said out loud."
+        },
+        {
+          "level": "quente",
+          "text": "Stare at each other for 30 seconds — no looking away."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you says what the other wears that's most distracting."
+        },
+        {
+          "level": "quente",
+          "text": "Give a 10-second kiss — timed."
+        },
+        {
+          "level": "quente",
+          "text": "Share a fantasy using only three words."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you describes your favorite kind of touch."
+        },
+        {
+          "level": "quente",
+          "text": "Recreate your first kiss — improved version."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you sends a teasing message to the other right now."
+        },
+        {
+          "level": "quente",
+          "text": "Confess the moment you felt most attracted today."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you kisses the other's hand — slowly."
+        },
+        {
+          "level": "quente",
+          "text": "Describe the ideal setting for an unforgettable night."
+        },
+        {
+          "level": "quente",
+          "text": "First to blink owes a kiss wherever the other asks."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you names a physical detail of the other you adore."
+        },
+        {
+          "level": "quente",
+          "text": "Stay inches apart for 20 seconds without touching."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you confesses what you almost did but didn't dare."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you gives a light bite where the other allows."
+        },
+        {
+          "level": "quente",
+          "text": "Say which scent of the other stays with you."
+        },
+        {
+          "level": "quente",
+          "text": "Describe the last time you felt butterflies."
+        },
+        {
+          "level": "quente",
+          "text": "Each of you acts out asking the other for a slow dance."
+        },
+        {
+          "level": "quente",
+          "text": "Confess what you're thinking right now — no filter."
+        },
+        {
+          "level": "quente",
+          "text": "Whisper the other's name three times, slower each time."
+        },
+        {
+          "level": "quente",
+          "text": "Pick together the soundtrack for a perfect night."
+        },
+        {
+          "level": "quente",
+          "text": "End the round with the most creative kiss you can."
+        }
+      ]
+    },
+    "vc": {
+      "title": "Truth or Dare",
+      "description": "Spicy mode.",
+      "truth": "Truth",
+      "dare": "Dare",
+      "truthLabel": "Truth",
+      "dareLabel": "Dare",
+      "truths": [
+        "What was your boldest thought today?",
+        "What did you notice first about me?",
+        "What message did you almost send and delete?",
+        "What was the most unforgettable kiss of your life?",
+        "What would you do if we had a night with no rules?",
+        "Which outfit of mine do you like best?",
+        "Have you ever dreamed about me? Tell me the dream.",
+        "What's your biggest weakness when flirting?",
+        "What makes you lose focus in a conversation?",
+        "What pickup line has actually worked on you?",
+        "What did you think the first time you saw me?",
+        "What's your favorite kind of touch?",
+        "Have you stalked my profile? How far did you go?",
+        "What was the last lie you told?",
+        "What makes you instantly blush?",
+        "Which part of your body do you like best?",
+        "What compliment do you never forget?",
+        "What's your secret charm?",
+        "What would you do if I disappeared for a week?",
+        "What movie puts you in the mood?",
+        "Do you prefer a long kiss or a surprise kiss?",
+        "What was the weirdest date you've ever had?",
+        "What has nobody ever told you that they should have?",
+        "What pet name do you hate?",
+        "What do you pretend not to notice?",
+        "What song makes you think of romance?",
+        "Ever sent a message to the wrong person? Tell me.",
+        "What's your weak spot in arguments?",
+        "What truly wins you over?",
+        "What's the most impulsive thing you've ever done?",
+        "Do you believe in attraction at first sight?",
+        "What do you look at first in a person?",
+        "What secret would you only share after deep trust?",
+        "What was your most embarrassing date moment?",
+        "What makes you jealous even if you won't admit it?",
+        "Which quirk of yours do you find charming?",
+        "What would you do differently on our first date?",
+        "Which message of mine made you smile alone?",
+        "Where would you like to be kissed right now?",
+        "What's your mildest fantasy?",
+        "What do you admire about me that you've never said?",
+        "What habit would you hide in a relationship?",
+        "Ever pretended to like something to impress? What?",
+        "What's your most romantic time of day?",
+        "What gives you butterflies?",
+        "What's the most memorable gift you've received?",
+        "If you could repeat one kiss, which one?",
+        "Which conversation of ours do you still remember?",
+        "What do you want to do but wait for me to start?",
+        "What's your favorite place for a date?",
+        "What makes you trust someone?",
+        "What's the craziest thing you've done out of attraction?",
+        "Do you prefer declarations in public or in secret?",
+        "Which part of a date do you enjoy most?",
+        "What crossed your mind during our last hug?",
+        "What question are you afraid to answer?",
+        "What would you change about how you flirt?",
+        "What's the boldest compliment you've received?",
+        "Have you ever rehearsed a conversation before meeting me?",
+        "Where's your line between cute and cheesy?",
+        "What disarms you instantly?",
+        "Which look of mine have you noticed?",
+        "What would you keep as a memory of today?",
+        "What's your idea of a perfect night?",
+        "What would you never do on a first date?",
+        "What was your most romantic phase?",
+        "What do you want me to discover on my own?",
+        "What's your favorite way to receive affection?",
+        "Ever written and deleted a declaration? For whom?",
+        "Which detail of mine do you always notice?",
+        "What makes you feel flattered?",
+        "What promise are you afraid to make?",
+        "What do you hope happens at the end of the night?",
+        "What was your biggest rejection — and what did you learn?",
+        "What kind of message wakes you up in a good mood?",
+        "What scent turns your head?",
+        "What do you do when you're into someone?",
+        "Which move of mine surprised you?",
+        "What's non-negotiable for you in a relationship?",
+        "What's the most creative invitation you've received?",
+        "Do you prefer dancing together or talking late into the night?",
+        "Which memory would you relive right now?",
+        "What do you think when I go quiet?",
+        "What small gesture wins you over the most?",
+        "What are you embarrassed to ask for?",
+        "What was the most obvious hint you've ever dropped?",
+        "What would make you cancel everything to see me?",
+        "What silly secret have you never told anyone?",
+        "What makes a kiss unforgettable for you?",
+        "When was the last time you felt butterflies?",
+        "What do you expect from me that you haven't said?",
+        "What's your biggest charm without realizing it?",
+        "What topic do you avoid but wish we'd talk about?",
+        "What's your definition of chemistry?",
+        "What would you write about today in a journal?",
+        "What behavior makes you lose interest instantly?",
+        "What did you mean by the last message you sent me?",
+        "Which moment of ours would you tell your friends about?",
+        "What would you do if I kissed you right now?",
+        "What's the next thing you want to happen between us?"
+      ],
+      "dares": [
+        "Give a 10-second kiss.",
+        "Whisper something teasing in my ear.",
+        "Give the most sincere compliment you can.",
+        "Show the last photo in your gallery.",
+        "Imitate the way I talk for 30 seconds.",
+        "Hold my hand until the next round.",
+        "Kiss my forehead.",
+        "Describe what I'm thinking right now.",
+        "Send me a bold message — right now.",
+        "Look at me for 30 seconds without laughing.",
+        "Dance for 15 seconds with no music.",
+        "Tell a secret in one sentence.",
+        "Kiss my hand slowly.",
+        "Redo your best pickup line — on me.",
+        "Post a story tagging me (or pretend you did).",
+        "Make a dramatic soap-opera declaration.",
+        "Give a 20-second hug.",
+        "Compliment three things about me without repeating a category.",
+        "Say 'I want you' in your most serious voice.",
+        "Switch places with me and do your best impression.",
+        "Make up a rhyme with my name.",
+        "Give a kiss wherever I choose.",
+        "Show the most random photo on your phone.",
+        "Do your best seductive face for 10 seconds.",
+        "Say out loud what you felt when you saw me today.",
+        "Let me choose your next profile picture.",
+        "Whisper my name three times, slower each time.",
+        "Act out a proposal — exaggerated version.",
+        "Keep your eyes closed until I say open.",
+        "Describe my hug in three words.",
+        "Redo our first 'hi' the way it should have been.",
+        "Pick a song and dedicate it to me now.",
+        "Kiss my cheek — or risk more, your call.",
+        "Give my shoulders a 10-second massage.",
+        "Say the cheesiest romance-movie line without laughing.",
+        "Prove you can slow dance — 15 seconds.",
+        "Write a word on my arm with your finger. I'll guess.",
+        "Send a 10-second voice note saying whatever you want.",
+        "Rest your forehead on mine and count to ten.",
+        "Ask the question you've been holding back.",
+        "Say my name in the most charming way possible.",
+        "Choose: one kiss now or two later.",
+        "Draw a heart on my hand with your finger.",
+        "Confess something using only mime.",
+        "Give the lightest kiss you can.",
+        "Compliment my smile in a way I've never heard.",
+        "Point out my best angle and explain why.",
+        "Stay two inches from my face for 10 seconds.",
+        "Repeat the line that won you over.",
+        "Make up a toast for this moment.",
+        "Give a 1950s-style kiss — hand on the waist.",
+        "Show how you react when you get a message from me.",
+        "Pick a part of my face and compliment it for 15 seconds.",
+        "Sing a bit of a song looking into my eyes.",
+        "Act out our reunion after a year apart.",
+        "Say what you'd do right now if nobody were watching.",
+        "Give three kisses in a row in different places.",
+        "Say a phrase in another language in a seductive voice.",
+        "Tickle me until I ask you to stop.",
+        "Describe our first photo together without looking at it.",
+        "Hold my face and tell me one truth.",
+        "Recreate the Titanic scene — arms wide open.",
+        "Kiss the tip of my nose.",
+        "Say which outfit of mine you'd retire — and why.",
+        "Drop your voice and ask me out to dinner.",
+        "Give a peck lasting exactly 3 seconds.",
+        "Write a two-line mini poem about me.",
+        "Whisper a plan for us in my ear.",
+        "Pick our next date with your eyes closed pointing at a map.",
+        "Imitate the way I walk.",
+        "Kiss my shoulder.",
+        "Say 'you're trouble' — and explain.",
+        "Stay silent and say everything with your eyes for 15 seconds.",
+        "Hide a note for me to find later.",
+        "Recreate the exact moment we met.",
+        "Give a kiss with your hands in your pockets.",
+        "Compliment my laugh by imitating it first.",
+        "Show your most reliable dance move.",
+        "Breathe the word 'maybe' into my ear.",
+        "Choose: extra truth or extra kiss?",
+        "Make a small promise to keep today.",
+        "Kiss my left cheek, then the right, then decide.",
+        "Say what you thought when I arrived today.",
+        "Close your eyes and describe my face from memory.",
+        "Invent a new nickname for me right now.",
+        "Act jealous of someone who looked at me.",
+        "Give my hand a long kiss like a ballroom farewell.",
+        "Challenge: whoever holds the stare longer earns a wish.",
+        "Say 'come here' in the most convincing way there is.",
+        "Fix my hair like it's an important ritual.",
+        "Name three things we'd do on a trip together.",
+        "Touch your nose to mine for five seconds.",
+        "Confess which part of my face you look at first.",
+        "Give a cinematic kiss — dipping allowed.",
+        "Make a request starting with 'tonight I want...'",
+        "Send the emoji that sums up this moment right now.",
+        "Say 'I won' and kiss me before I can argue.",
+        "Pick my weak spot and use it against me.",
+        "Finish the sentence: 'if you knew what I'm thinking...'",
+        "Kiss me like it's the last one of the night."
+      ]
+    }
+  },
+  "checkout": {
+    "processing": {
+      "pageTitle": "Confirming your payment",
+      "workingTitle": "We're confirming your payment",
+      "workingDescription": "This only takes a few seconds. Please don't close this page.",
+      "activeTitle": "Premium activated! You're all set.",
+      "goToDashboard": "Go to dashboard",
+      "timeoutTitle": "Still processing",
+      "timeoutDescription": "Your payment may take a few more moments to confirm. As soon as it does, your Premium will unlock automatically — you can refresh this page or head back to the dashboard shortly."
+    },
+    "cancelled": {
+      "title": "Checkout canceled",
+      "description": "No worries — nothing was charged. You can subscribe whenever you're ready.",
+      "tryAgain": "Try again",
+      "backToDashboard": "Back to dashboard"
+    }
+  }
+}

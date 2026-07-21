@@ -1,0 +1,184 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
+import {
+  ImagePlus,
+  Sparkles,
+  Copy,
+  Check,
+  X,
+  RefreshCw,
+} from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
+import { TOOL_MESSAGE_KEY } from "./tool-icons";
+import type { ToolSlug } from "@/lib/data/types";
+
+type Status = "idle" | "loading" | "done";
+
+export function ToolWorkspace({ slug }: { slug: ToolSlug }) {
+  const t = useTranslations("tools.workspace");
+  const key = TOOL_MESSAGE_KEY[slug];
+
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [status, setStatus] = useState<Status>("idle");
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (previewUrl) URL.revokeObjectURL(previewUrl);
+    };
+  }, [previewUrl]);
+
+  const suggestions = [0, 1, 2].map((i) => t(`examples.${key}.${i}`));
+
+  function handleFile(file: File | undefined) {
+    if (!file || !file.type.startsWith("image/")) return;
+    if (previewUrl) URL.revokeObjectURL(previewUrl);
+    setPreviewUrl(URL.createObjectURL(file));
+    setStatus("idle");
+  }
+
+  function clearImage() {
+    if (previewUrl) URL.revokeObjectURL(previewUrl);
+    setPreviewUrl(null);
+    setStatus("idle");
+    if (inputRef.current) inputRef.current.value = "";
+  }
+
+  // Visual only — a análise real por IA entra na fase de integração.
+  function analyze() {
+    setStatus("loading");
+    window.setTimeout(() => setStatus("done"), 1400);
+  }
+
+  async function handleCopy(text: string, index: number) {
+    await navigator.clipboard.writeText(text);
+    setCopiedIndex(index);
+    window.setTimeout(() => {
+      setCopiedIndex((current) => (current === index ? null : current));
+    }, 1500);
+  }
+
+  return (
+    <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
+      <Card className="space-y-5 p-6">
+        {previewUrl ? (
+          <div className="relative overflow-hidden rounded-xl border border-border">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={previewUrl}
+              alt={t("previewAlt")}
+              className="max-h-80 w-full object-contain bg-surface-raised"
+            />
+            <button
+              type="button"
+              onClick={clearImage}
+              aria-label={t("removeImage")}
+              className="absolute right-2.5 top-2.5 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 text-foreground backdrop-blur transition-colors hover:bg-background"
+            >
+              <X className="h-4 w-4" aria-hidden />
+            </button>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => inputRef.current?.click()}
+            className="flex w-full flex-col items-center gap-3 rounded-xl border border-dashed border-border-strong bg-surface-raised/50 px-6 py-14 text-center transition-colors hover:border-accent/50 hover:bg-surface-raised"
+          >
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-muted text-accent">
+              <ImagePlus className="h-5 w-5" aria-hidden />
+            </span>
+            <span className="text-sm font-medium text-foreground">
+              {t("uploadLabel")}
+            </span>
+            <span className="text-xs text-subtle">{t("uploadHint")}</span>
+          </button>
+        )}
+
+        <input
+          ref={inputRef}
+          type="file"
+          accept="image/*"
+          className="hidden"
+          aria-label={t("uploadLabel")}
+          onChange={(event) => handleFile(event.target.files?.[0])}
+        />
+
+        <Button
+          type="button"
+          size="lg"
+          className="w-full"
+          disabled={!previewUrl || status === "loading"}
+          onClick={analyze}
+        >
+          <Sparkles className="h-4 w-4" aria-hidden />
+          {status === "loading" ? t("analyzing") : t("analyze")}
+        </Button>
+      </Card>
+
+      <div className="space-y-3">
+        {status === "idle" && (
+          <Card className="flex flex-col items-center gap-2 p-10 text-center text-sm text-muted">
+            <Sparkles className="h-6 w-6 text-subtle" aria-hidden />
+            {t("emptyState")}
+          </Card>
+        )}
+
+        {status === "loading" && (
+          <Card className="space-y-4 p-6">
+            <div className="flex items-center gap-2.5 text-sm text-accent">
+              <Sparkles className="h-4 w-4 animate-pulse" aria-hidden />
+              {t("loadingLabel")}
+            </div>
+            {[0, 1, 2].map((i) => (
+              <div key={i} className="space-y-2">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-2/3" />
+              </div>
+            ))}
+          </Card>
+        )}
+
+        {status === "done" && (
+          <>
+            {suggestions.map((suggestion, index) => (
+              <Card
+                key={index}
+                className="animate-fade-up flex items-start justify-between gap-4 p-5"
+              >
+                <p className="text-sm leading-relaxed text-foreground">
+                  {suggestion}
+                </p>
+                <button
+                  type="button"
+                  onClick={() => handleCopy(suggestion, index)}
+                  aria-label={t("copy")}
+                  className="shrink-0 text-muted transition-colors hover:text-accent"
+                >
+                  {copiedIndex === index ? (
+                    <Check className="h-4 w-4 text-success" aria-hidden />
+                  ) : (
+                    <Copy className="h-4 w-4" aria-hidden />
+                  )}
+                </button>
+              </Card>
+            ))}
+            <Button
+              type="button"
+              variant="secondary"
+              className="w-full"
+              onClick={analyze}
+            >
+              <RefreshCw className="h-4 w-4" aria-hidden />
+              {t("regenerate")}
+            </Button>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}

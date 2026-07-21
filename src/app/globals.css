@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESENROLE.AI — DESIGN TOKENS
+   Base escura, um único acento (âmbar-dourado), resto neutro.
+   Esta é a fonte de verdade visual. Nenhum componente define
+   cores próprias fora destes tokens.
+   ============================================================ */
+
+@theme {
+  /* Superfícies — escala de profundidade, não de cinza genérico */
+  --color-background: #0a0a0b;
+  --color-surface: #111113;
+  --color-surface-raised: #17171a;
+  --color-surface-overlay: #1c1c20;
+
+  /* Bordas */
+  --color-border: #232328;
+  --color-border-strong: #2e2e35;
+
+  /* Texto */
+  --color-foreground: #f5f5f4;
+  --color-muted: #8f8f98;
+  --color-subtle: #5d5d66;
+
+  /* Acento único */
+  --color-accent: #e6a23c;
+  --color-accent-hover: #f0b45a;
+  --color-accent-muted: rgba(230, 162, 60, 0.12);
+  --color-accent-foreground: #16120a;
+
+  /* Semânticas — uso restrito a feedback, nunca decoração */
+  --color-success: #4ade80;
+  --color-danger: #f87171;
+  --color-warning: #fbbf24;
+
+  /* Tipografia */
+  --font-sans: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+
+  /* Raio padrão */
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.375rem;
+}
+
+/* Tokens shadcn/ui mapeados para o nosso sistema */
+:root {
+  --background: var(--color-background);
+  --foreground: var(--color-foreground);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-foreground);
+  --popover: var(--color-surface-overlay);
+  --popover-foreground: var(--color-foreground);
+  --primary: var(--color-accent);
+  --primary-foreground: var(--color-accent-foreground);
+  --secondary: var(--color-surface-raised);
+  --secondary-foreground: var(--color-foreground);
+  --muted: var(--color-surface-raised);
+  --muted-foreground: var(--color-muted);
+  --accent: var(--color-surface-overlay);
+  --accent-foreground: var(--color-foreground);
+  --destructive: var(--color-danger);
+  --destructive-foreground: var(--color-background);
+  --border: var(--color-border);
+  --input: var(--color-border-strong);
+  --ring: var(--color-accent);
+  --radius: 0.5rem;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Seleção com o acento — detalhe que templates nunca têm */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+/* Scrollbar discreta */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 5px;
+}
+
+/* Animações de entrada — suaves, nunca chamativas */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-fade-in {
+  animation: fade-in 0.4s ease both;
+}
+.animate-slide-in-left {
+  animation: slide-in-left 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-slide-in-left {
+    animation: none;
+  }
+}
