@@ -112,6 +112,11 @@
       "title": "A próxima conversa pode ser diferente",
       "subtitle": "Descubra seu perfil de comunicação em 2 minutos e veja exatamente onde você está travando.",
       "cta": "Fazer o quiz gratuito"
+    },
+    "cta": {
+      "start": "Começar",
+      "login": "Entrar",
+      "unavailable": "Disponível em breve"
     }
   },
   "plans": {
@@ -1441,7 +1446,7 @@
     }
   },
   "planos": {
-    "title": "Libere seu acesso Premium",
-    "subtitle": "Sua conta está criada. Para usar as ferramentas e os jogos, ative o Premium."
+    "title": "Sua assinatura não está ativa",
+    "subtitle": "Para acessar o painel e as ferramentas, ative o Premium."
   }
 }

@@ -1,11 +1,13 @@
 import { useTranslations } from "next-intl";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { StartCta } from "@/components/marketing/start-cta";
 
 export function Hero() {
   const t = useTranslations("landing.hero");
+  const tCta = useTranslations("landing.cta");
 
   return (
     <section className="relative overflow-hidden">
@@ -32,17 +34,12 @@ export function Hero() {
           </p>
 
           <div className="flex animate-fade-up flex-col gap-3 delay-300 sm:flex-row">
-            <Link href="/quiz">
-              <Button size="lg" className="w-full sm:w-auto">
-                {t("cta")}
-                <ArrowRight className="h-4 w-4" aria-hidden />
+            <StartCta size="lg" />
+            <Link href="/login">
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto">
+                {tCta("login")}
               </Button>
             </Link>
-            <a href="#how">
-              <Button variant="secondary" size="lg" className="w-full sm:w-auto">
-                {t("secondaryCta")}
-              </Button>
-            </a>
           </div>
 
           <p className="text-xs text-subtle">{t("disclaimer")}</p>

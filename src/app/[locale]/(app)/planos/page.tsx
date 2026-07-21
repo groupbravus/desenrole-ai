@@ -9,7 +9,6 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { formatCurrency } from "@/lib/format";
 import { SubscribeButton } from "@/components/settings/subscribe-button";
-import { QuizClaimOnMount } from "@/components/quiz/quiz-claim-on-mount";
 
 export const metadata: Metadata = {
   title: "Planos — Desenrole.ai",
@@ -51,10 +50,6 @@ export default async function PlanosPage({
 
   return (
     <div className="mx-auto max-w-md space-y-8">
-      {/* Reivindica o resultado do quiz feito antes do cadastro, mesmo
-          que o usuário ainda não tenha assinado. */}
-      <QuizClaimOnMount />
-
       <div className="text-center">
         <h1 className="text-2xl font-bold tracking-tight md:text-3xl">
           {t("title")}

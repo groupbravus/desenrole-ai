@@ -1,16 +1,14 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Check } from "lucide-react";
-import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/format";
+import { StartCta } from "@/components/marketing/start-cta";
 import type { PremiumPrice } from "@/lib/data/billing.supabase";
 
 /**
  * Pricing da landing — V1: plano único Premium.
  *
- * A landing é pública (visitante anônimo), então o CTA leva ao funil
- * (quiz → cadastro). O checkout em si só é criado para usuário
- * autenticado, na aba Assinatura das configurações.
+ * A landing é pública. O CTA leva ao quiz EXTERNO (porta de entrada); a
+ * conta e o checkout acontecem nesse fluxo externo, nunca aqui.
  */
 export function Pricing({ price }: { price: PremiumPrice | null }) {
   const t = useTranslations("landing.pricing");
@@ -60,11 +58,9 @@ export function Pricing({ price }: { price: PremiumPrice | null }) {
               ))}
             </ul>
 
-            <Link href="/quiz" className="mt-8 block">
-              <Button className="w-full" size="lg">
-                {t("cta")}
-              </Button>
-            </Link>
+            <div className="mt-8">
+              <StartCta size="lg" className="block" />
+            </div>
           </div>
         </div>
 

@@ -6,7 +6,6 @@ import { requireUser } from "@/lib/auth/session";
 import { analysisRepository, toolsRepository } from "@/lib/data";
 import { ToolCard } from "@/components/tools/tool-card";
 import { RecentActivity } from "@/components/dashboard/recent-activity";
-import { QuizClaimOnMount } from "@/components/quiz/quiz-claim-on-mount";
 
 export const metadata: Metadata = {
   title: "Painel — Desenrole.ai",
@@ -31,9 +30,6 @@ export default async function PainelPage({
 
   return (
     <div className="mx-auto max-w-5xl space-y-10">
-      {/* Persiste o resultado do quiz respondido antes do cadastro. */}
-      <QuizClaimOnMount />
-
       <div>
         <h1 className="text-2xl font-bold tracking-tight md:text-3xl">
           {t("greeting", { name: firstName })}

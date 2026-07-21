@@ -1,7 +1,5 @@
 import { useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
-import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/button";
+import { StartCta } from "@/components/marketing/start-cta";
 
 export function FinalCta() {
   const t = useTranslations("landing.finalCta");
@@ -17,12 +15,9 @@ export function FinalCta() {
           {t("title")}
         </h2>
         <p className="mx-auto mt-4 max-w-md text-muted">{t("subtitle")}</p>
-        <Link href="/quiz" className="mt-8 inline-block">
-          <Button size="lg">
-            {t("cta")}
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </Button>
-        </Link>
+        <div className="mt-8 inline-block">
+          <StartCta size="lg" />
+        </div>
       </div>
     </section>
   );

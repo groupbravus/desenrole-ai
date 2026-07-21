@@ -14,7 +14,6 @@ import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/password-input";
 import { Button } from "@/components/ui/button";
 import { signInAction } from "@/lib/auth/actions";
-import { claimPendingQuizResult } from "@/lib/quiz/claim-client";
 import { safeInternalPath } from "@/lib/locale-path";
 
 export function LoginForm() {
@@ -47,11 +46,9 @@ export function LoginForm() {
       return;
     }
 
-    // Se o quiz foi respondido antes do cadastro, persiste agora.
-    await claimPendingQuizResult();
-
     // Nunca confiar no `next` da URL: pode vir de um link enviado por
-    // terceiros. Destino não-interno cai no padrão.
+    // terceiros. Destino não-interno cai no padrão. O gate de assinatura
+    // (server) decide: com entitlement → painel; sem → /planos.
     const target = safeInternalPath(searchParams.get("next")) ?? "/painel";
     router.replace(target);
     router.refresh();
@@ -62,17 +59,6 @@ export function LoginForm() {
       eyebrow={t("eyebrow")}
       title={t("title")}
       subtitle={t("subtitle")}
-      footer={
-        <>
-          {t("noAccount")}{" "}
-          <Link
-            href="/cadastro"
-            className="font-medium text-accent hover:underline"
-          >
-            {t("signup")}
-          </Link>
-        </>
-      }
     >
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
         <AuthError code={errorCode} />

@@ -477,6 +477,47 @@ a validação foi por build/tsc/testes, não pelo preview.
 (ex.: `https://desenrole-ai-jq8i.vercel.app`) — nunca localhost. Documentado
 em `.env.example`. O código já prefere essa env e cai no host da request.
 
+## FASE STRIPE — S4b: HOME COMO PORTA DE ENTRADA (checkout antes da conta)
+
+**Decisão do dono:** a home vira só porta de entrada. Novo cliente:
+Home → "Começar" (quiz EXTERNO) → checkout Stripe → pago → conta criada →
+painel. Cliente existente: Home → "Entrar" → login → painel (se entitlement).
+
+**Implementado:**
+- `src/components/marketing/start-cta.tsx` — CTA "Começar" que lê
+  `NEXT_PUBLIC_EXTERNAL_QUIZ_URL`. Sem a var → botão desabilitado + mensagem
+  segura (home não quebra). Mesma aba. Sem localhost, sem quiz interno, sem
+  locale anexado (só se o quiz externo aceitar).
+- Home religada (hero, site-header, final-cta, pricing): "Começar" → externo;
+  "Entrar" → `/login`. Removidos CTAs de cadastro/checkout direto.
+- **Quiz interno removido** do fluxo visual/rotas: deletados
+  `(minimal)/quiz`, `(minimal)/resultado`, `components/quiz/{quiz-flow,
+  result-view,quiz-claim-on-mount}`, `components/auth/cadastro-form`; removido
+  `QuizClaimOnMount` de painel/planos e o claim do login. **Tabelas/dados de
+  quiz preservados** (lib de dados mantida, só desligada da UI).
+- `/cadastro` → **redireciona para a home** (sem cadastro público). Link
+  "criar conta" removido do login.
+- `/planos` reformulado: "Sua assinatura não está ativa" (login sem
+  entitlement cai aqui via gate; bloqueia + informa; sem cadastro grátis).
+- `.env.example`: `NEXT_PUBLIC_EXTERNAL_QUIZ_URL=` (Vercel configura depois).
+
+**Validado:** tsc/eslint limpos; `next build` OK; `/quiz` e `/resultado`
+removidos das rotas; i18n paridade 440/440. (E2E clicável impossível aqui — o
+preview local serve o outro projeto `lara-web`.)
+
+### ⚠️ PENDENTE — S4c: PROVISIONAMENTO DE CONTA PÓS-PAGAMENTO (não implementado)
+O teste "usuário pago cria conta após checkout" **não está feito** e é um
+subsistema novo, sensível, que **contradiz** o checkout atual (hoje
+`createCheckoutSessionAction` exige usuário autenticado). Exige, com design
+aprovado: o quiz/checkout EXTERNO coletar e-mail sem conta; o webhook
+`checkout.session.completed` criar o usuário via **Supabase admin API**
+(service_role) + enviar convite/magic-link para definir senha; e
+`syncSubscription` passar a identificar/criar o usuário sem `user_id` prévio.
+Bloqueado também pelo link do quiz externo (ainda não fornecido). **Enquanto
+não for construído, não há caminho de criação de conta** (coerente com "sem
+cadastro grátis", mas o novo cliente só entra quando S4c + link externo
+existirem). Propor design antes de implementar.
+
 ## CONTEXTO HISTÓRICO — visão original da integração (pré-S2/S3)
 
 > Nota: S2/S3 já foram implementadas (ver seção acima). O texto abaixo é o

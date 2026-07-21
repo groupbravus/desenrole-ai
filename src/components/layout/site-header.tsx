@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/layout/logo";
+import { StartCta } from "@/components/marketing/start-cta";
 
 export function SiteHeader() {
   const t = useTranslations("nav");
@@ -46,9 +47,7 @@ export function SiteHeader() {
               {t("login")}
             </Button>
           </Link>
-          <Link href="/quiz">
-            <Button size="sm">{t("start")}</Button>
-          </Link>
+          <StartCta size="sm" withArrow={false} />
         </div>
       </div>
     </header>
