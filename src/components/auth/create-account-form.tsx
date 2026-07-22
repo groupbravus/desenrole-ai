@@ -12,13 +12,19 @@ import { FormField } from "@/components/ui/form-field";
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/password-input";
 import { Button } from "@/components/ui/button";
-import { finalizeAccountAction } from "@/lib/stripe/account-actions";
+import { createAccountFromCheckoutAction } from "@/lib/stripe/account-actions";
 
 /**
- * Passo final: nome + senha. Só é renderizado depois que o e-mail já foi
- * confirmado por OTP e a sessão já foi reivindicada (ver /criar-conta).
- * O e-mail vem do servidor só para exibição — a action recebe apenas
- * sessionId/nome/senha.
+ * Se a conta já foi criada (só a etapa seguinte falhou), um reload traz o
+ * usuário de volta ao estado certo em /criar-conta (login ou vincular) —
+ * evita pedir para preencher o formulário de novo à toa.
+ */
+const RETRY_VIA_RELOAD = new Set(["created_login_failed", "sync_failed"]);
+
+/**
+ * Formulário de criação de conta pós-checkout. O e-mail vem da Stripe
+ * (somente leitura); o usuário escolhe nome e senha. Sem OTP: a prova de
+ * posse é a própria Checkout Session paga, revalidada no servidor.
  */
 export function CreateAccountForm({
   sessionId,
@@ -52,7 +58,7 @@ export function CreateAccountForm({
 
   async function onSubmit(values: FormValues) {
     setErrorCode(null);
-    const result = await finalizeAccountAction({
+    const result = await createAccountFromCheckoutAction({
       sessionId,
       name: values.name,
       password: values.password,
@@ -60,6 +66,10 @@ export function CreateAccountForm({
 
     if (result.ok) {
       router.replace("/painel");
+      router.refresh();
+      return;
+    }
+    if (RETRY_VIA_RELOAD.has(result.code)) {
       router.refresh();
       return;
     }

@@ -372,9 +372,6 @@
       "created_login_failed": "Conta criada, mas o login automático falhou. Faça login.",
       "email_mismatch": "Esta assinatura pertence a outro e-mail.",
       "not_authenticated": "Faça login para continuar.",
-      "rate_limited": "Muitas tentativas. Aguarde um pouco antes de tentar de novo.",
-      "otp_expired": "O código expirou. Peça um novo.",
-      "otp_invalid": "Código inválido. Confira e tente de novo.",
       "CHECKOUT_ALREADY_CLAIMED": "Este checkout já foi usado para criar uma conta.",
       "sync_failed": "Pagamento confirmado, mas a sincronização falhou. Tente novamente em instantes."
     },
@@ -1489,7 +1486,8 @@
       "eyebrow": "Já tem conta",
       "title": "Este e-mail já tem conta",
       "subtitle": "Faça login para vincular sua assinatura à sua conta.",
-      "cta": "Entrar para vincular"
+      "cta": "Entrar para vincular",
+      "forgotPassword": "Esqueci minha senha"
     },
     "mismatch": {
       "eyebrow": "Conta diferente",
@@ -1509,20 +1507,6 @@
       "subtitle": "Conecte este pagamento à sua conta e acesse o painel.",
       "cta": "Vincular e acessar",
       "linking": "Vinculando..."
-    },
-    "otp": {
-      "eyebrow": "Confirme seu e-mail",
-      "title": "Enviaremos um código",
-      "subtitle": "Vamos confirmar que este e-mail é seu antes de criar a conta.",
-      "sendCta": "Enviar código",
-      "sending": "Enviando...",
-      "verifyTitle": "Digite o código",
-      "verifySubtitle": "Enviamos um código para {email}.",
-      "codeLabel": "Código",
-      "codePlaceholder": "000000",
-      "verifyCta": "Confirmar código",
-      "verifying": "Confirmando...",
-      "resend": "Reenviar código"
     }
   }
 }

@@ -505,100 +505,106 @@ painel. Cliente existente: Home → "Entrar" → login → painel (se entitlemen
 removidos das rotas; i18n paridade 440/440. (E2E clicável impossível aqui — o
 preview local serve o outro projeto `lara-web`.)
 
-### S4c: CRIAÇÃO DE CONTA PÓS-CHECKOUT (revisado por auditoria de segurança)
+### S4c: CRIAÇÃO DE CONTA PÓS-CHECKOUT (v3 — sem OTP, decisão final)
 
-**Decisão do dono:** o webhook NÃO cria contas. A conta nasce só quando o
-usuário volta do checkout, em `/criar-conta`. **Revisão de segurança do
-dono** (após a primeira implementação) apontou dois problemas corrigidos
-aqui: (1) a "proteção" contra duas contas não era atômica — o usuário era
-criado ANTES de qualquer reserva de sessão; (2) o `session_id` sozinho
-bastava para definir senha (bastava alguém obter a URL de retorno). A
-versão abaixo substitui INTEIRAMENTE a primeira (que usava
-`admin.auth.admin.createUser` — removida do código).
+**Histórico da decisão** (documentado para não repetir o mesmo ciclo):
+1. v1 usava `admin.auth.admin.createUser` direto — auditoria de segurança
+   apontou 2 furos: claim não-atômico (usuário criado antes de reservar a
+   sessão) e `session_id` sozinho bastando para definir senha.
+2. v2 corrigiu com claim atômico (RPC) + prova de posse do e-mail via OTP
+   nativo do Supabase (`signInWithOtp`/`verifyOtp`).
+3. **Bug real encontrado no teste em produção:** o GoTrue do Supabase grava
+   um `encrypted_password` **aleatório** em `auth.users` assim que
+   `signInWithOtp({shouldCreateUser:true})` cria a conta — **antes** do
+   código ser digitado, e o usuário nunca sabe essa senha. A RPC
+   `email_has_account` (que julgava "tem conta real" só pela presença de
+   um hash não-vazio) não sabia diferenciar isso de uma senha genuína.
+   Resultado: assim que a conta OTP nascia, qualquer reload de
+   `/criar-conta` já via "e-mail já tem conta" e mandava para o login —
+   sem o usuário nunca ter definido senha alguma. **v3 (esta) remove o OTP
+   por completo**, eliminando o vetor: com `admin.createUser` como ÚNICA
+   via de criação, `encrypted_password` só é populado com a senha real
+   escolhida pelo usuário — a RPC `email_has_account` volta a ser correta
+   sem precisar de nenhuma mudança nela mesma.
 
-**Claim atômico (migration nova):**
+**Claim atômico (sem mudança nesta v3):**
 `supabase/migrations/20260721120000_checkout_claim.sql` +
-`supabase/APLICAR-STRIPE-S4-CLAIM-MANUAL.sql` (aplicação manual, mesmo
-padrão de S1/S3 — **ainda não aplicada no banco**, ver pendência abaixo):
+`supabase/APLICAR-STRIPE-S4-CLAIM-MANUAL.sql` — **aplicada e verificada**
+no projeto dev (`mwpxxxwkvceeobaurgls`): `claim_checkout_session` e
+`email_has_account` existem, `SECURITY DEFINER`, `search_path=''` fixado,
+`EXECUTE` só para `service_role`, unique constraint confirmada.
 - `claim_checkout_session(_session_id, _user_id)` — `INSERT ... ON CONFLICT
-  DO NOTHING` (nunca sobrescreve dono anterior; vínculo imutável) +
-  `SELECT` do dono real. Atômico via o índice único já existente
-  (`checkout_sessions_stripe_checkout_session_id_key`, confirmado aplicado
-  no Postgres do projeto dev). Duas chamadas concorrentes: só uma
-  "vence"; a outra recebe `claimed=false` → código `CHECKOUT_ALREADY_CLAIMED`.
-  Mesmo usuário chamando de novo → `claimed=true` (retomada idempotente).
-  `SECURITY DEFINER`, `search_path=''`, `EXECUTE` só para `service_role`.
-- `email_has_account(_email)` — true **só** para conta com **senha real**
-  (`encrypted_password` não vazio). Uma conta OTP ainda sem senha (o
-  próprio usuário no meio do fluxo) não conta como "já tem conta" — evita
-  travar a pessoa que está terminando o próprio cadastro. Mesmo padrão de
-  segurança da função acima.
+  DO NOTHING` (nunca sobrescreve dono anterior) + `SELECT` do dono real.
+  Duas chamadas concorrentes: só uma "vence"; a outra recebe
+  `claimed=false` → `CHECKOUT_ALREADY_CLAIMED`. Mesmo usuário chamando de
+  novo → `claimed=true` (retomada idempotente).
+- `email_has_account(_email)` — true só para conta com senha real. Com o
+  OTP removido, essa checagem volta a ser 100% confiável.
 
-**Posse do e-mail por OTP nativo do Supabase** (não cria conta por Admin
-API): `signInWithOtp` + `verifyOtp`. O e-mail nunca vem do cliente — é
-sempre extraído da Checkout Session validada na Stripe.
-- `supabase/templates/otp.html` (novo) + `config.toml`
-  (`auth.email.template.magic_link`) — nenhum template anterior tinha
-  `{{ .Token }}`; sem isso o e-mail chegaria sem código para digitar.
-  **Aplicação no projeto remoto é manual** (Dashboard → Authentication →
-  Email Templates → Magic Link, ou `supabase config push` com CLI linkado)
-  — não há tooling MCP para isso.
-
-**Ordem final das operações** (`src/lib/stripe/account-actions.ts`):
-1. `requestCheckoutOtpAction` — revalida a sessão na Stripe → `email_has_account`
-   (bloqueia se já existe conta com senha) → `signInWithOtp` (e-mail só do
-   servidor).
-2. `verifyCheckoutOtpAction` — revalida a sessão de novo → `verifyOtp` →
-   confirma `auth.user.email === stripe email` → **claim atômico** → se
-   perder, `signOut()` + `CHECKOUT_ALREADY_CLAIMED`.
-3. `finalizeAccountAction` — exige autenticado → revalida a sessão de novo
-   → confirma e-mail → **reclama (idempotente/retomada)** → nome (profile)
-   → senha (`updateUser`) → `stripe_customers` (upsert por user_id) →
-   `checkout_sessions` (**UPDATE**, não upsert, restrito a
-   `session_id AND user_id` — nunca sobrescreve outro dono) →
-   `syncSubscription`. Entitlement só existe se TODOS os passos anteriores
-   passarem — nenhuma etapa libera acesso parcial.
-- `linkCheckoutToCurrentUserAction` (conta já existente, login normal):
-  mesmo claim atômico + vínculo, sem nome/senha (já existem). Só vincula
-  se `user.email === session email`.
+**Ordem final das operações** (`src/lib/stripe/account-actions.ts`,
+`createAccountFromCheckoutAction`):
+1. Revalida a Checkout Session na Stripe (mode/status/payment_status/
+   customer/subscription/e-mail).
+2. `email_has_account` → se já existe conta real, `email_exists` (sem
+   duplicar).
+3. **`admin.auth.admin.createUser`** com o e-mail da Stripe + senha do
+   formulário + `email_confirm:true`. A unicidade de e-mail do próprio
+   Postgres é o mutex real para duas requisições concorrentes com o mesmo
+   e-mail (teste G) — só uma `createUser` vence.
+4. **Claim atômico** com o `user_id` recém-criado. Se perder (outra conta
+   já é dona dessa sessão) → **compensação**: `admin.deleteUser` desfaz a
+   conta recém-criada antes de devolver `CHECKOUT_ALREADY_CLAIMED` —
+   nenhuma conta órfã fica para trás.
+5. Autentica (`signInWithPassword`) já aqui — não só no final — para
+   permitir retomada se o passo seguinte falhar.
+6. Vincula `stripe_customers` (upsert) + `checkout_sessions` (**UPDATE**,
+   não upsert, restrito a `session_id AND user_id`) + `syncSubscription`.
+   **Se `syncSubscription` falhar:** a conta e o claim NÃO são desfeitos
+   (a pessoa realmente pagou) — o usuário continua autenticado, sem
+   entitlement ainda (gate de premium continua bloqueando `/painel`). Ao
+   recarregar `/criar-conta`, a página já mostra a tela de retomada
+   (vincular), que tenta `syncSubscription` de novo.
+- `linkCheckoutToCurrentUserAction` (conta já existente, login normal, ou
+  retomada de uma finalização interrompida): mesmo claim atômico +
+  vínculo, sem nome/senha. Só vincula se `user.email === session email`.
 - `beginLinkAction` — inalterado (cookie httpOnly → login → volta).
 
-**`/criar-conta`** decide o estado de forma determinística e à prova de
-reload (sem inferir nada do React): sessão inválida → erro · logado com
-e-mail diferente → bloqueia + oferece sair · `email_has_account` true +
-logado → vincular · true + visitante → "já tem conta" (login) · false +
-logado → formulário nome/senha · false + visitante → OTP. Como
-`email_has_account` só considera senha real, o critério não muda mesmo
-depois que o OTP confirma o e-mail — reload no meio do fluxo continua
-levando ao passo certo.
+**`/criar-conta`** — 4 ramos determinísticos, reload-safe: sessão inválida
+→ erro · logado com e-mail diferente → bloqueia (com opção de sair) ·
+`email_has_account` true + logado → vincular/retomar · true + visitante →
+"já tem conta" (login **+ recuperar senha**) · false → formulário
+nome/senha direto (sem etapa intermediária — o ramo "autenticado sem
+senha" que existia com OTP é estruturalmente inalcançável agora).
 
-**Falhas e retomada:** todo passo de `finalizeAccountAction` após o claim é
-idempotente (reclamar de novo = no-op; setar nome/senha de novo = mesmo
-resultado; upsert/update restrito = seguro; `syncSubscription` já é
-idempotente). Se qualquer passo falhar, a entitlement nunca é criada —
-retry seguro chamando a mesma action de novo.
+**Removido nesta v3:** `requestCheckoutOtpAction`, `verifyCheckoutOtpAction`,
+`src/components/auth/otp-flow.tsx`, `supabase/templates/otp.html`, entrada
+`auth.email.template.magic_link` do `config.toml`.
 
-**Webhook:** inalterado (S3 + o skip de `user_not_identified` já feito). ✅
+**Webhook:** inalterado — nunca cria conta/senha/convite, só sincroniza. ✅
+
+**Usuários órfãos do ciclo OTP (auditoria + limpeza):** 3 contas de teste
+identificadas no dev sem entitlement e sem checkout finalizado
+(`mateusvianacontato@gmail.com`, `contas@groupbravus.com`,
+`suporte@groupbravus.com`). Apagadas as 2 primeiras (`admin.deleteUser`,
+cascade limpou profiles/checkout_sessions/stripe_customers); a terceira
+(tinha customer Stripe parcialmente vinculado) foi mantida a pedido do
+dono para inspeção.
 
 **Config externa:** `success_url` do checkout EXTERNO →
 `https://DOMINIO/{locale}/criar-conta?session_id={CHECKOUT_SESSION_ID}`.
 
-⚠️ **Pendências manuais (nada aplicado automaticamente):**
-1. Rodar `supabase/APLICAR-STRIPE-S4-CLAIM-MANUAL.sql` no SQL Editor do
-   projeto **dev** (`mwpxxxwkvceeobaurgls`) — segue o padrão "aplicação
-   manual" do projeto; não apliquei via MCP mesmo estando disponível,
-   por preferência já registrada.
-2. Configurar o template "Magic Link" no projeto remoto com o conteúdo de
-   `supabase/templates/otp.html` (Dashboard ou `supabase config push`).
-3. **Não existe projeto Supabase de produção ainda** — quando for criado,
-   TODAS as migrations (S1 em diante, incluindo esta) precisam ser
-   aplicadas lá também. Não presumir que dev = produção.
+⚠️ **Pendência:** revogar/remover manualmente o template "Magic Link" no
+Supabase Dashboard do projeto dev (foi configurado para a v2/OTP; sem
+efeito funcional agora que nada chama `signInWithOtp`, mas fica órfão lá
+até ser limpo manualmente — sem tooling MCP para isso). Também: não existe
+projeto Supabase de produção ainda — quando for criado, todas as
+migrations (S1 em diante) precisam ser aplicadas lá.
 
 **Validado:** tsc/eslint/build OK; rota `/criar-conta` presente; i18n
-502/502; 11 testes de lógica de acesso passando; nenhuma referência ao
-`createUser` restante no código. E2E clicável (OTP real, claim
-concorrente) não roda aqui — preview local serve outro projeto
-(`lara-web`) e a RPC ainda não está aplicada no banco.
+488/488; 11 testes de lógica de acesso passando; nenhuma referência a
+OTP/`signInWithOtp`/`verifyOtp`/`finalizeAccountAction` restante no fluxo
+de checkout. E2E clicável completo (claim concorrente real, etc.) ainda
+não executado nesta sessão.
 
 ## CONTEXTO HISTÓRICO — visão original da integração (pré-S2/S3)
 

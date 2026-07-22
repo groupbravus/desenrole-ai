@@ -19,17 +19,21 @@ import {
  * ============================================================
  * CRIAÇÃO / VÍNCULO DE CONTA A PARTIR DO CHECKOUT (server actions)
  * ============================================================
- * A conta nunca é criada por Admin API aqui — o usuário nasce pelo fluxo
- * NATIVO de OTP do Supabase (signInWithOtp/verifyOtp). O e-mail vem
- * SEMPRE da Checkout Session validada na Stripe; o cliente nunca o
- * informa nem pode alterá-lo.
+ * A conta nasce via Supabase Admin API (`admin.auth.admin.createUser`),
+ * sempre com o e-mail extraído da Checkout Session validada na Stripe —
+ * o cliente nunca o informa nem pode alterá-lo. SEM OTP, SEM magic link:
+ * a prova de posse do checkout é a própria Checkout Session paga.
  *
- * Ordem de segurança (após verificação do OTP):
+ * Ordem de segurança (createAccountFromCheckoutAction):
  *   1. relê a Checkout Session na Stripe
- *   2. confirma que o e-mail autenticado == e-mail da Stripe
- *   3. claim atômico da sessão (RPC) — perdedor recebe
+ *   2. cria o usuário (Admin API) — a unicidade de e-mail do Postgres é
+ *      o mutex real para duas requisições concorrentes com o mesmo
+ *      e-mail: só uma cria, a outra recebe email_exists
+ *   3. claim atômico da sessão (RPC) com o user_id recém-criado —
+ *      perdedor é compensado (conta deletada) e recebe
  *      CHECKOUT_ALREADY_CLAIMED
- *   4. só então: nome, senha, vínculo customer/subscription, sync
+ *   4. autentica (permite retomada se o próximo passo falhar)
+ *   5. vincula customer/subscription + syncSubscription
  *
  * O webhook (`api/webhooks/stripe`) permanece inalterado: nunca cria
  * conta, nunca define senha, nunca envia convite — só sincroniza.
@@ -37,16 +41,6 @@ import {
  */
 
 type Result = { ok: true } | { ok: false; code: string };
-
-function mapOtpError(error: { code?: string } | null | undefined): string {
-  const code = error?.code;
-  if (code === "over_email_send_rate_limit" || code === "over_request_rate_limit") {
-    return "rate_limited";
-  }
-  if (code === "otp_expired") return "otp_expired";
-  if (code === "invalid_credentials") return "otp_invalid";
-  return "unknown";
-}
 
 function mapPasswordError(code: string | undefined): string {
   if (code === "weak_password") return "weakPassword";
@@ -105,89 +99,11 @@ async function linkStripeAndSync(
 }
 
 /**
- * Passo 1 (OTP): envia o código por e-mail. O e-mail vem EXCLUSIVAMENTE
- * da Checkout Session validada — nunca de input do cliente. Só envia se
- * ainda não existir conta REAL (com senha) para esse e-mail.
+ * Cria a conta a partir de uma Checkout Session paga. E-mail vem da
+ * Stripe; nome e senha vêm do formulário. Se o e-mail já tiver conta
+ * REAL (com senha), não duplica — devolve `email_exists`.
  */
-export async function requestCheckoutOtpAction(input: {
-  sessionId: string;
-}): Promise<Result> {
-  const parsed = z.object({ sessionId: z.string().min(1) }).safeParse(input);
-  if (!parsed.success) return { ok: false, code: "invalidInput" };
-
-  const v = await validateCheckoutForSignup(parsed.data.sessionId);
-  if (!v.ok) return { ok: false, code: v.code };
-
-  let hasAccount: boolean;
-  try {
-    hasAccount = await emailHasAccount(v.email);
-  } catch {
-    return { ok: false, code: "unknown" };
-  }
-  if (hasAccount) return { ok: false, code: "email_exists" };
-
-  const supabase = await createClient();
-  const { error } = await supabase.auth.signInWithOtp({
-    email: v.email,
-    options: { shouldCreateUser: true },
-  });
-  if (error) return { ok: false, code: mapOtpError(error) };
-
-  return { ok: true };
-}
-
-/**
- * Passo 2 (OTP): verifica o código, confirma o e-mail e reivindica a
- * sessão atomicamente. Depois disso o usuário está autenticado E a
- * sessão é dele — falta só nome/senha (finalizeAccountAction).
- */
-export async function verifyCheckoutOtpAction(input: {
-  sessionId: string;
-  code: string;
-}): Promise<Result> {
-  const parsed = z
-    .object({ sessionId: z.string().min(1), code: z.string().min(6).max(8) })
-    .safeParse(input);
-  if (!parsed.success) return { ok: false, code: "invalidInput" };
-
-  // Relê a Stripe de novo — nunca confia no estado anterior.
-  const v = await validateCheckoutForSignup(parsed.data.sessionId);
-  if (!v.ok) return { ok: false, code: v.code };
-
-  const supabase = await createClient();
-  const { error } = await supabase.auth.verifyOtp({
-    email: v.email,
-    token: parsed.data.code,
-    type: "email",
-  });
-  if (error) return { ok: false, code: mapOtpError(error) };
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user || (user.email ?? "").toLowerCase() !== v.email) {
-    await supabase.auth.signOut();
-    return { ok: false, code: "otp_invalid" };
-  }
-
-  const admin = createAdminClient();
-  const claim = await claimOrBlock(admin, v.sessionId, user.id);
-  if (!claim.ok) {
-    // Sessão já é de outra conta: não deixa este login "solto" sem dono.
-    await supabase.auth.signOut();
-    return claim;
-  }
-
-  return { ok: true };
-}
-
-/**
- * Passo 3 (OTP): com o usuário já autenticado via OTP e a sessão já
- * reivindicada, define nome+senha e vincula customer/subscription.
- * Idempotente: retomada segura enquanto quem chama continuar sendo o
- * dono do claim (reclama de novo — no-op se já era dele).
- */
-export async function finalizeAccountAction(input: {
+export async function createAccountFromCheckoutAction(input: {
   sessionId: string;
   name: string;
   password: string;
@@ -201,36 +117,66 @@ export async function finalizeAccountAction(input: {
     .safeParse(input);
   if (!parsed.success) return { ok: false, code: "invalidInput" };
 
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user?.email) return { ok: false, code: "not_authenticated" };
-
   const v = await validateCheckoutForSignup(parsed.data.sessionId);
   if (!v.ok) return { ok: false, code: v.code };
-  if (user.email.toLowerCase() !== v.email) {
-    return { ok: false, code: "email_mismatch" };
+
+  let hasAccount: boolean;
+  try {
+    hasAccount = await emailHasAccount(v.email);
+  } catch {
+    return { ok: false, code: "unknown" };
+  }
+  if (hasAccount) return { ok: false, code: "email_exists" };
+
+  const locale = await getLocale();
+  const admin = createAdminClient();
+
+  const { data: created, error } = await admin.auth.admin.createUser({
+    email: v.email,
+    password: parsed.data.password,
+    email_confirm: true,
+    user_metadata: { name: parsed.data.name.trim(), locale },
+  });
+
+  if (error) {
+    const msg = (error.message ?? "").toLowerCase();
+    const exists =
+      error.status === 422 ||
+      error.code === "email_exists" ||
+      msg.includes("already") ||
+      msg.includes("registered");
+    if (exists) return { ok: false, code: "email_exists" };
+    if (error.code === "weak_password") {
+      return { ok: false, code: mapPasswordError(error.code) };
+    }
+    return { ok: false, code: "unknown" };
   }
 
-  const admin = createAdminClient();
-  const claim = await claimOrBlock(admin, v.sessionId, user.id);
-  if (!claim.ok) return claim;
+  const userId = created.user?.id;
+  if (!userId) return { ok: false, code: "unknown" };
 
-  const { error: profileError } = await admin
-    .from("profiles")
-    .update({ name: parsed.data.name.trim() })
-    .eq("id", user.id);
-  if (profileError) return { ok: false, code: "unknown" };
+  // Reivindica a sessão para ESTE usuário. Se perder (corrida rara em
+  // que outra conta já é dona), compensa deletando a conta recém-criada
+  // — nenhuma conta órfã sobra, nenhuma sessão fica com dois donos.
+  const claim = await claimOrBlock(admin, v.sessionId, userId);
+  if (!claim.ok) {
+    await admin.auth.admin.deleteUser(userId);
+    return claim;
+  }
 
-  const { error: pwError } = await supabase.auth.updateUser({
+  // Autentica já aqui (não só no final): se o vínculo/sync abaixo falhar,
+  // o usuário continua logado e /criar-conta o leva à tela de retomada
+  // (vincular), sem precisar recomeçar do zero.
+  const supabase = await createClient();
+  const { error: signInError } = await supabase.auth.signInWithPassword({
+    email: v.email,
     password: parsed.data.password,
   });
-  if (pwError) return { ok: false, code: mapPasswordError(pwError.code) };
+  if (signInError) return { ok: false, code: "created_login_failed" };
 
   const linked = await linkStripeAndSync(
     admin,
-    user.id,
+    userId,
     v.customerId,
     v.subscriptionId,
     v.sessionId,
@@ -244,7 +190,8 @@ export async function finalizeAccountAction(input: {
 /**
  * Fluxo de conta JÁ EXISTENTE: usuário logado normalmente (senha), mesmo
  * e-mail que pagou. Reivindica (idempotente) e vincula — sem tocar em
- * senha/perfil, que já existem.
+ * senha/perfil, que já existem. Também serve para RETOMAR uma finalização
+ * interrompida (ex.: syncSubscription falhou antes).
  */
 export async function linkCheckoutToCurrentUserAction(input: {
   sessionId: string;

@@ -13,7 +13,6 @@ import { AccountMismatch } from "@/components/auth/account-mismatch";
 import { CreateAccountForm } from "@/components/auth/create-account-form";
 import { LinkCheckout } from "@/components/auth/link-checkout";
 import { BeginLinkButton } from "@/components/auth/begin-link-button";
-import { OtpFlow } from "@/components/auth/otp-flow";
 
 export const metadata: Metadata = {
   title: "Criar conta — Desenrole.ai",
@@ -23,16 +22,18 @@ export const metadata: Metadata = {
  * /criar-conta — única porta de criação de conta, e SÓ a partir de uma
  * Checkout Session PAGA (revalidada direto na Stripe a cada render).
  *
- * Decisão determinística (reload-safe, sem inferir estado do React):
+ * Sem OTP: a conta nasce direto (nome + senha), com o e-mail vindo só da
+ * Stripe. Decisão determinística (reload-safe, sem inferir estado do
+ * React):
  *  1. sessão inválida/não paga -> erro.
  *  2. autenticado com e-mail DIFERENTE do que pagou -> bloqueia (sair).
- *  3. `emailHasAccount` (true só p/ conta com SENHA real, nunca uma
- *     conta OTP ainda sem senha — por isso não trava o próprio usuário
- *     no meio do fluxo):
- *       - true + autenticado  -> vincular (LinkCheckout).
- *       - true + visitante    -> "já tem conta" (login).
- *       - false + autenticado -> definir nome/senha (CreateAccountForm).
- *       - false + visitante   -> confirmar e-mail por OTP (OtpFlow).
+ *  3. `emailHasAccount` (true só p/ conta com SENHA real — createUser é a
+ *     ÚNICA via que grava senha, então isso nunca falso-positiva):
+ *       - true + autenticado -> vincular/retomar (LinkCheckout).
+ *       - true + visitante   -> "já tem conta" (login/recuperar senha).
+ *       - false              -> formulário nome/senha (CreateAccountForm).
+ *        (false + autenticado é inalcançável: sem OTP, só se autentica
+ *         depois que createUser já gravou a senha real.)
  */
 export default async function CriarContaPage({
   params,
@@ -89,11 +90,18 @@ export default async function CriarContaPage({
         title={t("emailExists.title")}
         subtitle={t("emailExists.subtitle")}
       >
-        <BeginLinkButton sessionId={v.sessionId} label={t("emailExists.cta")} />
+        <div className="space-y-3">
+          <BeginLinkButton sessionId={v.sessionId} label={t("emailExists.cta")} />
+          <Link
+            href="/recuperar-senha"
+            className="block text-center text-sm text-muted hover:text-foreground"
+          >
+            {t("emailExists.forgotPassword")}
+          </Link>
+        </div>
       </AuthCard>
     );
   }
 
-  if (user) return <CreateAccountForm sessionId={v.sessionId} email={v.email} />;
-  return <OtpFlow sessionId={v.sessionId} email={v.email} />;
+  return <CreateAccountForm sessionId={v.sessionId} email={v.email} />;
 }
