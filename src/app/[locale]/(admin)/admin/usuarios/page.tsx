@@ -4,7 +4,7 @@ import { adminRepository } from "@/lib/data";
 import { UsersBrowser } from "@/components/admin/users-browser";
 
 export const metadata: Metadata = {
-  title: "Usuários — Admin Desenrole.ai",
+  title: "Usuários — Admin Labia.ia",
 };
 
 export default async function AdminUsuariosPage({

@@ -10,7 +10,7 @@ import { NotificationsTab } from "@/components/settings/notifications-tab";
 import { LanguageTab } from "@/components/settings/language-tab";
 
 export const metadata: Metadata = {
-  title: "Configurações — Desenrole.ai",
+  title: "Configurações — Labia.ia",
 };
 
 export default async function ConfiguracoesPage({

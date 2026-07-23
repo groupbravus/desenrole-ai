@@ -23,7 +23,7 @@ export function Sidebar({
   return (
     <aside className="hidden shrink-0 border-r border-border md:sticky md:top-0 md:flex md:h-dvh md:w-64 md:flex-col">
       <div className="flex h-16 items-center px-5">
-        <Link href={homeHref} aria-label="Desenrole.ai">
+        <Link href={homeHref} aria-label="Labia.ia">
           <Logo />
         </Link>
       </div>

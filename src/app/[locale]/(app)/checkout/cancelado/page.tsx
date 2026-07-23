@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Checkout cancelado — Desenrole.ai",
+  title: "Checkout cancelado — Labia.ia",
 };
 
 export default async function CheckoutCanceladoPage({

@@ -6,7 +6,7 @@ import { Baralho } from "@/components/games/baralho";
 import { VerdadeConsequencia } from "@/components/games/verdade-consequencia";
 
 export const metadata: Metadata = {
-  title: "Jogos — Desenrole.ai",
+  title: "Jogos — Labia.ia",
 };
 
 export default async function JogosPage({

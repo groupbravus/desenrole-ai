@@ -7,7 +7,7 @@ import { formatDate } from "@/lib/format";
 import type { SupportStatus } from "@/lib/data/types";
 
 export const metadata: Metadata = {
-  title: "Suporte — Admin Desenrole.ai",
+  title: "Suporte — Admin Labia.ia",
 };
 
 const STATUS_VARIANT: Record<SupportStatus, "accent" | "default" | "success"> = {

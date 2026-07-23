@@ -3,7 +3,7 @@ import { setRequestLocale } from "next-intl/server";
 import { LoginForm } from "@/components/auth/login-form";
 
 export const metadata: Metadata = {
-  title: "Entrar — Desenrole.ai",
+  title: "Entrar — Labia.ia",
 };
 
 export default async function LoginPage({

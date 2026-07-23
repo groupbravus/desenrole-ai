@@ -11,7 +11,7 @@ import { formatCurrency } from "@/lib/format";
 import { SubscribeButton } from "@/components/settings/subscribe-button";
 
 export const metadata: Metadata = {
-  title: "Planos — Desenrole.ai",
+  title: "Planos — Labia.ia",
 };
 
 /**

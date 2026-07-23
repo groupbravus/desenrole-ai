@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: "Planos — Admin Desenrole.ai",
+  title: "Planos — Admin Labia.ia",
 };
 
 export default async function AdminPlanosPage({

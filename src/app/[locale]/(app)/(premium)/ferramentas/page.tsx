@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ToolCard } from "@/components/tools/tool-card";
 
 export const metadata: Metadata = {
-  title: "Ferramentas — Desenrole.ai",
+  title: "Ferramentas — Labia.ia",
 };
 
 export default async function FerramentasPage({

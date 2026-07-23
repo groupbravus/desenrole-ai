@@ -4,7 +4,7 @@ import { requireUser } from "@/lib/auth/session";
 import { ResetPasswordForm } from "@/components/auth/reset-password-form";
 
 export const metadata: Metadata = {
-  title: "Redefinir senha — Desenrole.ai",
+  title: "Redefinir senha — Labia.ia",
 };
 
 export default async function RedefinirSenhaPage({

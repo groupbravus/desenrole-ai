@@ -8,7 +8,7 @@ import { ToolCard } from "@/components/tools/tool-card";
 import { RecentActivity } from "@/components/dashboard/recent-activity";
 
 export const metadata: Metadata = {
-  title: "Painel — Desenrole.ai",
+  title: "Painel — Labia.ia",
 };
 
 export default async function PainelPage({

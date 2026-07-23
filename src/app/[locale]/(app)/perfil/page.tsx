@@ -12,7 +12,7 @@ import { StatCard } from "@/components/dashboard/stat-card";
 import { formatDate } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: "Perfil — Desenrole.ai",
+  title: "Perfil — Labia.ia",
 };
 
 export default async function PerfilPage({

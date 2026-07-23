@@ -12,14 +12,14 @@
       "badge": "Assistente de conversas com IA",
       "titleA": "Nunca mais fique sem saber",
       "titleHighlight": "o que responder",
-      "subtitle": "A Desenrole.ai te ajuda a iniciar, manter e evoluir conversas no Instagram e WhatsApp — com naturalidade, no seu estilo, sem scripts decorados.",
+      "subtitle": "A Labia.ia te ajuda a iniciar, manter e evoluir conversas no Instagram e WhatsApp — com naturalidade, no seu estilo, sem scripts decorados.",
       "cta": "Descobrir meu perfil",
       "secondaryCta": "Ver como funciona",
       "disclaimer": "Leva 2 minutos. Sem cartão de crédito para começar o quiz.",
       "demo": {
         "header": "Conversa em andamento",
         "received": "adoro viajar, acabei de voltar de Floripa",
-        "suggestionLabel": "Sugestão da Desenrole",
+        "suggestionLabel": "Sugestão da Labia",
         "suggestion": "Floripa em pleno inverno? Ou você é corajosa ou sabe de alguma praia secreta que eu preciso conhecer",
         "sent": "Floripa em pleno inverno? Ou você é corajosa ou sabe de alguma praia secreta que eu preciso conhecer",
         "reply": "hahaha os dois! você não vai acreditar no lugar que eu achei"
@@ -43,7 +43,7 @@
     },
     "tools": {
       "title": "Do print à resposta certa",
-      "subtitle": "Você envia o print, a Desenrole te mostra exatamente o que fazer.",
+      "subtitle": "Você envia o print, a Labia te mostra exatamente o que fazer.",
       "conversa": {
         "title": "Analisar conversa",
         "description": "Envie um print do WhatsApp ou Direct e descubra exatamente o que responder."
@@ -89,7 +89,7 @@
       "title": "Perguntas frequentes",
       "q1": {
         "question": "Isso não é manipulação?",
-        "answer": "Não — e esse é um princípio inegociável do produto. A Desenrole.ai trabalha comunicação: clareza, timing, leitura de contexto e redução de ansiedade. As sugestões são sempre respeitosas e soam como você. Nada de técnicas de pressão ou joguinhos."
+        "answer": "Não — e esse é um princípio inegociável do produto. A Labia.ia trabalha comunicação: clareza, timing, leitura de contexto e redução de ansiedade. As sugestões são sempre respeitosas e soam como você. Nada de técnicas de pressão ou joguinhos."
       },
       "q2": {
         "question": "As mensagens não vão parecer artificiais?",
@@ -413,7 +413,7 @@
   },
   "dashboard": {
     "greeting": "Olá, {name}",
-    "subtitle": "Aqui está um resumo da sua semana na Desenrole.",
+    "subtitle": "Aqui está um resumo da sua semana na Labia.",
     "toolsTitle": "Suas ferramentas",
     "gamesCard": {
       "title": "Jogos",
@@ -468,7 +468,7 @@
   },
   "history": {
     "pageTitle": "Histórico",
-    "pageSubtitle": "Tudo que você gerou com as ferramentas da Desenrole.",
+    "pageSubtitle": "Tudo que você gerou com as ferramentas da Labia.",
     "empty": {
       "title": "Nenhuma análise por aqui ainda",
       "description": "Quando você analisar um print de conversa ou de Story, o resultado aparece nesta lista."
@@ -582,7 +582,7 @@
       "notPersistedNotice": "Estas preferências ainda não são salvas — a persistência entra em uma próxima fase. Os controles abaixo são apenas uma prévia."
     },
     "language": {
-      "description": "Escolha o idioma usado em toda a Desenrole.ai."
+      "description": "Escolha o idioma usado em toda a Labia.ia."
     }
   },
   "support": {
@@ -633,7 +633,7 @@
     },
     "dashboard": {
       "title": "Painel administrativo",
-      "subtitle": "Visão geral da operação da Desenrole.ai.",
+      "subtitle": "Visão geral da operação da Labia.ia.",
       "stats": {
         "totalUsers": "Total de usuários",
         "newUsers": "Novos em 30 dias",

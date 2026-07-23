@@ -3,7 +3,7 @@ import { setRequestLocale } from "next-intl/server";
 import { RecoverForm } from "@/components/auth/recover-form";
 
 export const metadata: Metadata = {
-  title: "Recuperar senha — Desenrole.ai",
+  title: "Recuperar senha — Labia.ia",
 };
 
 export default async function RecuperarSenhaPage({

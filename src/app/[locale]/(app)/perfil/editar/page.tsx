@@ -4,7 +4,7 @@ import { requireUser } from "@/lib/auth/session";
 import { EditProfileForm } from "@/components/profile/edit-profile-form";
 
 export const metadata: Metadata = {
-  title: "Editar perfil — Desenrole.ai",
+  title: "Editar perfil — Labia.ia",
 };
 
 export default async function EditarPerfilPage({

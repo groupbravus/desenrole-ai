@@ -40,7 +40,7 @@ export function SiteFooter() {
         <LocaleSwitcher />
       </div>
       <div className="border-t border-border py-5 text-center text-xs text-subtle">
-        © {new Date().getFullYear()} Desenrole.ai — {t("rights")}
+        © {new Date().getFullYear()} Labia.ia — {t("rights")}
       </div>
     </footer>
   );

@@ -15,7 +15,7 @@ import { LinkCheckout } from "@/components/auth/link-checkout";
 import { BeginLinkButton } from "@/components/auth/begin-link-button";
 
 export const metadata: Metadata = {
-  title: "Criar conta — Desenrole.ai",
+  title: "Criar conta — Labia.ia",
 };
 
 /**

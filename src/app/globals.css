@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* ============================================================
-   DESENROLE.AI — DESIGN TOKENS
-   Base escura, um único acento (âmbar-dourado), resto neutro.
+   LABIA.IA — DESIGN TOKENS
+   Base escura, um único acento (laranja vívido), resto neutro.
    Esta é a fonte de verdade visual. Nenhum componente define
    cores próprias fora destes tokens.
    ============================================================ */
@@ -24,10 +24,10 @@
   --color-subtle: #5d5d66;
 
   /* Acento único */
-  --color-accent: #e6a23c;
-  --color-accent-hover: #f0b45a;
-  --color-accent-muted: rgba(230, 162, 60, 0.12);
-  --color-accent-foreground: #16120a;
+  --color-accent: #ff6b1a;
+  --color-accent-hover: #ff8a47;
+  --color-accent-muted: rgba(255, 107, 26, 0.12);
+  --color-accent-foreground: #170c04;
 
   /* Semânticas — uso restrito a feedback, nunca decoração */
   --color-success: #4ade80;

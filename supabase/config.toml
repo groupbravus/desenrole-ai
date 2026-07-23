@@ -263,15 +263,15 @@ otp_expiry = 3600
 # content_path = "./templates/password_changed_notification.html"
 
 [auth.email.template.confirmation]
-subject = "Confirme seu e-mail — Desenrole.ai"
+subject = "Confirme seu e-mail — Labia.ia"
 content_path = "./supabase/templates/confirmation.html"
 
 [auth.email.template.recovery]
-subject = "Redefinir sua senha — Desenrole.ai"
+subject = "Redefinir sua senha — Labia.ia"
 content_path = "./supabase/templates/recovery.html"
 
 [auth.email.template.email_change]
-subject = "Confirme seu novo e-mail — Desenrole.ai"
+subject = "Confirme seu novo e-mail — Labia.ia"
 content_path = "./supabase/templates/email-change.html"
 
 [auth.sms]

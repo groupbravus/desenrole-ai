@@ -5,7 +5,7 @@ import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import { ContactForm } from "@/components/support/contact-form";
 
 export const metadata: Metadata = {
-  title: "Suporte — Desenrole.ai",
+  title: "Suporte — Labia.ia",
 };
 
 export default async function SuportePage({

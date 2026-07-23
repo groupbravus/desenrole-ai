@@ -37,7 +37,7 @@ export function getStripe(): Stripe {
   instance = new Stripe(secretKey, {
     apiVersion: "2025-02-24.acacia",
     typescript: true,
-    appInfo: { name: "desenrole.ai" },
+    appInfo: { name: "labia.ia" },
   });
 
   return instance;

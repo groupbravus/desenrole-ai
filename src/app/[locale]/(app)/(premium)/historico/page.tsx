@@ -4,7 +4,7 @@ import { analysisRepository } from "@/lib/data";
 import { HistoryList } from "@/components/history/history-list";
 
 export const metadata: Metadata = {
-  title: "Histórico — Desenrole.ai",
+  title: "Histórico — Labia.ia",
 };
 
 export default async function HistoricoPage({

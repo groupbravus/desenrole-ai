@@ -10,7 +10,7 @@ import { Card } from "@/components/ui/card";
 import { formatDate } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: "Usuário — Admin Desenrole.ai",
+  title: "Usuário — Admin Labia.ia",
 };
 
 export default async function AdminUsuarioDetailPage({

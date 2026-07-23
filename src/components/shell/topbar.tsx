@@ -25,8 +25,8 @@ export function Topbar({
           navNamespace={navNamespace}
           homeHref={homeHref}
         />
-        <Link href={homeHref} className="md:hidden" aria-label="Desenrole.ai">
-          <Logo />
+        <Link href={homeHref} className="md:hidden" aria-label="Labia.ia">
+          <Logo variant="mark" />
         </Link>
       </div>
       <div className="flex items-center gap-3">

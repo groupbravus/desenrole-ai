@@ -7,7 +7,7 @@ import { ToolWorkspace } from "@/components/tools/tool-workspace";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
-  title: "Ferramenta — Desenrole.ai",
+  title: "Ferramenta — Labia.ia",
 };
 
 export async function generateStaticParams() {

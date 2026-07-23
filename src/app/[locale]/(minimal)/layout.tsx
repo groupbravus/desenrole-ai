@@ -8,7 +8,7 @@ export default function MinimalLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-dvh flex-col">
       <header className="flex h-16 shrink-0 items-center justify-between px-5">
-        <Link href="/" aria-label="Desenrole.ai">
+        <Link href="/" aria-label="Labia.ia">
           <Logo />
         </Link>
         <LocaleSwitcher />

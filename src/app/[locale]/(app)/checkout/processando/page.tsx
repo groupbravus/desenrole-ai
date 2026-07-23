@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { PremiumPoll } from "./premium-poll";
 
 export const metadata: Metadata = {
-  title: "Processando — Desenrole.ai",
+  title: "Processando — Labia.ia",
 };
 
 export default async function CheckoutProcessandoPage({

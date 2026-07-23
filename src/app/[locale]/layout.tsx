@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Desenrole.ai — Conversas melhores, mais confiança",
+  title: "Labia.ia — Conversas melhores, mais confiança",
   description:
     "Ferramentas inteligentes para conduzir conversas com mais naturalidade e confiança.",
 };

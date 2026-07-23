@@ -7,7 +7,7 @@ import { StatCard } from "@/components/dashboard/stat-card";
 import { UsersTable } from "@/components/admin/users-table";
 
 export const metadata: Metadata = {
-  title: "Painel admin — Desenrole.ai",
+  title: "Painel admin — Labia.ia",
 };
 
 export default async function AdminDashboardPage({
