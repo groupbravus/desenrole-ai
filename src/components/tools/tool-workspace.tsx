@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { TOOL_MESSAGE_KEY } from "./tool-icons";
 import type { ToolSlug } from "@/lib/data/types";
@@ -34,6 +35,7 @@ export function ToolWorkspace({ slug }: { slug: ToolSlug }) {
   }, [previewUrl]);
 
   const suggestions = [0, 1, 2].map((i) => t(`examples.${key}.${i}`));
+  const bestReply = suggestions[0] ?? "";
 
   function handleFile(file: File | undefined) {
     if (!file || !file.type.startsWith("image/")) return;
@@ -145,28 +147,62 @@ export function ToolWorkspace({ slug }: { slug: ToolSlug }) {
 
         {status === "done" && (
           <>
-            {suggestions.map((suggestion, index) => (
-              <Card
-                key={index}
-                className="animate-fade-up flex items-start justify-between gap-4 p-5"
-              >
-                <p className="text-sm leading-relaxed text-foreground">
-                  {suggestion}
+            <Card className="animate-fade-up space-y-3 border-accent/40 bg-surface p-6 shadow-[0_0_40px_rgba(230,162,60,0.08)]">
+              <Badge variant="accent">
+                <span aria-hidden>🔥</span> {t("bestReplyBadge")}
+              </Badge>
+              <div className="flex items-start justify-between gap-4">
+                <p className="text-base leading-relaxed text-foreground">
+                  {bestReply}
                 </p>
                 <button
                   type="button"
-                  onClick={() => handleCopy(suggestion, index)}
+                  onClick={() => handleCopy(bestReply, 0)}
                   aria-label={t("copy")}
                   className="shrink-0 text-muted transition-colors hover:text-accent"
                 >
-                  {copiedIndex === index ? (
+                  {copiedIndex === 0 ? (
                     <Check className="h-4 w-4 text-success" aria-hidden />
                   ) : (
                     <Copy className="h-4 w-4" aria-hidden />
                   )}
                 </button>
-              </Card>
-            ))}
+              </div>
+            </Card>
+
+            {suggestions.length > 1 && (
+              <div className="space-y-2">
+                <p className="px-1 text-xs font-medium uppercase tracking-wide text-subtle">
+                  {t("otherReplies")}
+                </p>
+                {suggestions.slice(1).map((suggestion, i) => {
+                  const index = i + 1;
+                  return (
+                    <Card
+                      key={index}
+                      className="animate-fade-up flex items-start justify-between gap-3 p-3.5"
+                    >
+                      <p className="text-sm leading-relaxed text-muted">
+                        {suggestion}
+                      </p>
+                      <button
+                        type="button"
+                        onClick={() => handleCopy(suggestion, index)}
+                        aria-label={t("copy")}
+                        className="shrink-0 text-muted transition-colors hover:text-accent"
+                      >
+                        {copiedIndex === index ? (
+                          <Check className="h-4 w-4 text-success" aria-hidden />
+                        ) : (
+                          <Copy className="h-4 w-4" aria-hidden />
+                        )}
+                      </button>
+                    </Card>
+                  );
+                })}
+              </div>
+            )}
+
             <Button
               type="button"
               variant="secondary"
@@ -176,6 +212,20 @@ export function ToolWorkspace({ slug }: { slug: ToolSlug }) {
               <RefreshCw className="h-4 w-4" aria-hidden />
               {t("regenerate")}
             </Button>
+
+            <Card className="flex items-start gap-3 border-dashed border-border-strong bg-surface-raised/40 p-4">
+              <span className="text-lg leading-none" aria-hidden>
+                📩
+              </span>
+              <div className="space-y-0.5">
+                <p className="text-sm font-medium text-foreground">
+                  {t("followUp.title")}
+                </p>
+                <p className="text-xs leading-relaxed text-subtle">
+                  {t("followUp.instruction")} {t("followUp.detail")}
+                </p>
+              </div>
+            </Card>
           </>
         )}
       </div>

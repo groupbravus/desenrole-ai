@@ -452,6 +452,13 @@
       "emptyState": "Envie um print e as sugestões aparecem aqui.",
       "copy": "Copiar resposta",
       "regenerate": "Gerar novamente",
+      "bestReplyBadge": "Melhor resposta",
+      "otherReplies": "Outras opções",
+      "followUp": {
+        "title": "Ela respondeu?",
+        "instruction": "Tire outro print.",
+        "detail": "A IA vai dizer exatamente o que responder."
+      },
       "examples": {
         "conversa": [
           "Você conta isso rindo, mas aposto que no dia não teve graça nenhuma. Quero a versão completa.",

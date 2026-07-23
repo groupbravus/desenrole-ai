@@ -452,6 +452,13 @@
       "emptyState": "Sube una captura y las sugerencias aparecerán aquí.",
       "copy": "Copiar respuesta",
       "regenerate": "Generar de nuevo",
+      "bestReplyBadge": "Mejor respuesta",
+      "otherReplies": "Otras opciones",
+      "followUp": {
+        "title": "¿Ella respondió?",
+        "instruction": "Haz otra captura.",
+        "detail": "La IA te dirá exactamente qué responder."
+      },
       "examples": {
         "conversa": [
           "Lo cuentas riendo, pero apuesto a que ese día no tuvo nada de gracioso. Quiero la versión completa.",

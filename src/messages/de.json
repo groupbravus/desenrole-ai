@@ -452,6 +452,13 @@
       "emptyState": "Upload a screenshot and suggestions will show up here.",
       "copy": "Copy reply",
       "regenerate": "Generate again",
+      "bestReplyBadge": "Beste Antwort",
+      "otherReplies": "Weitere Optionen",
+      "followUp": {
+        "title": "Hat sie geantwortet?",
+        "instruction": "Mach einen weiteren Screenshot.",
+        "detail": "Die KI sagt dir genau, was du antworten sollst."
+      },
       "examples": {
         "conversa": [
           "You tell that laughing, but I bet it wasn't funny at all that day. I want the full version.",
