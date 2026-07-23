@@ -4,9 +4,15 @@ import { supportRepository } from "@/lib/data";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import { ContactForm } from "@/components/support/contact-form";
 
-export const metadata: Metadata = {
-  title: "Suporte — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("suporte") };
+}
 
 export default async function SuportePage({
   params,

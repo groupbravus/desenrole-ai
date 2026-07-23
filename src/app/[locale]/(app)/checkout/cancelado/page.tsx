@@ -6,9 +6,15 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-export const metadata: Metadata = {
-  title: "Checkout cancelado — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("checkoutCancelado") };
+}
 
 export default async function CheckoutCanceladoPage({
   params,

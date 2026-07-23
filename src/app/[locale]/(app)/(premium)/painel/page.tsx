@@ -7,9 +7,15 @@ import { analysisRepository, toolsRepository } from "@/lib/data";
 import { ToolCard } from "@/components/tools/tool-card";
 import { RecentActivity } from "@/components/dashboard/recent-activity";
 
-export const metadata: Metadata = {
-  title: "Painel — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("painel") };
+}
 
 export default async function PainelPage({
   params,

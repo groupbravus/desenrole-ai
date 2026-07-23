@@ -14,9 +14,15 @@ import { CreateAccountForm } from "@/components/auth/create-account-form";
 import { LinkCheckout } from "@/components/auth/link-checkout";
 import { BeginLinkButton } from "@/components/auth/begin-link-button";
 
-export const metadata: Metadata = {
-  title: "Criar conta — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("criarConta") };
+}
 
 /**
  * /criar-conta — única porta de criação de conta, e SÓ a partir de uma

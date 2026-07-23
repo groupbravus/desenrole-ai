@@ -7,9 +7,15 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/format";
 
-export const metadata: Metadata = {
-  title: "Planos — Admin Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("adminPlanos") };
+}
 
 export default async function AdminPlanosPage({
   params,

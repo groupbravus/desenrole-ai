@@ -9,9 +9,15 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { formatDate } from "@/lib/format";
 
-export const metadata: Metadata = {
-  title: "Usuário — Admin Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("adminUsuario") };
+}
 
 export default async function AdminUsuarioDetailPage({
   params,

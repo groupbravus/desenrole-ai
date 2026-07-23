@@ -5,9 +5,15 @@ import { toolsRepository } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 import { ToolCard } from "@/components/tools/tool-card";
 
-export const metadata: Metadata = {
-  title: "Ferramentas — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("ferramentas") };
+}
 
 export default async function FerramentasPage({
   params,

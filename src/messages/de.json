@@ -1508,5 +1508,32 @@
       "cta": "Link and enter",
       "linking": "Linking..."
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Labia.ia — Bessere Gespräche, mehr Selbstvertrauen",
+      "description": "Intelligente Tools, um Gespräche natürlicher und selbstbewusster zu führen."
+    },
+    "login": "Anmelden — Labia.ia",
+    "criarConta": "Konto erstellen — Labia.ia",
+    "recuperarSenha": "Passwort wiederherstellen — Labia.ia",
+    "redefinirSenha": "Passwort zurücksetzen — Labia.ia",
+    "perfil": "Profil — Labia.ia",
+    "editarPerfil": "Profil bearbeiten — Labia.ia",
+    "planos": "Pläne — Labia.ia",
+    "historico": "Verlauf — Labia.ia",
+    "suporte": "Support — Labia.ia",
+    "ferramentas": "Werkzeuge — Labia.ia",
+    "ferramenta": "Werkzeug — Labia.ia",
+    "painel": "Dashboard — Labia.ia",
+    "jogos": "Spiele — Labia.ia",
+    "configuracoes": "Einstellungen — Labia.ia",
+    "checkoutCancelado": "Checkout abgebrochen — Labia.ia",
+    "checkoutProcessando": "Wird verarbeitet — Labia.ia",
+    "adminPainel": "Admin-Dashboard — Labia.ia",
+    "adminSuporte": "Support — Admin Labia.ia",
+    "adminUsuarios": "Benutzer — Admin Labia.ia",
+    "adminUsuario": "Benutzer — Admin Labia.ia",
+    "adminPlanos": "Pläne — Admin Labia.ia"
   }
 }

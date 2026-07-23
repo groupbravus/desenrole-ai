@@ -1,1512 +1,1539 @@
 {
   "nav": {
-    "howItWorks": "How it works",
-    "tools": "Tools",
-    "pricing": "Pricing",
+    "howItWorks": "Cómo funciona",
+    "tools": "Herramientas",
+    "pricing": "Precios",
     "faq": "FAQ",
-    "login": "Sign in",
-    "start": "Get started"
+    "login": "Iniciar sesión",
+    "start": "Empezar"
   },
   "landing": {
     "hero": {
-      "badge": "AI conversation assistant",
-      "titleA": "Never run out of",
-      "titleHighlight": "the right thing to say",
-      "subtitle": "Labia.ia helps you start, keep, and grow conversations on Instagram and WhatsApp — naturally, in your own style, no memorized scripts.",
-      "cta": "Discover my profile",
-      "secondaryCta": "See how it works",
-      "disclaimer": "Takes 2 minutes. No credit card needed for the quiz.",
+      "badge": "Asistente de conversación con IA",
+      "titleA": "Nunca te quedes sin",
+      "titleHighlight": "saber qué decir",
+      "subtitle": "Labia.ia te ayuda a iniciar, mantener y hacer crecer conversaciones en Instagram y WhatsApp — con naturalidad, a tu estilo, sin guiones memorizados.",
+      "cta": "Descubrir mi perfil",
+      "secondaryCta": "Ver cómo funciona",
+      "disclaimer": "Toma 2 minutos. No necesitas tarjeta de crédito para el quiz.",
       "demo": {
-        "header": "Conversation in progress",
-        "received": "I love traveling, just got back from the coast",
-        "suggestionLabel": "Labia suggestion",
-        "suggestion": "The coast in the middle of winter? Either you're brave or you know a secret beach I need to hear about",
-        "sent": "The coast in the middle of winter? Either you're brave or you know a secret beach I need to hear about",
-        "reply": "haha both! you won't believe the place I found"
+        "header": "Conversación en curso",
+        "received": "Me encanta viajar, acabo de volver de la playa",
+        "suggestionLabel": "Sugerencia de Labia",
+        "suggestion": "¿La playa en pleno invierno? O eres valiente o conoces una playa secreta que necesito escuchar",
+        "sent": "¿La playa en pleno invierno? O eres valiente o conoces una playa secreta que necesito escuchar",
+        "reply": "jaja ¡las dos cosas! no vas a creer el lugar que encontré"
       }
     },
     "how": {
-      "title": "From frozen to flowing in three steps",
-      "subtitle": "No memorizing, no generic canned lines. The system understands the real context of your conversation.",
+      "title": "De bloqueo total a fluidez en tres pasos",
+      "subtitle": "Sin memorizar, sin frases genéricas de manual. El sistema entiende el contexto real de tu conversación.",
       "step1": {
-        "title": "Share the context",
-        "description": "Paste the conversation or describe the situation: a story reply, a new match, a chat gone cold."
+        "title": "Comparte el contexto",
+        "description": "Pega la conversación o describe la situación: una respuesta a una historia, un match nuevo, un chat que se enfrió."
       },
       "step2": {
-        "title": "Get suggestions in your tone",
-        "description": "The AI generates reply options that sound like you — playful, direct, or more reserved."
+        "title": "Recibe sugerencias con tu tono",
+        "description": "La IA genera opciones de respuesta que suenan como tú — juguetón, directo o más reservado."
       },
       "step3": {
-        "title": "Chat with confidence",
-        "description": "You pick, tweak, and send. Over time the freeze disappears — the skill becomes yours."
+        "title": "Conversa con confianza",
+        "description": "Tú eliges, ajustas y envías. Con el tiempo el bloqueo desaparece — la habilidad se vuelve tuya."
       }
     },
     "tools": {
-      "title": "From screenshot to the right reply",
-      "subtitle": "You send the screenshot, Labia shows you exactly what to do.",
+      "title": "De la captura de pantalla a la respuesta perfecta",
+      "subtitle": "Envías la captura, Labia te muestra exactamente qué hacer.",
       "conversa": {
-        "title": "Analyze conversation",
-        "description": "Send a WhatsApp or DM screenshot and find out exactly what to reply."
+        "title": "Analizar conversación",
+        "description": "Envía una captura de WhatsApp o DM y descubre exactamente qué responder."
       },
       "story": {
-        "title": "Analyze her Story",
-        "description": "Send an Instagram Story screenshot and find the best way to catch her attention."
+        "title": "Analizar su Story",
+        "description": "Envía una captura de una Story de Instagram y encuentra la mejor forma de captar su atención."
       }
     },
     "proof": {
-      "title": "People who used canned lines now have real conversations",
+      "title": "Personas que usaban frases de manual ahora tienen conversaciones reales",
       "t1": {
-        "quote": "I used to freeze on the first message. Two weeks with the analyzer and I understood what I was doing wrong. Three dates this month.",
+        "quote": "Antes me bloqueaba en el primer mensaje. Dos semanas con el analizador y entendí qué estaba haciendo mal. Tres citas este mes.",
         "initials": "LM",
         "name": "Lucas M.",
         "detail": "28 · São Paulo"
       },
       "t2": {
-        "quote": "What changed for me was the tone. The suggestions sound like me talking, just without the anxiety getting in the way.",
+        "quote": "Lo que cambió para mí fue el tono. Las sugerencias suenan como si hablara yo, solo que sin la ansiedad de por medio.",
         "initials": "RA",
         "name": "Rodrigo A.",
         "detail": "24 · Belo Horizonte"
       },
       "t3": {
-        "quote": "I thought it would be another pickup-lines app. It's the opposite: it taught me to notice signals I was completely missing.",
+        "quote": "Pensé que sería otra app de frases para ligar. Es todo lo contrario: me enseñó a notar señales que se me pasaban por completo.",
         "initials": "FT",
         "name": "Felipe T.",
         "detail": "31 · Curitiba"
       }
     },
     "pricing": {
-      "title": "Pick your pace",
-      "subtitle": "Cancel anytime, right from your dashboard. No hassle.",
-      "recommended": "Most popular",
-      "cta": "Get started",
-      "guarantee": "7-day guarantee: not for you? Full refund, no questions asked.",
+      "title": "Elige tu ritmo",
+      "subtitle": "Cancela cuando quieras, directamente desde tu panel. Sin complicaciones.",
+      "recommended": "Más popular",
+      "cta": "Empezar",
+      "guarantee": "Garantía de 7 días: ¿no es para ti? Reembolso completo, sin preguntas.",
       "interval": {
-        "week": "week",
-        "month": "month"
+        "week": "semana",
+        "month": "mes"
       }
     },
     "faq": {
-      "title": "Frequently asked questions",
+      "title": "Preguntas frecuentes",
       "q1": {
-        "question": "Isn't this manipulation?",
-        "answer": "No — and that's a non-negotiable principle of the product. Labia.ia is about communication: clarity, timing, reading context, and reducing anxiety. Suggestions are always respectful and sound like you. No pressure tactics, no games."
+        "question": "¿Esto no es manipulación?",
+        "answer": "No — y eso es un principio innegociable del producto. Labia.ia se trata de comunicación: claridad, timing, leer el contexto y reducir la ansiedad. Las sugerencias siempre son respetuosas y suenan como tú. Sin tácticas de presión, sin jueguitos."
       },
       "q2": {
-        "question": "Won't the messages sound artificial?",
-        "answer": "You set the tone — playful, direct, shy — and the AI adapts suggestions to how you talk. You can always edit before sending. The goal is to unblock you, not replace you."
+        "question": "¿Los mensajes no sonarán artificiales?",
+        "answer": "Tú defines el tono — juguetón, directo, tímido — y la IA adapta las sugerencias a tu forma de hablar. Siempre puedes editar antes de enviar. El objetivo es desbloquearte, no reemplazarte."
       },
       "q3": {
-        "question": "Which apps does it work with?",
-        "answer": "Any of them: Instagram, WhatsApp, Tinder, Bumble. You bring the conversation context and use the suggestions wherever you want."
+        "question": "¿Con qué apps funciona?",
+        "answer": "Con cualquiera: Instagram, WhatsApp, Tinder, Bumble. Tú aportas el contexto de la conversación y usas las sugerencias donde quieras."
       },
       "q4": {
-        "question": "How do I cancel?",
-        "answer": "Two clicks, in the subscription area. Access continues until the end of the paid period. No phone calls, no retention emails, no tricks."
+        "question": "¿Cómo cancelo?",
+        "answer": "Dos clics, en la sección de suscripción. El acceso continúa hasta el final del período pagado. Sin llamadas, sin correos de retención, sin trucos."
       },
       "q5": {
-        "question": "Are my conversations safe?",
-        "answer": "Yes. Your conversations are private, never shared, and you can delete your history anytime. Privacy is built into the architecture."
+        "question": "¿Mis conversaciones están seguras?",
+        "answer": "Sí. Tus conversaciones son privadas, nunca se comparten, y puedes eliminar tu historial cuando quieras. La privacidad está integrada en la arquitectura."
       }
     },
     "finalCta": {
-      "title": "The next conversation can be different",
-      "subtitle": "Discover your communication profile in 2 minutes and see exactly where you're getting stuck.",
-      "cta": "Take the free quiz"
+      "title": "La próxima conversación puede ser diferente",
+      "subtitle": "Descubre tu perfil de comunicación en 2 minutos y ve exactamente dónde te estás trabando.",
+      "cta": "Hacer el quiz gratis"
     },
     "cta": {
-      "start": "Get started",
-      "login": "Log in",
-      "unavailable": "Available soon"
+      "start": "Empezar",
+      "login": "Iniciar sesión",
+      "unavailable": "Disponible pronto"
     }
   },
   "plans": {
     "weekly": {
-      "name": "Weekly",
-      "description": "For an intense trial run"
+      "name": "Semanal",
+      "description": "Para una prueba intensa"
     },
     "monthly": {
-      "name": "Monthly",
-      "description": "Best value"
+      "name": "Mensual",
+      "description": "Mejor precio"
     },
     "features": {
-      "allTools": "Unlimited conversation and Story analyses",
-      "games": "All date-night games",
-      "history": "Full analysis history",
-      "priority": "Priority processing",
-      "savings": "Save 37% vs. weekly"
+      "allTools": "Análisis ilimitados de conversaciones y Stories",
+      "games": "Todos los juegos para citas",
+      "history": "Historial completo de análisis",
+      "priority": "Procesamiento prioritario",
+      "savings": "Ahorra 37% frente al semanal"
     },
     "premium": {
       "name": "Premium",
-      "description": "Full access to every tool and game"
+      "description": "Acceso completo a todas las herramientas y juegos"
     }
   },
   "footer": {
-    "tagline": "More natural conversations, more confidence, less anxiety.",
-    "product": "Product",
-    "tools": "Tools",
-    "pricing": "Pricing",
+    "tagline": "Conversaciones más naturales, más confianza, menos ansiedad.",
+    "product": "Producto",
+    "tools": "Herramientas",
+    "pricing": "Precios",
     "legal": "Legal",
-    "terms": "Terms of use",
-    "privacy": "Privacy",
-    "support": "Support",
-    "rights": "All rights reserved."
+    "terms": "Términos de uso",
+    "privacy": "Privacidad",
+    "support": "Soporte",
+    "rights": "Todos los derechos reservados."
   },
   "common": {
-    "showPassword": "Show password",
-    "hidePassword": "Hide password"
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña"
   },
   "quiz": {
-    "back": "Back",
+    "back": "Volver",
     "questions": {
       "q1": {
-        "title": "When a new conversation shows up — a match, someone who followed you, a story reply — what usually happens?",
+        "title": "Cuando aparece una conversación nueva — un match, alguien que te siguió, una respuesta a una historia — ¿qué suele pasar?",
         "options": {
-          "a": "I think about the perfect message for so long I sometimes never send it",
-          "b": "I send something quick, even without being sure it's the right approach",
-          "c": "I wait for a clearer signal before acting",
-          "d": "I send a good opener, but freeze when I need to keep the chat going"
+          "a": "Pienso tanto en el mensaje perfecto que a veces nunca lo envío",
+          "b": "Envío algo rápido, aunque no esté seguro de que sea el enfoque correcto",
+          "c": "Espero una señal más clara antes de actuar",
+          "d": "Envío un buen mensaje inicial, pero me bloqueo cuando necesito mantener la conversación"
         }
       },
       "q2": {
-        "title": "After you send a message, what goes through your head while you wait for a reply?",
+        "title": "Después de enviar un mensaje, ¿qué pasa por tu cabeza mientras esperas la respuesta?",
         "options": {
-          "a": "I replay every word trying to guess if I said something wrong",
-          "b": "Nothing much — I go on with my day",
-          "c": "I analyze their reply pattern to gauge interest",
-          "d": "I wonder if I should have sent something more"
+          "a": "Repaso cada palabra tratando de adivinar si dije algo mal",
+          "b": "Nada en especial — sigo con mi día",
+          "c": "Analizo su patrón de respuesta para medir el interés",
+          "d": "Me pregunto si debería haber enviado algo más"
         }
       },
       "q3": {
-        "title": "A conversation went cold — the reply took a while or got too short. You...",
+        "title": "Una conversación se enfrió — la respuesta tardó o se volvió muy corta. Tú...",
         "options": {
-          "a": "Wait, and only react if she picks it back up",
-          "b": "Send another message trying to revive it, even without knowing exactly how",
-          "c": "Assume she lost interest and give up",
-          "d": "Know you should send something light, but don't know what"
+          "a": "Esperas, y solo reaccionas si ella la retoma",
+          "b": "Envías otro mensaje tratando de revivirla, aunque no sepas exactamente cómo",
+          "c": "Asumes que perdió el interés y te rindes",
+          "d": "Sabes que deberías enviar algo ligero, pero no sabes qué"
         }
       },
       "q4": {
-        "title": "How do you usually decide it's time to ask someone out?",
+        "title": "¿Cómo sueles decidir que es momento de invitar a alguien a salir?",
         "options": {
-          "a": "I go for it as soon as the conversation starts flowing",
-          "b": "I wait for a very obvious signal before risking the invite",
-          "c": "I overthink the perfect invite and end up postponing it",
-          "d": "I know when it's time, but freeze when it comes to phrasing the invite"
+          "a": "Me lanzo apenas la conversación empieza a fluir",
+          "b": "Espero una señal muy obvia antes de arriesgarme a invitar",
+          "c": "Le doy demasiadas vueltas a la invitación perfecta y termino postergándola",
+          "d": "Sé cuándo es el momento, pero me bloqueo al redactar la invitación"
         }
       },
       "q5": {
-        "title": "What trips you up most in a conversation today?",
+        "title": "¿Qué es lo que más te traba en una conversación hoy en día?",
         "options": {
-          "a": "Reading the right signals — I'm not always sure the interest is real",
-          "b": "The anxiety between sending a message and getting a reply",
-          "c": "I come on too strong and end up scaring people off",
-          "d": "Keeping the momentum — I start well and lose the thread halfway"
+          "a": "Leer las señales correctas — no siempre estoy seguro de que el interés sea real",
+          "b": "La ansiedad entre enviar un mensaje y recibir la respuesta",
+          "c": "Me paso de intenso y termino espantando a la gente",
+          "d": "Mantener el ritmo — empiezo bien y pierdo el hilo a la mitad"
         }
       },
       "q6": {
-        "title": "If you could fix one thing right now, what would it be?",
+        "title": "Si pudieras arreglar una sola cosa ahora mismo, ¿cuál sería?",
         "options": {
-          "a": "Being able to start without spending twenty minutes overthinking",
-          "b": "Understanding better what the other person is signaling",
-          "c": "Having more tact in the first messages",
-          "d": "Not freezing when it's time to move the conversation forward"
+          "a": "Poder empezar sin pasar veinte minutos dándole vueltas",
+          "b": "Entender mejor qué te está señalando la otra persona",
+          "c": "Tener más tacto en los primeros mensajes",
+          "d": "No bloquearme cuando es momento de avanzar la conversación"
         }
       }
     }
   },
   "result": {
-    "eyebrow": "Your communication profile",
-    "strengthsTitle": "Where you're already doing well",
-    "watchOutTitle": "Where this trips you up",
-    "toolTitle": "Start here",
-    "ctaPrimary": "Create my account",
-    "ctaSecondary": "Retake the quiz",
+    "eyebrow": "Tu perfil de comunicación",
+    "strengthsTitle": "Dónde ya lo estás haciendo bien",
+    "watchOutTitle": "Dónde esto te hace tropezar",
+    "toolTitle": "Empieza aquí",
+    "ctaPrimary": "Crear mi cuenta",
+    "ctaSecondary": "Repetir el quiz",
     "profiles": {
       "observador": {
-        "title": "The Cautious Reader",
-        "tagline": "You read the signals well, but wait too long for confirmation before acting.",
-        "description": "You have a real feel for conversational context — you pick up on tone, timing, and nuances most people miss. The issue isn't reading skill, it's over-caution: while you wait for a perfectly clear signal, the window sometimes closes.",
+        "title": "El Lector Cauteloso",
+        "tagline": "Lees bien las señales, pero esperas demasiado una confirmación antes de actuar.",
+        "description": "Tienes un verdadero sentido del contexto conversacional — captas el tono, el timing y matices que la mayoría no nota. El problema no es tu capacidad de lectura, es el exceso de cautela: mientras esperas una señal perfectamente clara, a veces la ventana se cierra.",
         "strengths": [
-          "Picks up on nuances most people miss",
-          "Rarely comes across as forced or rushed",
-          "Nails the right tone for each conversation"
+          "Capta matices que la mayoría no nota",
+          "Rara vez parece forzado o apresurado",
+          "Da con el tono perfecto para cada conversación"
         ],
         "watchOuts": [
-          "Waits for signals so obvious the moment passes",
-          "Can come across as uninterested from being too cautious",
-          "Hesitates right when it's time to move things forward"
+          "Espera señales tan obvias que el momento se le escapa",
+          "Puede parecer desinteresado por ser demasiado cauteloso",
+          "Duda justo cuando es momento de avanzar"
         ]
       },
       "direto": {
-        "title": "The Unfiltered Direct One",
-        "tagline": "You've got initiative to spare — you just need to calibrate the tone.",
-        "description": "Freezing up isn't your problem — you act, start conversations, and propose next steps without hesitation. What's usually missing is calibration: reading the right moment before skipping steps, and adjusting your tone so it doesn't come off rushed or generic.",
+        "title": "El Directo Sin Filtro",
+        "tagline": "Te sobra iniciativa — solo necesitas calibrar el tono.",
+        "description": "Bloquearte no es tu problema — actúas, inicias conversaciones y propones los próximos pasos sin dudar. Lo que suele faltar es calibración: leer el momento correcto antes de saltarte pasos, y ajustar tu tono para que no suene apresurado o genérico.",
         "strengths": [
-          "Never freezes out of fear of taking the first step",
-          "Can start a conversation from scratch without hesitating",
-          "Has the confidence to propose the next step"
+          "Nunca se bloquea por miedo a dar el primer paso",
+          "Puede iniciar una conversación desde cero sin dudar",
+          "Tiene la confianza para proponer el siguiente paso"
         ],
         "watchOuts": [
-          "Sometimes skips steps before it's time",
-          "Can come across as rushed or generic",
-          "Doesn't always read interest before pushing forward"
+          "A veces se salta pasos antes de tiempo",
+          "Puede parecer apresurado o genérico",
+          "No siempre lee el interés antes de avanzar"
         ]
       },
       "ansioso": {
-        "title": "The Anxious Perfectionist",
-        "tagline": "You know what you want to say — the anxiety is what gets in the way of sending it.",
-        "description": "You put real thought into every message — that's a strength. But chasing the perfect message, combined with the anxiety of waiting for a reply, throws off your timing: the delay sometimes cools down a conversation that was going well.",
+        "title": "El Perfeccionista Ansioso",
+        "tagline": "Sabes lo que quieres decir — la ansiedad es lo que te impide enviarlo.",
+        "description": "Piensas de verdad cada mensaje — eso es una fortaleza. Pero perseguir el mensaje perfecto, sumado a la ansiedad de esperar una respuesta, te descuadra el timing: la demora a veces enfría una conversación que iba bien.",
         "strengths": [
-          "Puts real thought into every message",
-          "Genuinely cares about getting the tone right",
-          "Has the potential to be very present in a conversation"
+          "Piensa de verdad cada mensaje",
+          "Le importa de verdad dar con el tono correcto",
+          "Tiene el potencial de estar muy presente en una conversación"
         ],
         "watchOuts": [
-          "Freezes up so much it sometimes never gets sent",
-          "The delay can cool the chat without you noticing",
-          "Reads silence as rejection too quickly"
+          "Se bloquea tanto que a veces nunca llega a enviar el mensaje",
+          "La demora puede enfriar el chat sin que te des cuenta",
+          "Interpreta el silencio como rechazo demasiado rápido"
         ]
       },
       "quase-la": {
-        "title": "The Almost There",
-        "tagline": "You start strong — the challenge is keeping it going and closing it out.",
-        "description": "Your opener works: you start conversations naturally and have good timing. The blind spot shows up in the middle or the end — keeping the chat flowing, or taking the step to propose an actual date, which tends to freeze right at the key moment.",
+        "title": "El Casi Ahí",
+        "tagline": "Empiezas fuerte — el reto es mantenerlo y cerrarlo.",
+        "description": "Tu apertura funciona: inicias conversaciones con naturalidad y tienes buen timing. El punto ciego aparece en el medio o al final — mantener el chat fluyendo, o dar el paso de proponer una cita real, algo que tiende a bloquearse justo en el momento clave.",
         "strengths": [
-          "Starts conversations naturally",
-          "Has good timing for making first contact",
-          "Already has the basics down — just needs to unblock the rest"
+          "Inicia conversaciones con naturalidad",
+          "Tiene buen timing para el primer contacto",
+          "Ya domina lo básico — solo necesita desbloquear el resto"
         ],
         "watchOuts": [
-          "Loses the thread of the conversation halfway through",
-          "Freezes right when it's time to propose meeting up",
-          "Lets good conversations die out from indecision"
+          "Pierde el hilo de la conversación a la mitad",
+          "Se bloquea justo cuando es momento de proponer verse",
+          "Deja que buenas conversaciones se apaguen por indecisión"
         ]
       }
     }
   },
   "auth": {
     "cadastro": {
-      "eyebrow": "Create account",
-      "title": "Start figuring it out",
-      "subtitle": "Takes less than a minute.",
-      "nameLabel": "Name",
-      "namePlaceholder": "What should we call you",
-      "emailLabel": "Email",
-      "emailPlaceholder": "you@email.com",
-      "passwordLabel": "Password",
-      "passwordPlaceholder": "At least 8 characters",
-      "submit": "Create account",
-      "submitting": "Creating account...",
-      "haveAccount": "Already have an account?",
-      "login": "Sign in",
-      "termsAgreement": "By creating an account, you agree to the <terms>Terms of use</terms> and the <privacy>Privacy Policy</privacy>.",
+      "eyebrow": "Crear cuenta",
+      "title": "Empieza a resolverlo",
+      "subtitle": "Toma menos de un minuto.",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "¿Cómo deberíamos llamarte?",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Al menos 8 caracteres",
+      "submit": "Crear cuenta",
+      "submitting": "Creando cuenta...",
+      "haveAccount": "¿Ya tienes una cuenta?",
+      "login": "Iniciar sesión",
+      "termsAgreement": "Al crear una cuenta, aceptas los <terms>Términos de uso</terms> y la <privacy>Política de privacidad</privacy>.",
       "errors": {
-        "nameMin": "Enter at least 2 letters",
-        "emailInvalid": "Enter a valid email",
-        "passwordMin": "Password must be at least 8 characters"
+        "nameMin": "Ingresa al menos 2 letras",
+        "emailInvalid": "Ingresa un correo válido",
+        "passwordMin": "La contraseña debe tener al menos 8 caracteres"
       },
       "success": {
-        "title": "Check your email",
-        "description": "We sent a confirmation link to {email}.",
-        "cta": "Go to sign in"
+        "title": "Revisa tu correo",
+        "description": "Enviamos un enlace de confirmación a {email}.",
+        "cta": "Ir a iniciar sesión"
       }
     },
     "login": {
-      "eyebrow": "Sign in",
-      "title": "Welcome back",
-      "subtitle": "Pick up right where you left off.",
-      "emailLabel": "Email",
-      "emailPlaceholder": "you@email.com",
-      "passwordLabel": "Password",
-      "passwordPlaceholder": "Your password",
-      "forgot": "Forgot your password?",
-      "submit": "Sign in",
-      "submitting": "Signing in...",
-      "noAccount": "Don't have an account yet?",
-      "signup": "Create account",
+      "eyebrow": "Iniciar sesión",
+      "title": "Bienvenido de nuevo",
+      "subtitle": "Continúa justo donde lo dejaste.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Tu contraseña",
+      "forgot": "¿Olvidaste tu contraseña?",
+      "submit": "Iniciar sesión",
+      "submitting": "Iniciando sesión...",
+      "noAccount": "¿Todavía no tienes una cuenta?",
+      "signup": "Crear cuenta",
       "errors": {
-        "emailInvalid": "Enter a valid email",
-        "passwordRequired": "Enter your password"
+        "emailInvalid": "Ingresa un correo válido",
+        "passwordRequired": "Ingresa tu contraseña"
       },
       "success": {
-        "title": "Signed in",
-        "description": "All good here.",
-        "cta": "Back to home"
+        "title": "Sesión iniciada",
+        "description": "Todo listo por aquí.",
+        "cta": "Volver al inicio"
       }
     },
     "recover": {
-      "eyebrow": "Recover password",
-      "title": "Let's get you back in",
-      "subtitle": "We'll send a reset link to your email.",
-      "emailLabel": "Email",
-      "emailPlaceholder": "you@email.com",
-      "submit": "Send link",
-      "submitting": "Sending...",
-      "backToLogin": "Back to sign in",
+      "eyebrow": "Recuperar contraseña",
+      "title": "Vamos a que vuelvas a entrar",
+      "subtitle": "Te enviaremos un enlace de restablecimiento a tu correo.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "submit": "Enviar enlace",
+      "submitting": "Enviando...",
+      "backToLogin": "Volver a iniciar sesión",
       "errors": {
-        "emailInvalid": "Enter a valid email"
+        "emailInvalid": "Ingresa un correo válido"
       },
       "success": {
-        "title": "Check your email",
-        "description": "If an account exists for that email, we sent a reset link.",
-        "cta": "Back to sign in"
+        "title": "Revisa tu correo",
+        "description": "Si existe una cuenta con ese correo, enviamos un enlace de restablecimiento.",
+        "cta": "Volver a iniciar sesión"
       }
     },
     "errors": {
-      "invalidCredentials": "Incorrect email or password.",
-      "emailTaken": "An account with that email already exists.",
-      "emailNotConfirmed": "Confirm your email before signing in. Check your inbox.",
-      "weakPassword": "Pick a stronger password (at least 8 characters).",
-      "samePassword": "The new password must be different from the current one.",
-      "sessionExpired": "Your session expired. Please sign in again.",
-      "notAuthenticated": "You need to be signed in to do that.",
-      "invalidInput": "Please check the information you entered.",
-      "unknown": "Something went wrong. Try again in a moment.",
-      "wrongCurrentPassword": "The current password is incorrect.",
-      "reauthNeeded": "For security, sign in again before changing your password.",
-      "invalid_session": "We couldn't find a valid checkout.",
-      "not_paid": "The payment hasn't been confirmed yet.",
-      "no_subscription": "No subscription is tied to this checkout.",
-      "no_customer": "Checkout customer not found.",
-      "no_email": "We couldn't get the checkout email.",
-      "created_login_failed": "Account created, but automatic login failed. Please log in.",
-      "email_mismatch": "This subscription belongs to a different email.",
-      "not_authenticated": "Log in to continue.",
-      "CHECKOUT_ALREADY_CLAIMED": "This checkout has already been used to create an account.",
-      "sync_failed": "Payment confirmed, but syncing failed. Please try again shortly."
+      "invalidCredentials": "Correo o contraseña incorrectos.",
+      "emailTaken": "Ya existe una cuenta con ese correo.",
+      "emailNotConfirmed": "Confirma tu correo antes de iniciar sesión. Revisa tu bandeja de entrada.",
+      "weakPassword": "Elige una contraseña más segura (al menos 8 caracteres).",
+      "samePassword": "La nueva contraseña debe ser diferente de la actual.",
+      "sessionExpired": "Tu sesión expiró. Vuelve a iniciar sesión.",
+      "notAuthenticated": "Necesitas haber iniciado sesión para hacer eso.",
+      "invalidInput": "Revisa la información que ingresaste.",
+      "unknown": "Algo salió mal. Inténtalo de nuevo en un momento.",
+      "wrongCurrentPassword": "La contraseña actual es incorrecta.",
+      "reauthNeeded": "Por seguridad, vuelve a iniciar sesión antes de cambiar tu contraseña.",
+      "invalid_session": "No encontramos un checkout válido.",
+      "not_paid": "El pago aún no ha sido confirmado.",
+      "no_subscription": "No hay ninguna suscripción vinculada a este checkout.",
+      "no_customer": "No se encontró el cliente del checkout.",
+      "no_email": "No pudimos obtener el correo del checkout.",
+      "created_login_failed": "Cuenta creada, pero el inicio de sesión automático falló. Por favor, inicia sesión.",
+      "email_mismatch": "Esta suscripción pertenece a otro correo.",
+      "not_authenticated": "Inicia sesión para continuar.",
+      "CHECKOUT_ALREADY_CLAIMED": "Este checkout ya fue usado para crear una cuenta.",
+      "sync_failed": "Pago confirmado, pero la sincronización falló. Inténtalo de nuevo en breve."
     },
     "reset": {
-      "eyebrow": "New password",
-      "title": "Set your new password",
-      "subtitle": "Choose a password you don't use anywhere else.",
-      "passwordLabel": "New password",
-      "passwordPlaceholder": "At least 8 characters",
-      "confirmLabel": "Confirm new password",
-      "submit": "Save new password",
-      "submitting": "Saving...",
+      "eyebrow": "Nueva contraseña",
+      "title": "Define tu nueva contraseña",
+      "subtitle": "Elige una contraseña que no uses en ningún otro lugar.",
+      "passwordLabel": "Nueva contraseña",
+      "passwordPlaceholder": "Al menos 8 caracteres",
+      "confirmLabel": "Confirmar nueva contraseña",
+      "submit": "Guardar nueva contraseña",
+      "submitting": "Guardando...",
       "errors": {
-        "passwordMin": "Password must be at least 8 characters",
-        "mismatch": "Passwords don't match"
+        "passwordMin": "La contraseña debe tener al menos 8 caracteres",
+        "mismatch": "Las contraseñas no coinciden"
       }
     }
   },
   "shell": {
     "nav": {
-      "painel": "Dashboard",
-      "ferramentas": "Tools",
-      "jogos": "Games",
-      "historico": "History",
-      "perfil": "Profile",
-      "configuracoes": "Settings",
-      "suporte": "Support"
+      "painel": "Panel",
+      "ferramentas": "Herramientas",
+      "jogos": "Juegos",
+      "historico": "Historial",
+      "perfil": "Perfil",
+      "configuracoes": "Configuración",
+      "suporte": "Soporte"
     },
     "userMenu": {
-      "trigger": "Open account menu",
-      "profile": "Profile",
-      "settings": "Settings",
-      "logout": "Sign out"
+      "trigger": "Abrir menú de cuenta",
+      "profile": "Perfil",
+      "settings": "Configuración",
+      "logout": "Cerrar sesión"
     },
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "adminAccess": "Admin panel",
-    "backToApp": "Back to app"
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "adminAccess": "Panel admin",
+    "backToApp": "Volver a la app"
   },
   "dashboard": {
-    "greeting": "Hi, {name}",
-    "subtitle": "Here's a summary of your week on Labia.",
-    "toolsTitle": "Your tools",
+    "greeting": "Hola, {name}",
+    "subtitle": "Aquí tienes un resumen de tu semana en Labia.",
+    "toolsTitle": "Tus herramientas",
     "gamesCard": {
-      "title": "Games",
-      "description": "Flirt Roulette, Sync Deck, and Truth or Dare — to get out of the chat and heat up the date."
+      "title": "Juegos",
+      "description": "Ruleta de Coqueteo, Mazo Sincronizado y Verdad o Reto — para salir del chat y subirle la temperatura a la cita."
     },
     "recentActivity": {
-      "title": "Recent activity",
-      "viewAll": "View history",
-      "empty": "You haven't used any tool yet. Get started now."
+      "title": "Actividad reciente",
+      "viewAll": "Ver historial",
+      "empty": "Todavía no has usado ninguna herramienta. Empieza ahora."
     }
   },
   "tools": {
-    "eyebrow": "AI analysis",
-    "pageTitle": "Tools",
-    "pageSubtitle": "Upload a screenshot and get exactly what to say. That simple.",
+    "eyebrow": "Análisis con IA",
+    "pageTitle": "Herramientas",
+    "pageSubtitle": "Sube una captura y obtén exactamente qué decir. Así de simple.",
     "premium": "Premium",
-    "open": "Open tool",
+    "open": "Abrir herramienta",
     "catalog": {
       "conversa": {
-        "title": "Analyze conversation",
-        "description": "Send a WhatsApp or DM screenshot and find out exactly what to reply."
+        "title": "Analizar conversación",
+        "description": "Envía una captura de WhatsApp o DM y descubre exactamente qué responder."
       },
       "story": {
-        "title": "Analyze her Story",
-        "description": "Send an Instagram Story screenshot and find the best way to catch her attention."
+        "title": "Analizar su Story",
+        "description": "Envía una captura de una Story de Instagram y encuentra la mejor forma de captar su atención."
       }
     },
     "workspace": {
-      "uploadLabel": "Upload screenshot",
-      "uploadHint": "PNG or JPG · click to choose an image",
-      "removeImage": "Remove image",
-      "previewAlt": "Uploaded screenshot",
-      "analyze": "Analyze screenshot",
-      "analyzing": "Analyzing...",
-      "loadingLabel": "Reading the screenshot and crafting the best replies...",
-      "emptyState": "Upload a screenshot and suggestions will show up here.",
-      "copy": "Copy reply",
-      "regenerate": "Generate again",
+      "uploadLabel": "Subir captura",
+      "uploadHint": "PNG o JPG · haz clic para elegir una imagen",
+      "removeImage": "Quitar imagen",
+      "previewAlt": "Captura subida",
+      "analyze": "Analizar captura",
+      "analyzing": "Analizando...",
+      "loadingLabel": "Leyendo la captura y preparando las mejores respuestas...",
+      "emptyState": "Sube una captura y las sugerencias aparecerán aquí.",
+      "copy": "Copiar respuesta",
+      "regenerate": "Generar de nuevo",
       "examples": {
         "conversa": [
-          "You tell that laughing, but I bet it wasn't funny at all that day. I want the full version.",
-          "Deal then: you pick the topic, I pick the place. Agreed?",
-          "That answer deserved more than a text. Tell me the rest in person?"
+          "Lo cuentas riendo, pero apuesto a que ese día no tuvo nada de gracioso. Quiero la versión completa.",
+          "Trato hecho: tú eliges el tema, yo elijo el lugar. ¿De acuerdo?",
+          "Esa respuesta merecía más que un mensaje. ¿Me cuentas el resto en persona?"
         ],
         "story": [
-          "That place is begging for a second visit — this time with better company.",
-          "Okay, that story wins best of the day. What do I get if I guess where it was?",
-          "You can't post that and expect nobody to ask. Tell me everything."
+          "Ese lugar está pidiendo a gritos una segunda visita — esta vez con mejor compañía.",
+          "Bueno, esa historia se lleva el premio del día. ¿Qué gano si adivino dónde fue?",
+          "No puedes publicar eso y esperar que nadie pregunte. Cuéntamelo todo."
         ]
       }
     }
   },
   "history": {
-    "pageTitle": "History",
-    "pageSubtitle": "Everything you've generated with Labia's tools.",
+    "pageTitle": "Historial",
+    "pageSubtitle": "Todo lo que has generado con las herramientas de Labia.",
     "empty": {
-      "title": "No analyses here yet",
-      "description": "Once you analyze a conversation or Story screenshot, the result shows up in this list."
+      "title": "Todavía no hay análisis aquí",
+      "description": "Cuando analices una conversación o una captura de Story, el resultado aparecerá en esta lista."
     },
     "status": {
-      "pending": "Queued",
-      "processing": "Processing",
-      "completed": "Completed",
-      "failed": "Failed"
+      "pending": "En cola",
+      "processing": "Procesando",
+      "completed": "Completado",
+      "failed": "Fallido"
     }
   },
   "profile": {
-    "editProfile": "Edit profile",
-    "memberSince": "Member since {date}",
+    "editProfile": "Editar perfil",
+    "memberSince": "Miembro desde {date}",
     "stats": {
-      "history": "Analyses in history",
-      "quiz": "Quiz completed"
+      "history": "Análisis en el historial",
+      "quiz": "Quiz completado"
     },
     "edit": {
-      "title": "Edit profile",
-      "subtitle": "Update your personal information.",
-      "avatarNote": "Profile photo upload will be available soon.",
-      "nameLabel": "Name",
-      "emailLabel": "Email",
-      "cancel": "Cancel",
-      "save": "Save changes",
-      "saving": "Saving...",
+      "title": "Editar perfil",
+      "subtitle": "Actualiza tu información personal.",
+      "avatarNote": "La subida de foto de perfil estará disponible pronto.",
+      "nameLabel": "Nombre",
+      "emailLabel": "Correo electrónico",
+      "cancel": "Cancelar",
+      "save": "Guardar cambios",
+      "saving": "Guardando...",
       "errors": {
-        "nameMin": "Enter at least 2 letters",
-        "emailInvalid": "Enter a valid email"
+        "nameMin": "Ingresa al menos 2 letras",
+        "emailInvalid": "Ingresa un correo válido"
       },
       "success": {
-        "title": "Profile updated",
-        "description": "Your information was saved successfully.",
-        "cta": "Back to profile",
-        "emailPending": "We sent a confirmation link to the new email. It only changes after you confirm."
+        "title": "Perfil actualizado",
+        "description": "Tu información se guardó correctamente.",
+        "cta": "Volver al perfil",
+        "emailPending": "Enviamos un enlace de confirmación al nuevo correo. Solo cambiará después de que lo confirmes."
       }
     }
   },
   "settings": {
-    "pageTitle": "Settings",
-    "pageSubtitle": "Manage your account, subscription, and preferences.",
+    "pageTitle": "Configuración",
+    "pageSubtitle": "Gestiona tu cuenta, suscripción y preferencias.",
     "tabs": {
-      "account": "Account",
-      "subscription": "Subscription",
-      "notifications": "Notifications",
-      "language": "Language"
+      "account": "Cuenta",
+      "subscription": "Suscripción",
+      "notifications": "Notificaciones",
+      "language": "Idioma"
     },
     "account": {
-      "editProfile": "Edit profile",
-      "changePassword": "Change password",
-      "newPasswordLabel": "New password",
-      "updatePassword": "Update password",
-      "updating": "Updating...",
+      "editProfile": "Editar perfil",
+      "changePassword": "Cambiar contraseña",
+      "newPasswordLabel": "Nueva contraseña",
+      "updatePassword": "Actualizar contraseña",
+      "updating": "Actualizando...",
       "errors": {
-        "newPasswordMin": "New password must be at least 8 characters",
-        "mismatch": "Passwords don't match",
-        "currentPasswordRequired": "Enter your current password"
+        "newPasswordMin": "La nueva contraseña debe tener al menos 8 caracteres",
+        "mismatch": "Las contraseñas no coinciden",
+        "currentPasswordRequired": "Ingresa tu contraseña actual"
       },
       "passwordSuccess": {
-        "title": "Password updated",
-        "description": "Your password was changed and your other sessions were signed out.",
-        "cta": "Close"
+        "title": "Contraseña actualizada",
+        "description": "Tu contraseña fue cambiada y tus otras sesiones cerraron sesión.",
+        "cta": "Cerrar"
       },
       "dangerZone": {
-        "title": "Danger zone",
-        "description": "Deleting your account permanently removes your data. This action cannot be undone.",
-        "cta": "Delete account",
-        "confirmMessage": "Are you sure? This action is permanent.",
-        "cancel": "Cancel",
-        "confirmCta": "Confirm deletion",
-        "disabledNote": "Account deletion will be enabled once the database integration is live."
+        "title": "Zona de peligro",
+        "description": "Eliminar tu cuenta borra tus datos de forma permanente. Esta acción no se puede deshacer.",
+        "cta": "Eliminar cuenta",
+        "confirmMessage": "¿Estás seguro? Esta acción es permanente.",
+        "cancel": "Cancelar",
+        "confirmCta": "Confirmar eliminación",
+        "disabledNote": "La eliminación de cuenta se habilitará cuando la integración con la base de datos esté activa."
       },
-      "confirmPasswordLabel": "Confirm new password",
-      "currentPasswordLabel": "Current password",
-      "securityNote": "We ask for your current password so a session opened by someone else can't change it. Your other sessions will be signed out."
+      "confirmPasswordLabel": "Confirmar nueva contraseña",
+      "currentPasswordLabel": "Contraseña actual",
+      "securityNote": "Pedimos tu contraseña actual para que una sesión abierta por otra persona no pueda cambiarla. Tus otras sesiones cerrarán sesión."
     },
     "subscription": {
-      "notConfigured": "Subscription not set up yet",
-      "notConfiguredDescription": "Billing isn't active in this version. No subscription is linked to your account right now.",
-      "availablePlans": "Planned tiers",
-      "priceProvisional": "Provisional amounts — final pricing will come from Stripe once billing is enabled.",
-      "statusActive": "Active",
-      "endsOn": "Ends on {date}",
-      "renewsOn": "Renews on {date}",
-      "manageNote": "Your Premium subscription is active. Soon you'll be able to manage payment and cancellation right here.",
-      "premiumEyebrow": "Premium plan",
-      "subscribeCta": "Subscribe now",
-      "redirecting": "Redirecting…",
-      "hostedNote": "Payment is processed securely by Stripe. You'll be taken to the hosted checkout.",
+      "notConfigured": "La suscripción aún no está configurada",
+      "notConfiguredDescription": "La facturación no está activa en esta versión. Por ahora no hay ninguna suscripción vinculada a tu cuenta.",
+      "availablePlans": "Planes disponibles",
+      "priceProvisional": "Montos provisionales — el precio final vendrá de Stripe cuando se habilite la facturación.",
+      "statusActive": "Activa",
+      "endsOn": "Termina el {date}",
+      "renewsOn": "Se renueva el {date}",
+      "manageNote": "Tu suscripción Premium está activa. Pronto podrás gestionar el pago y la cancelación aquí mismo.",
+      "premiumEyebrow": "Plan Premium",
+      "subscribeCta": "Suscribirse ahora",
+      "redirecting": "Redirigiendo…",
+      "hostedNote": "El pago se procesa de forma segura con Stripe. Serás redirigido al checkout alojado.",
       "errors": {
-        "not_configured": "Payments are unavailable right now. Please try again later.",
-        "not_authenticated": "Sign in to subscribe.",
-        "already_premium": "You already have Premium active.",
-        "no_session_url": "We couldn't start checkout. Please try again."
+        "not_configured": "Los pagos no están disponibles en este momento. Inténtalo más tarde.",
+        "not_authenticated": "Inicia sesión para suscribirte.",
+        "already_premium": "Ya tienes Premium activo.",
+        "no_session_url": "No pudimos iniciar el checkout. Inténtalo de nuevo."
       }
     },
     "notifications": {
       "productUpdates": {
-        "label": "Product updates",
-        "description": "Alerts about new tools and improvements."
+        "label": "Novedades del producto",
+        "description": "Alertas sobre nuevas herramientas y mejoras."
       },
       "weeklyDigest": {
-        "label": "Weekly digest",
-        "description": "A summary of your activity for the week."
+        "label": "Resumen semanal",
+        "description": "Un resumen de tu actividad de la semana."
       },
       "toolReminders": {
-        "label": "Tool reminders",
-        "description": "Suggestions for when to use a tool based on your history."
+        "label": "Recordatorios de herramientas",
+        "description": "Sugerencias de cuándo usar una herramienta según tu historial."
       },
-      "notPersistedNotice": "These preferences aren't saved yet — persistence comes in a later phase. The controls below are just a preview."
+      "notPersistedNotice": "Estas preferencias todavía no se guardan — la persistencia llegará en una fase posterior. Los controles de abajo son solo una vista previa."
     },
     "language": {
-      "description": "Choose the language used across Labia.ia."
+      "description": "Elige el idioma que se usa en toda Labia.ia."
     }
   },
   "support": {
-    "pageTitle": "Support",
-    "pageSubtitle": "Get answers or talk to us.",
-    "faqTitle": "Frequently asked questions",
-    "contactTitle": "Get in touch",
+    "pageTitle": "Soporte",
+    "pageSubtitle": "Obtén respuestas o habla con nosotros.",
+    "faqTitle": "Preguntas frecuentes",
+    "contactTitle": "Ponte en contacto",
     "faq": {
-      "account": "How do I change my email or password?",
-      "accountAnswer": "Go to Settings > Account. You can update your info and change your password anytime.",
-      "cancel": "How do I cancel my subscription?",
-      "cancelAnswer": "In Settings > Subscription. Access continues until the end of the paid period, no hassle.",
-      "tools": "How do I use the conversation tools?",
-      "toolsAnswer": "Pick a tool, upload a screenshot of the conversation or Story, and get ready-to-send suggestions. You can copy and tweak before sending.",
-      "privacy": "Is my data and conversations safe?",
-      "privacyAnswer": "Yes. Your conversations are private and never shared. You can delete your history anytime in Settings.",
-      "billing": "How does billing work?",
-      "billingAnswer": "The subscription is recurring, weekly or monthly, and can be canceled anytime right from the dashboard."
+      "account": "¿Cómo cambio mi correo o contraseña?",
+      "accountAnswer": "Ve a Configuración > Cuenta. Puedes actualizar tu información y cambiar tu contraseña cuando quieras.",
+      "cancel": "¿Cómo cancelo mi suscripción?",
+      "cancelAnswer": "En Configuración > Suscripción. El acceso continúa hasta el final del período pagado, sin complicaciones.",
+      "tools": "¿Cómo uso las herramientas de conversación?",
+      "toolsAnswer": "Elige una herramienta, sube una captura de la conversación o Story, y obtén sugerencias listas para enviar. Puedes copiarlas y ajustarlas antes de enviar.",
+      "privacy": "¿Mis datos y conversaciones están seguros?",
+      "privacyAnswer": "Sí. Tus conversaciones son privadas y nunca se comparten. Puedes eliminar tu historial cuando quieras desde Configuración.",
+      "billing": "¿Cómo funciona la facturación?",
+      "billingAnswer": "La suscripción es recurrente, semanal o mensual, y se puede cancelar cuando quieras directamente desde el panel."
     },
     "contact": {
-      "subjectLabel": "Subject",
-      "messageLabel": "Message",
-      "messagePlaceholder": "Describe your question or issue...",
-      "send": "Send message",
-      "sending": "Sending...",
+      "subjectLabel": "Asunto",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Describe tu pregunta o problema...",
+      "send": "Enviar mensaje",
+      "sending": "Enviando...",
       "errors": {
-        "messageMin": "Write at least 10 characters"
+        "messageMin": "Escribe al menos 10 caracteres"
       },
       "subjects": {
-        "billing": "Billing",
-        "technical": "Technical issue",
-        "account": "Account",
-        "other": "Other"
+        "billing": "Facturación",
+        "technical": "Problema técnico",
+        "account": "Cuenta",
+        "other": "Otro"
       },
       "success": {
-        "title": "Message sent",
-        "description": "Our team replies within 24h at your registered email.",
-        "cta": "Send another message"
+        "title": "Mensaje enviado",
+        "description": "Nuestro equipo responde en 24h al correo con el que te registraste.",
+        "cta": "Enviar otro mensaje"
       }
     }
   },
   "admin": {
     "nav": {
-      "painel": "Dashboard",
-      "usuarios": "Users",
-      "suporte": "Support",
-      "planos": "Plans"
+      "painel": "Panel",
+      "usuarios": "Usuarios",
+      "suporte": "Soporte",
+      "planos": "Planes"
     },
     "dashboard": {
-      "title": "Admin dashboard",
-      "subtitle": "An overview of Labia.ia's operations.",
+      "title": "Panel de administración",
+      "subtitle": "Una vista general de las operaciones de Labia.ia.",
       "stats": {
-        "totalUsers": "Total users",
-        "newUsers": "New in 30 days",
-        "quizCompletions": "Quizzes completed",
-        "openSupport": "Open tickets"
+        "totalUsers": "Usuarios totales",
+        "newUsers": "Nuevos en 30 días",
+        "quizCompletions": "Quizzes completados",
+        "openSupport": "Tickets abiertos"
       },
-      "noFinancialsNotice": "Financial metrics (subscriptions, revenue) will appear here once the Stripe integration is live.",
-      "recentUsers": "Recent users",
-      "viewAll": "View all"
+      "noFinancialsNotice": "Las métricas financieras (suscripciones, ingresos) aparecerán aquí cuando la integración con Stripe esté activa.",
+      "recentUsers": "Usuarios recientes",
+      "viewAll": "Ver todos"
     },
     "users": {
-      "pageTitle": "Users",
-      "pageSubtitle": "Registered accounts and their access roles.",
-      "searchPlaceholder": "Search by name or email...",
-      "allRoles": "All roles",
-      "empty": "No users found for these filters.",
-      "backToList": "Back to users",
-      "userId": "User ID",
+      "pageTitle": "Usuarios",
+      "pageSubtitle": "Cuentas registradas y sus roles de acceso.",
+      "searchPlaceholder": "Buscar por nombre o correo...",
+      "allRoles": "Todos los roles",
+      "empty": "No se encontraron usuarios con estos filtros.",
+      "backToList": "Volver a usuarios",
+      "userId": "ID de usuario",
       "table": {
-        "user": "User",
-        "role": "Role",
-        "joined": "Joined"
+        "user": "Usuario",
+        "role": "Rol",
+        "joined": "Se unió"
       },
       "roles": {
-        "user": "User",
-        "admin": "Administrator"
+        "user": "Usuario",
+        "admin": "Administrador"
       }
     },
     "plans": {
-      "pageTitle": "Plans",
-      "pageSubtitle": "Pricing and features offered in each plan.",
-      "recommended": "Recommended",
-      "editPlan": "Edit plan",
-      "editNote": "Plan editing will be enabled once the Stripe integration is live."
+      "pageTitle": "Planes",
+      "pageSubtitle": "Precios y funciones que ofrece cada plan.",
+      "recommended": "Recomendado",
+      "editPlan": "Editar plan",
+      "editNote": "La edición de planes se habilitará cuando la integración con Stripe esté activa."
     },
     "support": {
-      "pageTitle": "Support tickets",
-      "pageSubtitle": "Requests submitted by users.",
-      "empty": "No tickets recorded yet.",
+      "pageTitle": "Tickets de soporte",
+      "pageSubtitle": "Solicitudes enviadas por los usuarios.",
+      "empty": "Todavía no hay tickets registrados.",
       "status": {
-        "open": "Open",
-        "in_progress": "In progress",
-        "resolved": "Resolved"
+        "open": "Abierto",
+        "in_progress": "En progreso",
+        "resolved": "Resuelto"
       }
     }
   },
   "games": {
-    "pageTitle": "Games",
-    "pageSubtitle": "To get out of the chat and heat up the date — together, no rush.",
+    "pageTitle": "Juegos",
+    "pageSubtitle": "Para salir del chat y subirle la temperatura a la cita — juntos, sin prisa.",
     "roleta": {
-      "title": "Flirt Roulette",
-      "description": "Spin and take on the challenge.",
-      "spin": "Spin the wheel",
-      "spinning": "Spinning...",
+      "title": "Ruleta de Coqueteo",
+      "description": "Gira y acepta el reto.",
+      "spin": "Girar la ruleta",
+      "spinning": "Girando...",
       "challenges": [
         {
           "emoji": "💋",
-          "title": "Timed kiss",
-          "text": "Give a 10-second kiss."
+          "title": "Beso cronometrado",
+          "text": "Dense un beso de 10 segundos."
         },
         {
           "emoji": "🔥",
-          "title": "Confession",
-          "text": "Share a fantasy you've never told."
+          "title": "Confesión",
+          "text": "Comparte una fantasía que nunca has contado."
         },
         {
           "emoji": "👀",
-          "title": "Eye to eye",
-          "text": "Hold eye contact for 30 seconds without laughing."
+          "title": "Ojo a ojo",
+          "text": "Mantengan contacto visual 30 segundos sin reírse."
         },
         {
           "emoji": "🤫",
-          "title": "Forbidden question",
-          "text": "Ask the question you never had the courage to ask."
+          "title": "Pregunta prohibida",
+          "text": "Haz la pregunta que nunca te atreviste a hacer."
         },
         {
           "emoji": "📱",
-          "title": "Open gallery",
-          "text": "Show the latest favorite photo in your gallery."
+          "title": "Abre la galería",
+          "text": "Muestra la última foto favorita de tu galería."
         },
         {
           "emoji": "👏",
-          "title": "Compliment swap",
-          "text": "Each of you gives a sincere compliment right now."
+          "title": "Intercambio de cumplidos",
+          "text": "Cada uno le hace un cumplido sincero al otro ahora mismo."
         },
         {
           "emoji": "💋",
-          "title": "Different kiss",
-          "text": "Give a kiss somewhere unexpected."
+          "title": "Beso diferente",
+          "text": "Dale un beso en un lugar inesperado."
         },
         {
           "emoji": "🔥",
-          "title": "Hot memory",
-          "text": "Describe your hottest moment together."
+          "title": "Recuerdo caliente",
+          "text": "Describe el momento más caliente que han vivido juntos."
         },
         {
           "emoji": "👀",
-          "title": "Cold read",
-          "text": "Guess what the other person is thinking right now."
+          "title": "Lectura en frío",
+          "text": "Adivina qué está pensando la otra persona ahora mismo."
         },
         {
           "emoji": "🤫",
-          "title": "Light secret",
-          "text": "Share something nobody else knows."
+          "title": "Secreto ligero",
+          "text": "Comparte algo que nadie más sabe."
         },
         {
           "emoji": "📱",
-          "title": "Last search",
-          "text": "Show the last thing you searched on your phone."
+          "title": "Última búsqueda",
+          "text": "Muestra lo último que buscaste en tu teléfono."
         },
         {
           "emoji": "👏",
-          "title": "Impression",
-          "text": "Impersonate the other person for 30 seconds."
+          "title": "Imitación",
+          "text": "Imita a la otra persona durante 30 segundos."
         },
         {
           "emoji": "💋",
-          "title": "Movie kiss",
-          "text": "Recreate a kiss from a famous movie."
+          "title": "Beso de película",
+          "text": "Recreen un beso de una película famosa."
         },
         {
           "emoji": "🔥",
-          "title": "Whisper",
-          "text": "Whisper something teasing in their ear."
+          "title": "Susurro",
+          "text": "Susúrrale algo provocador al oído."
         },
         {
           "emoji": "👀",
-          "title": "First impression",
-          "text": "Share what you thought on the first date."
+          "title": "Primera impresión",
+          "text": "Comparte qué pensaste en la primera cita."
         },
         {
           "emoji": "🤫",
-          "title": "Two truths",
-          "text": "Say two truths and one lie — the other person guesses."
+          "title": "Dos verdades",
+          "text": "Di dos verdades y una mentira — la otra persona adivina."
         },
         {
           "emoji": "📱",
-          "title": "Revealing playlist",
-          "text": "Show your most played song this month."
+          "title": "Playlist reveladora",
+          "text": "Muestra tu canción más escuchada este mes."
         },
         {
           "emoji": "👏",
-          "title": "Quick dance",
-          "text": "Dance together for one minute, no music."
+          "title": "Baile rápido",
+          "text": "Bailen juntos un minuto, sin música."
         },
         {
           "emoji": "💋",
-          "title": "Holding hands",
-          "text": "Hold hands until the next round."
+          "title": "Tomados de la mano",
+          "text": "Tómense de la mano hasta la próxima ronda."
         },
         {
           "emoji": "🔥",
-          "title": "The bet",
-          "text": "Propose a bet — the loser does something embarrassing."
+          "title": "La apuesta",
+          "text": "Propón una apuesta — quien pierda hace algo vergonzoso."
         },
         {
           "emoji": "👀",
-          "title": "X-ray",
-          "text": "Name three things that changed in the other person since you met."
+          "title": "Rayos X",
+          "text": "Nombra tres cosas que cambiaron en la otra persona desde que se conocieron."
         },
         {
           "emoji": "🤫",
-          "title": "Old messages",
-          "text": "Read your very first conversation together."
+          "title": "Mensajes antiguos",
+          "text": "Lean juntos su primerísima conversación."
         },
         {
           "emoji": "📱",
-          "title": "Photo now",
-          "text": "Take a selfie making the most dramatic face possible."
+          "title": "Foto ahora",
+          "text": "Tómense una selfie con la cara más dramática posible."
         },
         {
           "emoji": "👏",
-          "title": "Gratitude",
-          "text": "Thank them for something specific they did."
+          "title": "Gratitud",
+          "text": "Agradécele por algo específico que haya hecho."
         },
         {
           "emoji": "💋",
-          "title": "Surprise kiss",
-          "text": "Steal a kiss at some point during the next round."
+          "title": "Beso sorpresa",
+          "text": "Róbale un beso en algún momento durante la próxima ronda."
         },
         {
           "emoji": "🔥",
-          "title": "Three words",
-          "text": "Describe the other person in three words — spicy ones."
+          "title": "Tres palabras",
+          "text": "Describe a la otra persona en tres palabras — que sean picantes."
         },
         {
           "emoji": "👀",
-          "title": "No words",
-          "text": "Communicate only with gestures until the next round."
+          "title": "Sin palabras",
+          "text": "Comuníquense solo con gestos hasta la próxima ronda."
         },
         {
           "emoji": "🤫",
-          "title": "Jealousy confession",
-          "text": "Confess something that made you jealous."
+          "title": "Confesión de celos",
+          "text": "Confiesa algo que te dio celos."
         },
         {
           "emoji": "📱",
-          "title": "Week's chats",
-          "text": "Show who you talked to most this week."
+          "title": "Chats de la semana",
+          "text": "Muestra con quién hablaste más esta semana."
         },
         {
           "emoji": "👏",
-          "title": "Physical compliment",
-          "text": "Compliment something physical you admire about them."
+          "title": "Cumplido físico",
+          "text": "Halaga algo físico que admires de la otra persona."
         },
         {
           "emoji": "💋",
-          "title": "Forehead to forehead",
-          "text": "Stay forehead to forehead for 15 seconds in silence."
+          "title": "Frente con frente",
+          "text": "Queden frente con frente durante 15 segundos en silencio."
         },
         {
           "emoji": "🔥",
-          "title": "The scene",
-          "text": "Describe the dream date in detail."
+          "title": "La escena",
+          "text": "Describe la cita soñada con detalle."
         },
         {
           "emoji": "👀",
-          "title": "Mirror",
-          "text": "Copy everything the other person does for 30 seconds."
+          "title": "Espejo",
+          "text": "Copia todo lo que haga la otra persona durante 30 segundos."
         },
         {
           "emoji": "🤫",
-          "title": "Silly fear",
-          "text": "Confess a silly fear you have."
+          "title": "Miedo tonto",
+          "text": "Confiesa un miedo tonto que tengas."
         },
         {
           "emoji": "📱",
-          "title": "The stalking",
-          "text": "Confess: have you stalked them online? How far did you go?"
+          "title": "El stalkeo",
+          "text": "Confiesa: ¿la has stalkeado en línea? ¿Hasta dónde llegaste?"
         },
         {
           "emoji": "👏",
-          "title": "Vote of confidence",
-          "text": "Share something you admire but never said out loud."
+          "title": "Voto de confianza",
+          "text": "Comparte algo que admires pero nunca hayas dicho en voz alta."
         },
         {
           "emoji": "💋",
-          "title": "Slow kiss",
-          "text": "Give the slowest kiss you can."
+          "title": "Beso lento",
+          "text": "Dense el beso más lento que puedan."
         },
         {
           "emoji": "🔥",
-          "title": "Honest mode",
-          "text": "Answer without thinking: what attracts you most about them?"
+          "title": "Modo honesto",
+          "text": "Responde sin pensar: ¿qué es lo que más te atrae de la otra persona?"
         },
         {
           "emoji": "👀",
-          "title": "Staring contest",
-          "text": "First to laugh owes a forfeit chosen by the other."
+          "title": "Concurso de miradas",
+          "text": "Quien se ría primero debe cumplir una penitencia elegida por el otro."
         },
         {
           "emoji": "🤫",
-          "title": "The future",
-          "text": "Share a plan that includes the other person."
+          "title": "El futuro",
+          "text": "Comparte un plan que incluya a la otra persona."
         }
       ]
     },
     "baralho": {
-      "title": "Sync Deck",
-      "description": "Missions to do together.",
-      "draw": "Draw a card",
-      "drawAgain": "Draw another card",
+      "title": "Mazo Sincronizado",
+      "description": "Misiones para hacer juntos.",
+      "draw": "Sacar una carta",
+      "drawAgain": "Sacar otra carta",
       "levels": {
-        "all": "All",
-        "leve": "Light",
-        "romantico": "Romantic",
-        "quente": "Hot"
+        "all": "Todas",
+        "leve": "Suave",
+        "romantico": "Romántico",
+        "quente": "Picante"
       },
       "cards": [
         {
           "level": "leve",
-          "text": "Tell each other the best thing about your week."
+          "text": "Cuéntense la mejor cosa que les pasó esta semana."
         },
         {
           "level": "leve",
-          "text": "Pick together the next show to binge."
+          "text": "Elijan juntos la próxima serie para maratonear."
         },
         {
           "level": "leve",
-          "text": "Each of you imitates how the other answers the phone."
+          "text": "Cada uno imita cómo el otro contesta el teléfono."
         },
         {
           "level": "leve",
-          "text": "Build your top 3 favorite foods together."
+          "text": "Armen juntos su top 3 de comidas favoritas."
         },
         {
           "level": "leve",
-          "text": "Describe each other as movie characters."
+          "text": "Descríbanse mutuamente como personajes de película."
         },
         {
           "level": "leve",
-          "text": "Play rock, paper, scissors — best of five."
+          "text": "Jueguen piedra, papel o tijera — al mejor de cinco."
         },
         {
           "level": "leve",
-          "text": "Share your first impressions of each other."
+          "text": "Compartan sus primeras impresiones el uno del otro."
         },
         {
           "level": "leve",
-          "text": "Create a secret handshake for the two of you."
+          "text": "Creen un saludo secreto para ustedes dos."
         },
         {
           "level": "leve",
-          "text": "Each of you shares a useless talent."
+          "text": "Cada uno comparte un talento inútil."
         },
         {
           "level": "leve",
-          "text": "Pick a song to be 'your song'."
+          "text": "Elijan una canción para que sea 'su canción'."
         },
         {
           "level": "leve",
-          "text": "Hold 10 seconds of eye contact without laughing."
+          "text": "Mantengan 10 segundos de contacto visual sin reírse."
         },
         {
           "level": "leve",
-          "text": "Each of you tells the story of your own name."
+          "text": "Cada uno cuenta la historia de su propio nombre."
         },
         {
           "level": "leve",
-          "text": "Decide together: beach or mountains? Defend your pick."
+          "text": "Decidan juntos: ¿playa o montaña? Defiendan su elección."
         },
         {
           "level": "leve",
-          "text": "Say which emoji defines the other and why."
+          "text": "Digan qué emoji define al otro y por qué."
         },
         {
           "level": "leve",
-          "text": "Each of you shows the oldest photo on your phone."
+          "text": "Cada uno muestra la foto más antigua de su teléfono."
         },
         {
           "level": "leve",
-          "text": "Invent a duo name for the two of you."
+          "text": "Inventen un nombre de dúo para ustedes dos."
         },
         {
           "level": "leve",
-          "text": "Share an embarrassing story you've never told."
+          "text": "Compartan una historia vergonzosa que nunca hayan contado."
         },
         {
           "level": "leve",
-          "text": "Each of you compliments the other's style."
+          "text": "Cada uno le hace un cumplido al estilo del otro."
         },
         {
           "level": "leve",
-          "text": "Plan the perfect Saturday in one minute."
+          "text": "Planeen el sábado perfecto en un minuto."
         },
         {
           "level": "leve",
-          "text": "Guess the most used app on each other's phone."
+          "text": "Adivinen la app más usada en el teléfono del otro."
         },
         {
           "level": "leve",
-          "text": "Each of you teaches something you're good at."
+          "text": "Cada uno enseña algo en lo que es bueno."
         },
         {
           "level": "leve",
-          "text": "Share the best trip you've ever taken."
+          "text": "Compartan el mejor viaje que hayan hecho."
         },
         {
           "level": "leve",
-          "text": "Pick the movie the other absolutely must watch."
+          "text": "Elijan la película que el otro tiene que ver sí o sí."
         },
         {
           "level": "leve",
-          "text": "Each of you confesses a weird habit."
+          "text": "Cada uno confiesa un hábito raro."
         },
         {
           "level": "leve",
-          "text": "Define each other with a song title."
+          "text": "Defínanse mutuamente con el título de una canción."
         },
         {
           "level": "leve",
-          "text": "Say what you'd do with a completely free day."
+          "text": "Digan qué harían con un día completamente libre."
         },
         {
           "level": "leve",
-          "text": "Each of you reveals your favorite guilty pleasure."
+          "text": "Cada uno revela su placer culposo favorito."
         },
         {
           "level": "romantico",
-          "text": "Share the moment you thought: 'I really like this person'."
+          "text": "Compartan el momento en que pensaron: 'esta persona me gusta de verdad'."
         },
         {
           "level": "romantico",
-          "text": "Each of you describes the perfect hug — then test it."
+          "text": "Cada uno describe el abrazo perfecto — y luego lo prueban."
         },
         {
           "level": "romantico",
-          "text": "Write together the caption for your first photo."
+          "text": "Escriban juntos el pie de foto para su primera foto."
         },
         {
           "level": "romantico",
-          "text": "Tell each other what you silently admire most."
+          "text": "Cuéntense qué es lo que más admiran en silencio del otro."
         },
         {
           "level": "romantico",
-          "text": "Each of you describes introducing the other to your family."
+          "text": "Cada uno describe cómo sería presentarle el otro a su familia."
         },
         {
           "level": "romantico",
-          "text": "Describe the dream date with the other person."
+          "text": "Describan la cita soñada con la otra persona."
         },
         {
           "level": "romantico",
-          "text": "Stay hugged for 30 seconds without saying anything."
+          "text": "Quédense abrazados 30 segundos sin decir nada."
         },
         {
           "level": "romantico",
-          "text": "Each of you shares what you felt on the first kiss."
+          "text": "Cada uno comparte qué sintió en el primer beso."
         },
         {
           "level": "romantico",
-          "text": "Say three things that make the other person unique."
+          "text": "Digan tres cosas que hacen única a la otra persona."
         },
         {
           "level": "romantico",
-          "text": "Plan a trip together — destination, itinerary, and soundtrack."
+          "text": "Planeen un viaje juntos — destino, itinerario y banda sonora."
         },
         {
           "level": "romantico",
-          "text": "Each of you completes: 'I feel at home when you...'"
+          "text": "Cada uno completa: 'me siento en casa cuando tú...'"
         },
         {
           "level": "romantico",
-          "text": "Say which of the other's quirks you'd miss the most."
+          "text": "Digan cuál manía del otro extrañarían más."
         },
         {
           "level": "romantico",
-          "text": "Pick a photo of you two and tell the story behind it."
+          "text": "Elijan una foto de ustedes dos y cuenten la historia detrás de ella."
         },
         {
           "level": "romantico",
-          "text": "Each of you shares a dream you'd like to split in two."
+          "text": "Cada uno comparte un sueño que le gustaría cumplir junto al otro."
         },
         {
           "level": "romantico",
-          "text": "Describe the other to a stranger in 20 seconds."
+          "text": "Describan al otro a un desconocido en 20 segundos."
         },
         {
           "level": "romantico",
-          "text": "Say the first thing you noticed about each other."
+          "text": "Digan qué fue lo primero que notaron el uno del otro."
         },
         {
           "level": "romantico",
-          "text": "Each of you creates a new nickname — with justification."
+          "text": "Cada uno crea un apodo nuevo — con justificación."
         },
         {
           "level": "romantico",
-          "text": "Share a moment when the other person saved your day."
+          "text": "Compartan un momento en que el otro les salvó el día."
         },
         {
           "level": "romantico",
-          "text": "Slow dance together, even without music."
+          "text": "Bailen lento juntos, aunque no haya música."
         },
         {
           "level": "romantico",
-          "text": "Each of you says how the other changed your routine."
+          "text": "Cada uno dice cómo el otro cambió su rutina."
         },
         {
           "level": "romantico",
-          "text": "Write a tiny note for the other to read tomorrow."
+          "text": "Escriban una notita para que el otro la lea mañana."
         },
         {
           "level": "romantico",
-          "text": "Share which memory of you two you'd repeat."
+          "text": "Compartan qué recuerdo de ustedes dos repetirían."
         },
         {
           "level": "romantico",
-          "text": "Each of you says what you'd do on the last day of a trip together."
+          "text": "Cada uno dice qué haría en el último día de un viaje juntos."
         },
         {
           "level": "romantico",
-          "text": "Hold hands and share one gratitude from today."
+          "text": "Tómense de la mano y compartan algo por lo que están agradecidos hoy."
         },
         {
           "level": "romantico",
-          "text": "Describe your very first message exchange — from memory."
+          "text": "Describan de memoria su primerísimo intercambio de mensajes."
         },
         {
           "level": "romantico",
-          "text": "Each of you says what you feel when the other smiles."
+          "text": "Cada uno dice qué siente cuando el otro sonríe."
         },
         {
           "level": "romantico",
-          "text": "Agree on a secret code just for you two to use at parties."
+          "text": "Acuerden un código secreto solo para usar entre ustedes en las fiestas."
         },
         {
           "level": "quente",
-          "text": "Whisper in each other's ear what just crossed your mind."
+          "text": "Susúrrense al oído lo que se les acaba de ocurrir."
         },
         {
           "level": "quente",
-          "text": "Each of you gives a kiss where the other chooses."
+          "text": "Cada uno da un beso donde el otro elija."
         },
         {
           "level": "quente",
-          "text": "Describe in detail your most memorable kiss together."
+          "text": "Describan con detalle su beso más memorable juntos."
         },
         {
           "level": "quente",
-          "text": "Each of you confesses a thought you never said out loud."
+          "text": "Cada uno confiesa un pensamiento que nunca dijo en voz alta."
         },
         {
           "level": "quente",
-          "text": "Stare at each other for 30 seconds — no looking away."
+          "text": "Mírense fijamente durante 30 segundos — sin desviar la mirada."
         },
         {
           "level": "quente",
-          "text": "Each of you says what the other wears that's most distracting."
+          "text": "Cada uno dice qué prenda del otro le distrae más."
         },
         {
           "level": "quente",
-          "text": "Give a 10-second kiss — timed."
+          "text": "Dense un beso de 10 segundos — cronometrado."
         },
         {
           "level": "quente",
-          "text": "Share a fantasy using only three words."
+          "text": "Compartan una fantasía usando solo tres palabras."
         },
         {
           "level": "quente",
-          "text": "Each of you describes your favorite kind of touch."
+          "text": "Cada uno describe su tipo de caricia favorita."
         },
         {
           "level": "quente",
-          "text": "Recreate your first kiss — improved version."
+          "text": "Recreen su primer beso — versión mejorada."
         },
         {
           "level": "quente",
-          "text": "Each of you sends a teasing message to the other right now."
+          "text": "Cada uno le envía al otro un mensaje provocador ahora mismo."
         },
         {
           "level": "quente",
-          "text": "Confess the moment you felt most attracted today."
+          "text": "Confiesen el momento en que se sintieron más atraídos hoy."
         },
         {
           "level": "quente",
-          "text": "Each of you kisses the other's hand — slowly."
+          "text": "Cada uno besa la mano del otro — lentamente."
         },
         {
           "level": "quente",
-          "text": "Describe the ideal setting for an unforgettable night."
+          "text": "Describan el escenario ideal para una noche inolvidable."
         },
         {
           "level": "quente",
-          "text": "First to blink owes a kiss wherever the other asks."
+          "text": "Quien parpadee primero debe un beso donde el otro pida."
         },
         {
           "level": "quente",
-          "text": "Each of you names a physical detail of the other you adore."
+          "text": "Cada uno nombra un detalle físico del otro que adora."
         },
         {
           "level": "quente",
-          "text": "Stay inches apart for 20 seconds without touching."
+          "text": "Queden a pocos centímetros durante 20 segundos sin tocarse."
         },
         {
           "level": "quente",
-          "text": "Each of you confesses what you almost did but didn't dare."
+          "text": "Cada uno confiesa qué estuvo a punto de hacer pero no se atrevió."
         },
         {
           "level": "quente",
-          "text": "Each of you gives a light bite where the other allows."
+          "text": "Cada uno da un mordisco suave donde el otro permita."
         },
         {
           "level": "quente",
-          "text": "Say which scent of the other stays with you."
+          "text": "Digan qué aroma del otro se les queda grabado."
         },
         {
           "level": "quente",
-          "text": "Describe the last time you felt butterflies."
+          "text": "Describan la última vez que sintieron mariposas en el estómago."
         },
         {
           "level": "quente",
-          "text": "Each of you acts out asking the other for a slow dance."
+          "text": "Cada uno actúa cómo le pediría al otro un baile lento."
         },
         {
           "level": "quente",
-          "text": "Confess what you're thinking right now — no filter."
+          "text": "Confiesen qué están pensando ahora mismo — sin filtro."
         },
         {
           "level": "quente",
-          "text": "Whisper the other's name three times, slower each time."
+          "text": "Susurren el nombre del otro tres veces, cada vez más despacio."
         },
         {
           "level": "quente",
-          "text": "Pick together the soundtrack for a perfect night."
+          "text": "Elijan juntos la banda sonora para una noche perfecta."
         },
         {
           "level": "quente",
-          "text": "End the round with the most creative kiss you can."
+          "text": "Terminen la ronda con el beso más creativo que puedan."
         }
       ]
     },
     "vc": {
-      "title": "Truth or Dare",
-      "description": "Spicy mode.",
-      "truth": "Truth",
-      "dare": "Dare",
-      "truthLabel": "Truth",
-      "dareLabel": "Dare",
+      "title": "Verdad o Reto",
+      "description": "Modo picante.",
+      "truth": "Verdad",
+      "dare": "Reto",
+      "truthLabel": "Verdad",
+      "dareLabel": "Reto",
       "truths": [
-        "What was your boldest thought today?",
-        "What did you notice first about me?",
-        "What message did you almost send and delete?",
-        "What was the most unforgettable kiss of your life?",
-        "What would you do if we had a night with no rules?",
-        "Which outfit of mine do you like best?",
-        "Have you ever dreamed about me? Tell me the dream.",
-        "What's your biggest weakness when flirting?",
-        "What makes you lose focus in a conversation?",
-        "What pickup line has actually worked on you?",
-        "What did you think the first time you saw me?",
-        "What's your favorite kind of touch?",
-        "Have you stalked my profile? How far did you go?",
-        "What was the last lie you told?",
-        "What makes you instantly blush?",
-        "Which part of your body do you like best?",
-        "What compliment do you never forget?",
-        "What's your secret charm?",
-        "What would you do if I disappeared for a week?",
-        "What movie puts you in the mood?",
-        "Do you prefer a long kiss or a surprise kiss?",
-        "What was the weirdest date you've ever had?",
-        "What has nobody ever told you that they should have?",
-        "What pet name do you hate?",
-        "What do you pretend not to notice?",
-        "What song makes you think of romance?",
-        "Ever sent a message to the wrong person? Tell me.",
-        "What's your weak spot in arguments?",
-        "What truly wins you over?",
-        "What's the most impulsive thing you've ever done?",
-        "Do you believe in attraction at first sight?",
-        "What do you look at first in a person?",
-        "What secret would you only share after deep trust?",
-        "What was your most embarrassing date moment?",
-        "What makes you jealous even if you won't admit it?",
-        "Which quirk of yours do you find charming?",
-        "What would you do differently on our first date?",
-        "Which message of mine made you smile alone?",
-        "Where would you like to be kissed right now?",
-        "What's your mildest fantasy?",
-        "What do you admire about me that you've never said?",
-        "What habit would you hide in a relationship?",
-        "Ever pretended to like something to impress? What?",
-        "What's your most romantic time of day?",
-        "What gives you butterflies?",
-        "What's the most memorable gift you've received?",
-        "If you could repeat one kiss, which one?",
-        "Which conversation of ours do you still remember?",
-        "What do you want to do but wait for me to start?",
-        "What's your favorite place for a date?",
-        "What makes you trust someone?",
-        "What's the craziest thing you've done out of attraction?",
-        "Do you prefer declarations in public or in secret?",
-        "Which part of a date do you enjoy most?",
-        "What crossed your mind during our last hug?",
-        "What question are you afraid to answer?",
-        "What would you change about how you flirt?",
-        "What's the boldest compliment you've received?",
-        "Have you ever rehearsed a conversation before meeting me?",
-        "Where's your line between cute and cheesy?",
-        "What disarms you instantly?",
-        "Which look of mine have you noticed?",
-        "What would you keep as a memory of today?",
-        "What's your idea of a perfect night?",
-        "What would you never do on a first date?",
-        "What was your most romantic phase?",
-        "What do you want me to discover on my own?",
-        "What's your favorite way to receive affection?",
-        "Ever written and deleted a declaration? For whom?",
-        "Which detail of mine do you always notice?",
-        "What makes you feel flattered?",
-        "What promise are you afraid to make?",
-        "What do you hope happens at the end of the night?",
-        "What was your biggest rejection — and what did you learn?",
-        "What kind of message wakes you up in a good mood?",
-        "What scent turns your head?",
-        "What do you do when you're into someone?",
-        "Which move of mine surprised you?",
-        "What's non-negotiable for you in a relationship?",
-        "What's the most creative invitation you've received?",
-        "Do you prefer dancing together or talking late into the night?",
-        "Which memory would you relive right now?",
-        "What do you think when I go quiet?",
-        "What small gesture wins you over the most?",
-        "What are you embarrassed to ask for?",
-        "What was the most obvious hint you've ever dropped?",
-        "What would make you cancel everything to see me?",
-        "What silly secret have you never told anyone?",
-        "What makes a kiss unforgettable for you?",
-        "When was the last time you felt butterflies?",
-        "What do you expect from me that you haven't said?",
-        "What's your biggest charm without realizing it?",
-        "What topic do you avoid but wish we'd talk about?",
-        "What's your definition of chemistry?",
-        "What would you write about today in a journal?",
-        "What behavior makes you lose interest instantly?",
-        "What did you mean by the last message you sent me?",
-        "Which moment of ours would you tell your friends about?",
-        "What would you do if I kissed you right now?",
-        "What's the next thing you want to happen between us?"
+        "¿Cuál fue tu pensamiento más atrevido hoy?",
+        "¿Qué fue lo primero que notaste en mí?",
+        "¿Qué mensaje casi enviaste y borraste?",
+        "¿Cuál fue el beso más inolvidable de tu vida?",
+        "¿Qué harías si tuviéramos una noche sin reglas?",
+        "¿Qué outfit mío te gusta más?",
+        "¿Alguna vez soñaste conmigo? Cuéntame el sueño.",
+        "¿Cuál es tu mayor debilidad al coquetear?",
+        "¿Qué te hace perder la concentración en una conversación?",
+        "¿Qué frase para ligar realmente te funcionó a ti?",
+        "¿Qué pensaste la primera vez que me viste?",
+        "¿Cuál es tu tipo de caricia favorita?",
+        "¿Has stalkeado mi perfil? ¿Hasta dónde llegaste?",
+        "¿Cuál fue la última mentira que dijiste?",
+        "¿Qué te hace sonrojar al instante?",
+        "¿Qué parte de tu cuerpo te gusta más?",
+        "¿Qué cumplido nunca olvidas?",
+        "¿Cuál es tu encanto secreto?",
+        "¿Qué harías si desapareciera por una semana?",
+        "¿Qué película te pone en clima?",
+        "¿Prefieres un beso largo o un beso sorpresa?",
+        "¿Cuál fue la cita más rara que has tenido?",
+        "¿Qué nunca te han dicho pero deberían haberte dicho?",
+        "¿Qué apodo cariñoso odias?",
+        "¿Qué finges no notar?",
+        "¿Qué canción te hace pensar en romance?",
+        "¿Alguna vez enviaste un mensaje a la persona equivocada? Cuéntame.",
+        "¿Cuál es tu punto débil en una discusión?",
+        "¿Qué es lo que realmente te conquista?",
+        "¿Cuál es lo más impulsivo que has hecho?",
+        "¿Crees en el amor a primera vista?",
+        "¿Qué es lo primero que miras en una persona?",
+        "¿Qué secreto solo compartirías con mucha confianza?",
+        "¿Cuál fue tu momento más vergonzoso en una cita?",
+        "¿Qué te da celos aunque no lo admitas?",
+        "¿Qué manía tuya te parece encantadora?",
+        "¿Qué harías diferente en nuestra primera cita?",
+        "¿Qué mensaje mío te hizo sonreír a solas?",
+        "¿Dónde te gustaría que te besara ahora mismo?",
+        "¿Cuál es tu fantasía más suave?",
+        "¿Qué admiras de mí que nunca has dicho?",
+        "¿Qué hábito esconderías en una relación?",
+        "¿Alguna vez fingiste que te gustaba algo para impresionar? ¿Qué fue?",
+        "¿Cuál es tu momento del día más romántico?",
+        "¿Qué te da mariposas en el estómago?",
+        "¿Cuál es el regalo más memorable que has recibido?",
+        "Si pudieras repetir un beso, ¿cuál sería?",
+        "¿Qué conversación nuestra todavía recuerdas?",
+        "¿Qué quieres hacer pero esperas que yo dé el primer paso?",
+        "¿Cuál es tu lugar favorito para una cita?",
+        "¿Qué te hace confiar en alguien?",
+        "¿Cuál es la cosa más loca que has hecho por atracción?",
+        "¿Prefieres las declaraciones en público o en secreto?",
+        "¿Qué parte de una cita disfrutas más?",
+        "¿Qué pasó por tu mente durante nuestro último abrazo?",
+        "¿Qué pregunta te da miedo responder?",
+        "¿Qué cambiarías de tu forma de coquetear?",
+        "¿Cuál es el cumplido más atrevido que has recibido?",
+        "¿Alguna vez ensayaste una conversación antes de conocerme?",
+        "¿Dónde está tu límite entre tierno y cursi?",
+        "¿Qué te desarma al instante?",
+        "¿Qué mirada mía has notado?",
+        "¿Qué te gustaría guardar como recuerdo de hoy?",
+        "¿Cuál es tu idea de una noche perfecta?",
+        "¿Qué nunca harías en una primera cita?",
+        "¿Cuál fue tu etapa más romántica?",
+        "¿Qué quieres que descubra por mi cuenta?",
+        "¿Cuál es tu forma favorita de recibir cariño?",
+        "¿Alguna vez escribiste y borraste una declaración? ¿Para quién?",
+        "¿Qué detalle mío siempre notas?",
+        "¿Qué te hace sentir halagado/a?",
+        "¿Qué promesa te da miedo hacer?",
+        "¿Qué esperas que pase al final de la noche?",
+        "¿Cuál fue tu mayor rechazo — y qué aprendiste?",
+        "¿Qué tipo de mensaje te hace despertar de buen humor?",
+        "¿Qué aroma te vuelve loco/a?",
+        "¿Qué haces cuando te gusta alguien?",
+        "¿Qué movimiento mío te sorprendió?",
+        "¿Qué es innegociable para ti en una relación?",
+        "¿Cuál es la invitación más creativa que has recibido?",
+        "¿Prefieres bailar juntos o hablar hasta tarde?",
+        "¿Qué recuerdo revivirías ahora mismo?",
+        "¿Qué piensas cuando me quedo callado/a?",
+        "¿Qué pequeño gesto te conquista más?",
+        "¿Qué te da vergüenza pedir?",
+        "¿Cuál fue la indirecta más obvia que has soltado?",
+        "¿Qué te haría cancelar todo por verme?",
+        "¿Qué secreto tonto nunca le has contado a nadie?",
+        "¿Qué hace que un beso sea inolvidable para ti?",
+        "¿Cuándo fue la última vez que sentiste mariposas?",
+        "¿Qué esperas de mí que no has dicho?",
+        "¿Cuál es tu mayor encanto sin darte cuenta?",
+        "¿Qué tema evitas pero te gustaría que habláramos?",
+        "¿Cuál es tu definición de química?",
+        "¿Qué escribirías hoy en un diario?",
+        "¿Qué comportamiento te hace perder el interés al instante?",
+        "¿Qué quisiste decir con el último mensaje que me enviaste?",
+        "¿Qué momento nuestro le contarías a tus amigos?",
+        "¿Qué harías si te besara ahora mismo?",
+        "¿Qué es lo próximo que quieres que pase entre nosotros?"
       ],
       "dares": [
-        "Give a 10-second kiss.",
-        "Whisper something teasing in my ear.",
-        "Give the most sincere compliment you can.",
-        "Show the last photo in your gallery.",
-        "Imitate the way I talk for 30 seconds.",
-        "Hold my hand until the next round.",
-        "Kiss my forehead.",
-        "Describe what I'm thinking right now.",
-        "Send me a bold message — right now.",
-        "Look at me for 30 seconds without laughing.",
-        "Dance for 15 seconds with no music.",
-        "Tell a secret in one sentence.",
-        "Kiss my hand slowly.",
-        "Redo your best pickup line — on me.",
-        "Post a story tagging me (or pretend you did).",
-        "Make a dramatic soap-opera declaration.",
-        "Give a 20-second hug.",
-        "Compliment three things about me without repeating a category.",
-        "Say 'I want you' in your most serious voice.",
-        "Switch places with me and do your best impression.",
-        "Make up a rhyme with my name.",
-        "Give a kiss wherever I choose.",
-        "Show the most random photo on your phone.",
-        "Do your best seductive face for 10 seconds.",
-        "Say out loud what you felt when you saw me today.",
-        "Let me choose your next profile picture.",
-        "Whisper my name three times, slower each time.",
-        "Act out a proposal — exaggerated version.",
-        "Keep your eyes closed until I say open.",
-        "Describe my hug in three words.",
-        "Redo our first 'hi' the way it should have been.",
-        "Pick a song and dedicate it to me now.",
-        "Kiss my cheek — or risk more, your call.",
-        "Give my shoulders a 10-second massage.",
-        "Say the cheesiest romance-movie line without laughing.",
-        "Prove you can slow dance — 15 seconds.",
-        "Write a word on my arm with your finger. I'll guess.",
-        "Send a 10-second voice note saying whatever you want.",
-        "Rest your forehead on mine and count to ten.",
-        "Ask the question you've been holding back.",
-        "Say my name in the most charming way possible.",
-        "Choose: one kiss now or two later.",
-        "Draw a heart on my hand with your finger.",
-        "Confess something using only mime.",
-        "Give the lightest kiss you can.",
-        "Compliment my smile in a way I've never heard.",
-        "Point out my best angle and explain why.",
-        "Stay two inches from my face for 10 seconds.",
-        "Repeat the line that won you over.",
-        "Make up a toast for this moment.",
-        "Give a 1950s-style kiss — hand on the waist.",
-        "Show how you react when you get a message from me.",
-        "Pick a part of my face and compliment it for 15 seconds.",
-        "Sing a bit of a song looking into my eyes.",
-        "Act out our reunion after a year apart.",
-        "Say what you'd do right now if nobody were watching.",
-        "Give three kisses in a row in different places.",
-        "Say a phrase in another language in a seductive voice.",
-        "Tickle me until I ask you to stop.",
-        "Describe our first photo together without looking at it.",
-        "Hold my face and tell me one truth.",
-        "Recreate the Titanic scene — arms wide open.",
-        "Kiss the tip of my nose.",
-        "Say which outfit of mine you'd retire — and why.",
-        "Drop your voice and ask me out to dinner.",
-        "Give a peck lasting exactly 3 seconds.",
-        "Write a two-line mini poem about me.",
-        "Whisper a plan for us in my ear.",
-        "Pick our next date with your eyes closed pointing at a map.",
-        "Imitate the way I walk.",
-        "Kiss my shoulder.",
-        "Say 'you're trouble' — and explain.",
-        "Stay silent and say everything with your eyes for 15 seconds.",
-        "Hide a note for me to find later.",
-        "Recreate the exact moment we met.",
-        "Give a kiss with your hands in your pockets.",
-        "Compliment my laugh by imitating it first.",
-        "Show your most reliable dance move.",
-        "Breathe the word 'maybe' into my ear.",
-        "Choose: extra truth or extra kiss?",
-        "Make a small promise to keep today.",
-        "Kiss my left cheek, then the right, then decide.",
-        "Say what you thought when I arrived today.",
-        "Close your eyes and describe my face from memory.",
-        "Invent a new nickname for me right now.",
-        "Act jealous of someone who looked at me.",
-        "Give my hand a long kiss like a ballroom farewell.",
-        "Challenge: whoever holds the stare longer earns a wish.",
-        "Say 'come here' in the most convincing way there is.",
-        "Fix my hair like it's an important ritual.",
-        "Name three things we'd do on a trip together.",
-        "Touch your nose to mine for five seconds.",
-        "Confess which part of my face you look at first.",
-        "Give a cinematic kiss — dipping allowed.",
-        "Make a request starting with 'tonight I want...'",
-        "Send the emoji that sums up this moment right now.",
-        "Say 'I won' and kiss me before I can argue.",
-        "Pick my weak spot and use it against me.",
-        "Finish the sentence: 'if you knew what I'm thinking...'",
-        "Kiss me like it's the last one of the night."
+        "Dense un beso de 10 segundos.",
+        "Susúrrame algo provocador al oído.",
+        "Hazme el cumplido más sincero que puedas.",
+        "Muestra la última foto de tu galería.",
+        "Imita mi forma de hablar durante 30 segundos.",
+        "Tómame de la mano hasta la próxima ronda.",
+        "Bésame la frente.",
+        "Describe qué estoy pensando ahora mismo.",
+        "Envíame un mensaje atrevido — ahora mismo.",
+        "Mírame durante 30 segundos sin reírte.",
+        "Baila 15 segundos sin música.",
+        "Cuenta un secreto en una sola frase.",
+        "Bésame la mano lentamente.",
+        "Repite tu mejor frase para ligar — conmigo.",
+        "Publica una historia etiquetándome (o finge que lo hiciste).",
+        "Haz una declaración dramática de telenovela.",
+        "Dame un abrazo de 20 segundos.",
+        "Hazme tres cumplidos sin repetir categoría.",
+        "Di \"te deseo\" con tu voz más seria.",
+        "Cambia de lugar conmigo y haz tu mejor imitación.",
+        "Inventa una rima con mi nombre.",
+        "Dame un beso donde yo elija.",
+        "Muestra la foto más random de tu teléfono.",
+        "Pon tu mejor cara seductora durante 10 segundos.",
+        "Di en voz alta qué sentiste cuando me viste hoy.",
+        "Déjame elegir tu próxima foto de perfil.",
+        "Susurra mi nombre tres veces, cada vez más despacio.",
+        "Actúa una propuesta — versión exagerada.",
+        "Mantén los ojos cerrados hasta que te diga que los abras.",
+        "Describe mi abrazo en tres palabras.",
+        "Repite nuestro primer \"hola\" como debió haber sido.",
+        "Elige una canción y dedícamela ahora.",
+        "Bésame la mejilla — o arriésgate a más, tú decides.",
+        "Dame un masaje de hombros de 10 segundos.",
+        "Di la frase más cursi de película romántica sin reírte.",
+        "Demuestra que sabes bailar lento — 15 segundos.",
+        "Escribe una palabra en mi brazo con el dedo. Yo adivino.",
+        "Envía una nota de voz de 10 segundos diciendo lo que quieras.",
+        "Apoya tu frente en la mía y cuenta hasta diez.",
+        "Haz la pregunta que has estado guardándote.",
+        "Di mi nombre de la forma más encantadora posible.",
+        "Elige: ¿un beso ahora o dos después?",
+        "Dibuja un corazón en mi mano con el dedo.",
+        "Confiesa algo usando solo mímica.",
+        "Dame el beso más suave que puedas.",
+        "Hazme un cumplido sobre mi sonrisa que nunca haya escuchado.",
+        "Señala mi mejor ángulo y explica por qué.",
+        "Quédate a cinco centímetros de mi cara durante 10 segundos.",
+        "Repite la frase que te conquistó.",
+        "Inventa un brindis para este momento.",
+        "Dame un beso estilo años 50 — con la mano en la cintura.",
+        "Muestra cómo reaccionas cuando recibes un mensaje mío.",
+        "Elige una parte de mi cara y hazle un cumplido durante 15 segundos.",
+        "Canta un fragmento de una canción mirándome a los ojos.",
+        "Actúa nuestro reencuentro después de un año separados.",
+        "Di qué harías ahora mismo si nadie estuviera mirando.",
+        "Dame tres besos seguidos en lugares diferentes.",
+        "Di una frase en otro idioma con voz seductora.",
+        "Hazme cosquillas hasta que te pida que pares.",
+        "Describe nuestra primera foto juntos sin mirarla.",
+        "Sostén mi cara y dime una verdad.",
+        "Recrea la escena del Titanic — brazos abiertos.",
+        "Bésame la punta de la nariz.",
+        "Di qué outfit mío jubilarías — y por qué.",
+        "Baja la voz e invítame a cenar.",
+        "Dame un beso corto de exactamente 3 segundos.",
+        "Escribe un mini poema de dos líneas sobre mí.",
+        "Susúrrame al oído un plan para nosotros.",
+        "Elige nuestra próxima cita con los ojos cerrados señalando un mapa.",
+        "Imita mi forma de caminar.",
+        "Bésame el hombro.",
+        "Di \"eres un problema\" — y explica por qué.",
+        "Quédate en silencio y dilo todo con la mirada durante 15 segundos.",
+        "Esconde una nota para que la encuentre después.",
+        "Recrea el momento exacto en que nos conocimos.",
+        "Dame un beso con las manos en los bolsillos.",
+        "Hazme un cumplido sobre mi risa imitándola primero.",
+        "Muestra tu paso de baile más confiable.",
+        "Susurra la palabra \"tal vez\" en mi oído.",
+        "Elige: ¿verdad extra o beso extra?",
+        "Haz una pequeña promesa para cumplir hoy.",
+        "Bésame la mejilla izquierda, luego la derecha, y decide.",
+        "Di qué pensaste cuando llegué hoy.",
+        "Cierra los ojos y describe mi cara de memoria.",
+        "Inventa un apodo nuevo para mí ahora mismo.",
+        "Actúa como si tuvieras celos de alguien que me miró.",
+        "Dale a mi mano un beso largo, como una despedida de gala.",
+        "Reto: quien aguante más la mirada gana un deseo.",
+        "Di \"ven aquí\" de la forma más convincente posible.",
+        "Arréglame el cabello como si fuera un ritual importante.",
+        "Nombra tres cosas que haríamos en un viaje juntos.",
+        "Toca tu nariz con la mía durante cinco segundos.",
+        "Confiesa qué parte de mi cara miras primero.",
+        "Dame un beso de película — con inclinación permitida.",
+        "Haz un pedido que empiece con \"esta noche quiero...\".",
+        "Envía el emoji que resume este momento ahora mismo.",
+        "Di \"gané\" y bésame antes de que pueda discutir.",
+        "Descubre mi punto débil y úsalo en mi contra.",
+        "Termina la frase: \"si supieras lo que estoy pensando...\".",
+        "Bésame como si fuera el último beso de la noche."
       ]
     }
   },
   "checkout": {
     "processing": {
-      "pageTitle": "Confirming your payment",
-      "workingTitle": "We're confirming your payment",
-      "workingDescription": "This only takes a few seconds. Please don't close this page.",
-      "activeTitle": "Premium activated! You're all set.",
-      "goToDashboard": "Go to dashboard",
-      "timeoutTitle": "Still processing",
-      "timeoutDescription": "Your payment may take a few more moments to confirm. As soon as it does, your Premium will unlock automatically — you can refresh this page or head back to the dashboard shortly."
+      "pageTitle": "Confirmando tu pago",
+      "workingTitle": "Estamos confirmando tu pago",
+      "workingDescription": "Esto solo toma unos segundos. Por favor, no cierres esta página.",
+      "activeTitle": "¡Premium activado! Ya está todo listo.",
+      "goToDashboard": "Ir al panel",
+      "timeoutTitle": "Todavía procesando",
+      "timeoutDescription": "Tu pago puede tardar unos momentos más en confirmarse. En cuanto se confirme, tu Premium se desbloqueará automáticamente — puedes actualizar esta página o volver al panel en breve."
     },
     "cancelled": {
-      "title": "Checkout canceled",
-      "description": "No worries — nothing was charged. You can subscribe whenever you're ready.",
-      "tryAgain": "Try again",
-      "backToDashboard": "Back to dashboard"
+      "title": "Checkout cancelado",
+      "description": "No te preocupes — no se realizó ningún cobro. Puedes suscribirte cuando estés listo.",
+      "tryAgain": "Intentar de nuevo",
+      "backToDashboard": "Volver al panel"
     }
   },
   "planos": {
-    "title": "Your subscription is not active",
-    "subtitle": "To access the dashboard and tools, activate Premium."
+    "title": "Tu suscripción no está activa",
+    "subtitle": "Para acceder al panel y las herramientas, activa Premium."
   },
   "createAccount": {
-    "eyebrow": "Payment confirmed",
-    "title": "Create your account",
-    "subtitle": "Almost there: set a name and password to get in.",
-    "emailLine": "Account for {email}",
-    "nameLabel": "Your name",
-    "namePlaceholder": "What should we call you",
-    "passwordLabel": "Password",
-    "passwordPlaceholder": "At least 8 characters",
-    "confirmLabel": "Confirm password",
-    "confirmPlaceholder": "Repeat the password",
-    "submit": "Create account and enter",
-    "submitting": "Creating...",
+    "eyebrow": "Pago confirmado",
+    "title": "Crea tu cuenta",
+    "subtitle": "Ya casi está: define un nombre y una contraseña para entrar.",
+    "emailLine": "Cuenta para {email}",
+    "nameLabel": "Tu nombre",
+    "namePlaceholder": "¿Cómo deberíamos llamarte?",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Al menos 8 caracteres",
+    "confirmLabel": "Confirmar contraseña",
+    "confirmPlaceholder": "Repite la contraseña",
+    "submit": "Crear cuenta y entrar",
+    "submitting": "Creando...",
     "errors": {
-      "invalidInput": "Check the details you entered.",
-      "weakPassword": "Use at least 8 characters.",
-      "passwordsMismatch": "Passwords don't match.",
-      "invalid_session": "We couldn't find a valid checkout. Return via the payment link.",
-      "not_paid": "The payment hasn't been confirmed yet.",
-      "no_subscription": "No subscription is tied to this checkout.",
-      "no_customer": "Checkout customer not found.",
-      "no_email": "We couldn't get the checkout email."
+      "invalidInput": "Revisa los datos que ingresaste.",
+      "weakPassword": "Usa al menos 8 caracteres.",
+      "passwordsMismatch": "Las contraseñas no coinciden.",
+      "invalid_session": "No encontramos un checkout válido. Vuelve a través del enlace de pago.",
+      "not_paid": "El pago aún no ha sido confirmado.",
+      "no_subscription": "No hay ninguna suscripción vinculada a este checkout.",
+      "no_customer": "No se encontró el cliente del checkout.",
+      "no_email": "No pudimos obtener el correo del checkout."
     },
     "emailExists": {
-      "eyebrow": "Already registered",
-      "title": "This email already has an account",
-      "subtitle": "Log in to link your subscription to your account.",
-      "cta": "Log in to link",
-      "forgotPassword": "I forgot my password"
+      "eyebrow": "Ya registrado",
+      "title": "Este correo ya tiene una cuenta",
+      "subtitle": "Inicia sesión para vincular tu suscripción a tu cuenta.",
+      "cta": "Iniciar sesión para vincular",
+      "forgotPassword": "Olvidé mi contraseña"
     },
     "mismatch": {
-      "eyebrow": "Different account",
-      "title": "You're on another account",
-      "subtitle": "This subscription belongs to a different email. Sign out and use the email that paid.",
-      "backHome": "Back to home",
-      "signOut": "Sign out and try another account"
+      "eyebrow": "Cuenta diferente",
+      "title": "Estás en otra cuenta",
+      "subtitle": "Esta suscripción pertenece a otro correo. Cierra sesión y usa el correo con el que pagaste.",
+      "backHome": "Volver al inicio",
+      "signOut": "Cerrar sesión y probar con otra cuenta"
     },
     "invalid": {
-      "eyebrow": "Oops",
-      "title": "Invalid link",
-      "backHome": "Back to home"
+      "eyebrow": "Ups",
+      "title": "Enlace inválido",
+      "backHome": "Volver al inicio"
     },
     "link": {
-      "eyebrow": "Almost there",
-      "title": "Link your subscription",
-      "subtitle": "Connect this payment to your account and open the dashboard.",
-      "cta": "Link and enter",
-      "linking": "Linking..."
+      "eyebrow": "Ya casi está",
+      "title": "Vincula tu suscripción",
+      "subtitle": "Conecta este pago a tu cuenta y abre el panel.",
+      "cta": "Vincular y entrar",
+      "linking": "Vinculando..."
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Labia.ia — Mejores conversaciones, más confianza",
+      "description": "Herramientas inteligentes para conducir conversaciones con más naturalidad y confianza."
+    },
+    "login": "Iniciar sesión — Labia.ia",
+    "criarConta": "Crear cuenta — Labia.ia",
+    "recuperarSenha": "Recuperar contraseña — Labia.ia",
+    "redefinirSenha": "Restablecer contraseña — Labia.ia",
+    "perfil": "Perfil — Labia.ia",
+    "editarPerfil": "Editar perfil — Labia.ia",
+    "planos": "Planes — Labia.ia",
+    "historico": "Historial — Labia.ia",
+    "suporte": "Soporte — Labia.ia",
+    "ferramentas": "Herramientas — Labia.ia",
+    "ferramenta": "Herramienta — Labia.ia",
+    "painel": "Panel — Labia.ia",
+    "jogos": "Juegos — Labia.ia",
+    "configuracoes": "Configuración — Labia.ia",
+    "checkoutCancelado": "Checkout cancelado — Labia.ia",
+    "checkoutProcessando": "Procesando — Labia.ia",
+    "adminPainel": "Panel admin — Labia.ia",
+    "adminSuporte": "Soporte — Admin Labia.ia",
+    "adminUsuarios": "Usuarios — Admin Labia.ia",
+    "adminUsuario": "Usuario — Admin Labia.ia",
+    "adminPlanos": "Planes — Admin Labia.ia"
   }
 }

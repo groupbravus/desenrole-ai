@@ -10,9 +10,15 @@ import { Badge } from "@/components/ui/badge";
 import { formatCurrency } from "@/lib/format";
 import { SubscribeButton } from "@/components/settings/subscribe-button";
 
-export const metadata: Metadata = {
-  title: "Planos — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("planos") };
+}
 
 /**
  * Página de planos/checkout — destino de quem está autenticado mas sem

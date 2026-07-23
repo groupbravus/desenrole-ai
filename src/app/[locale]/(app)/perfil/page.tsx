@@ -11,9 +11,15 @@ import { Card } from "@/components/ui/card";
 import { StatCard } from "@/components/dashboard/stat-card";
 import { formatDate } from "@/lib/format";
 
-export const metadata: Metadata = {
-  title: "Perfil — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("perfil") };
+}
 
 export default async function PerfilPage({
   params,

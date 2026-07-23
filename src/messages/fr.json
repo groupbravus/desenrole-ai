@@ -1508,5 +1508,32 @@
       "cta": "Link and enter",
       "linking": "Linking..."
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Labia.ia — De meilleures conversations, plus de confiance",
+      "description": "Des outils intelligents pour mener des conversations avec plus de naturel et de confiance."
+    },
+    "login": "Connexion — Labia.ia",
+    "criarConta": "Créer un compte — Labia.ia",
+    "recuperarSenha": "Récupérer le mot de passe — Labia.ia",
+    "redefinirSenha": "Réinitialiser le mot de passe — Labia.ia",
+    "perfil": "Profil — Labia.ia",
+    "editarPerfil": "Modifier le profil — Labia.ia",
+    "planos": "Forfaits — Labia.ia",
+    "historico": "Historique — Labia.ia",
+    "suporte": "Support — Labia.ia",
+    "ferramentas": "Outils — Labia.ia",
+    "ferramenta": "Outil — Labia.ia",
+    "painel": "Tableau de bord — Labia.ia",
+    "jogos": "Jeux — Labia.ia",
+    "configuracoes": "Paramètres — Labia.ia",
+    "checkoutCancelado": "Paiement annulé — Labia.ia",
+    "checkoutProcessando": "Traitement en cours — Labia.ia",
+    "adminPainel": "Tableau de bord admin — Labia.ia",
+    "adminSuporte": "Support — Admin Labia.ia",
+    "adminUsuarios": "Utilisateurs — Admin Labia.ia",
+    "adminUsuario": "Utilisateur — Admin Labia.ia",
+    "adminPlanos": "Forfaits — Admin Labia.ia"
   }
 }

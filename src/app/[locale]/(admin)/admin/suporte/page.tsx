@@ -6,9 +6,15 @@ import { Card } from "@/components/ui/card";
 import { formatDate } from "@/lib/format";
 import type { SupportStatus } from "@/lib/data/types";
 
-export const metadata: Metadata = {
-  title: "Suporte — Admin Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("adminSuporte") };
+}
 
 const STATUS_VARIANT: Record<SupportStatus, "accent" | "default" | "success"> = {
   open: "accent",

@@ -5,9 +5,15 @@ import { Roleta } from "@/components/games/roleta";
 import { Baralho } from "@/components/games/baralho";
 import { VerdadeConsequencia } from "@/components/games/verdade-consequencia";
 
-export const metadata: Metadata = {
-  title: "Jogos — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("jogos") };
+}
 
 export default async function JogosPage({
   params,

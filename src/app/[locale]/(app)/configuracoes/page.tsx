@@ -9,9 +9,15 @@ import { SubscriptionTab } from "@/components/settings/subscription-tab";
 import { NotificationsTab } from "@/components/settings/notifications-tab";
 import { LanguageTab } from "@/components/settings/language-tab";
 
-export const metadata: Metadata = {
-  title: "Configurações — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("configuracoes") };
+}
 
 export default async function ConfiguracoesPage({
   params,

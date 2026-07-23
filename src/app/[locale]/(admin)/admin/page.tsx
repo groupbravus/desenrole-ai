@@ -6,9 +6,15 @@ import { adminRepository } from "@/lib/data";
 import { StatCard } from "@/components/dashboard/stat-card";
 import { UsersTable } from "@/components/admin/users-table";
 
-export const metadata: Metadata = {
-  title: "Painel admin — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("adminPainel") };
+}
 
 export default async function AdminDashboardPage({
   params,

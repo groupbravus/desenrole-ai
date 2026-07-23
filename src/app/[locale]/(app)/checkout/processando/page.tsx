@@ -4,9 +4,15 @@ import { requireUser } from "@/lib/auth/session";
 import { Card } from "@/components/ui/card";
 import { PremiumPoll } from "./premium-poll";
 
-export const metadata: Metadata = {
-  title: "Processando — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("checkoutProcessando") };
+}
 
 export default async function CheckoutProcessandoPage({
   params,

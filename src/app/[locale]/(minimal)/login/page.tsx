@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LoginForm } from "@/components/auth/login-form";
 
-export const metadata: Metadata = {
-  title: "Entrar — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("login") };
+}
 
 export default async function LoginPage({
   params,

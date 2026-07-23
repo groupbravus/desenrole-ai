@@ -3,9 +3,15 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { adminRepository } from "@/lib/data";
 import { UsersBrowser } from "@/components/admin/users-browser";
 
-export const metadata: Metadata = {
-  title: "Usuários — Admin Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("adminUsuarios") };
+}
 
 export default async function AdminUsuariosPage({
   params,

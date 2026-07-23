@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { requireUser } from "@/lib/auth/session";
 import { ResetPasswordForm } from "@/components/auth/reset-password-form";
 
-export const metadata: Metadata = {
-  title: "Redefinir senha — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("redefinirSenha") };
+}
 
 export default async function RedefinirSenhaPage({
   params,

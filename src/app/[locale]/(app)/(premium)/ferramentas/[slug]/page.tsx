@@ -6,9 +6,15 @@ import { TOOL_ICONS, TOOL_MESSAGE_KEY } from "@/components/tools/tool-icons";
 import { ToolWorkspace } from "@/components/tools/tool-workspace";
 import { Badge } from "@/components/ui/badge";
 
-export const metadata: Metadata = {
-  title: "Ferramenta — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("ferramenta") };
+}
 
 export async function generateStaticParams() {
   const tools = await toolsRepository.getTools();

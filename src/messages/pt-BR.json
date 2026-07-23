@@ -1508,5 +1508,32 @@
       "cta": "Vincular e acessar",
       "linking": "Vinculando..."
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Labia.ia — Conversas melhores, mais confiança",
+      "description": "Ferramentas inteligentes para conduzir conversas com mais naturalidade e confiança."
+    },
+    "login": "Entrar — Labia.ia",
+    "criarConta": "Criar conta — Labia.ia",
+    "recuperarSenha": "Recuperar senha — Labia.ia",
+    "redefinirSenha": "Redefinir senha — Labia.ia",
+    "perfil": "Perfil — Labia.ia",
+    "editarPerfil": "Editar perfil — Labia.ia",
+    "planos": "Planos — Labia.ia",
+    "historico": "Histórico — Labia.ia",
+    "suporte": "Suporte — Labia.ia",
+    "ferramentas": "Ferramentas — Labia.ia",
+    "ferramenta": "Ferramenta — Labia.ia",
+    "painel": "Painel — Labia.ia",
+    "jogos": "Jogos — Labia.ia",
+    "configuracoes": "Configurações — Labia.ia",
+    "checkoutCancelado": "Checkout cancelado — Labia.ia",
+    "checkoutProcessando": "Processando — Labia.ia",
+    "adminPainel": "Painel admin — Labia.ia",
+    "adminSuporte": "Suporte — Admin Labia.ia",
+    "adminUsuarios": "Usuários — Admin Labia.ia",
+    "adminUsuario": "Usuário — Admin Labia.ia",
+    "adminPlanos": "Planos — Admin Labia.ia"
   }
 }

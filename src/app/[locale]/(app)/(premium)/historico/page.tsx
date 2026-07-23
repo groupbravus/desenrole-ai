@@ -3,9 +3,15 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { analysisRepository } from "@/lib/data";
 import { HistoryList } from "@/components/history/history-list";
 
-export const metadata: Metadata = {
-  title: "Histórico — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("historico") };
+}
 
 export default async function HistoricoPage({
   params,

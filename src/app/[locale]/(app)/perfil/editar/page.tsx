@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { requireUser } from "@/lib/auth/session";
 import { EditProfileForm } from "@/components/profile/edit-profile-form";
 
-export const metadata: Metadata = {
-  title: "Editar perfil — Labia.ia",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return { title: t("editarPerfil") };
+}
 
 export default async function EditarPerfilPage({
   params,
