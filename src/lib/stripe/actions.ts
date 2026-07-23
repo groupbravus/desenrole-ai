@@ -121,6 +121,42 @@ export async function createCheckoutSessionAction(): Promise<CheckoutResult> {
 }
 
 /**
+ * Checkout PÚBLICO (sem login) — usado pelo botão da seção de preços na
+ * landing. Cria a Checkout Session direto pelo Price ID configurado, sem
+ * vincular a um usuário (não existe ainda): a conta só é criada depois,
+ * no retorno, pelo fluxo já existente em /criar-conta + checkout-account.ts.
+ * Por isso não grava em `checkout_sessions` (essa tabela é do fluxo
+ * autenticado, com user_id NOT NULL) nem passa `customer`.
+ */
+export async function createPublicCheckoutSessionAction(): Promise<CheckoutResult> {
+  const priceId = process.env.STRIPE_MONTHLY_PRICE_ID;
+  if (!priceId) return { ok: false, code: "not_configured" };
+
+  const stripe = getStripe();
+  const locale = await getLocale();
+  const origin = await getOrigin();
+
+  const environment =
+    process.env.NODE_ENV === "production" ? "production" : "development";
+
+  const session = await stripe.checkout.sessions.create({
+    mode: "subscription",
+    line_items: [{ price: priceId, quantity: 1 }],
+    allow_promotion_codes: false,
+    metadata: { plan_slug: "premium", environment, source: "landing_pricing" },
+    subscription_data: {
+      metadata: { plan_slug: "premium", source: "landing_pricing" },
+    },
+    success_url: `${origin}/${locale}/criar-conta?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${origin}/${locale}`,
+  });
+
+  if (!session.url) return { ok: false, code: "no_session_url" };
+
+  return { ok: true, url: session.url };
+}
+
+/**
  * Reconciliação no retorno do checkout — APENAS uma tentativa de sync.
  * Valida que a sessão pertence ao usuário e chama syncSubscription, que
  * relê a Stripe. Não concede Premium por si só.

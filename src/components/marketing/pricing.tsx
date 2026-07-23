@@ -1,14 +1,15 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Check } from "lucide-react";
 import { formatCurrency } from "@/lib/format";
-import { StartCta } from "@/components/marketing/start-cta";
+import { PricingCheckoutButton } from "@/components/marketing/pricing-checkout-button";
 import type { PremiumPrice } from "@/lib/data/billing.supabase";
 
 /**
  * Pricing da landing — V1: plano único Premium.
  *
- * A landing é pública. O CTA leva ao quiz EXTERNO (porta de entrada); a
- * conta e o checkout acontecem nesse fluxo externo, nunca aqui.
+ * A landing é pública. Hero, ferramentas e CTA final continuam levando ao
+ * quiz EXTERNO via <StartCta>. Só o botão deste card abre a Checkout
+ * Session Live direto (ver PricingCheckoutButton) e leva a /criar-conta.
  */
 export function Pricing({ price }: { price: PremiumPrice | null }) {
   const t = useTranslations("landing.pricing");
@@ -59,7 +60,7 @@ export function Pricing({ price }: { price: PremiumPrice | null }) {
             </ul>
 
             <div className="mt-8">
-              <StartCta size="lg" className="block" />
+              <PricingCheckoutButton size="lg" className="block" />
             </div>
           </div>
         </div>
