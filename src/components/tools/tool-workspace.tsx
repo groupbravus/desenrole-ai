@@ -14,19 +14,36 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { TOOL_MESSAGE_KEY } from "./tool-icons";
+import {
+  analyzeConversationAction,
+  type ConversationAnalysis,
+} from "@/lib/ai/analyze-conversation";
 import type { ToolSlug } from "@/lib/data/types";
 
 type Status = "idle" | "loading" | "done";
 
+const REPLY_STYLE_EMOJI = { funny: "😂", playful: "😏" } as const;
+
+function fileToBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(file);
+  });
+}
+
 export function ToolWorkspace({ slug }: { slug: ToolSlug }) {
   const t = useTranslations("tools.workspace");
-  const key = TOOL_MESSAGE_KEY[slug];
+  const tAuthErrors = useTranslations("auth.errors");
 
   const inputRef = useRef<HTMLInputElement>(null);
+  const [file, setFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const [result, setResult] = useState<ConversationAnalysis | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     return () => {
@@ -34,27 +51,57 @@ export function ToolWorkspace({ slug }: { slug: ToolSlug }) {
     };
   }, [previewUrl]);
 
-  const suggestions = [0, 1, 2].map((i) => t(`examples.${key}.${i}`));
-  const bestReply = suggestions[0] ?? "";
+  const bestReply = result?.bestReply ?? "";
+  const otherReplies = result?.otherReplies ?? [];
 
-  function handleFile(file: File | undefined) {
-    if (!file || !file.type.startsWith("image/")) return;
+  function handleFile(nextFile: File | undefined) {
+    if (!nextFile || !nextFile.type.startsWith("image/")) return;
     if (previewUrl) URL.revokeObjectURL(previewUrl);
-    setPreviewUrl(URL.createObjectURL(file));
+    setFile(nextFile);
+    setPreviewUrl(URL.createObjectURL(nextFile));
     setStatus("idle");
+    setResult(null);
+    setError(null);
   }
 
   function clearImage() {
     if (previewUrl) URL.revokeObjectURL(previewUrl);
+    setFile(null);
     setPreviewUrl(null);
     setStatus("idle");
+    setResult(null);
+    setError(null);
     if (inputRef.current) inputRef.current.value = "";
   }
 
-  // Visual only — a análise real por IA entra na fase de integração.
-  function analyze() {
+  async function analyze() {
+    if (!file || status === "loading") return;
     setStatus("loading");
-    window.setTimeout(() => setStatus("done"), 1400);
+    setError(null);
+
+    try {
+      const imageBase64 = await fileToBase64(file);
+      const response = await analyzeConversationAction({
+        imageBase64,
+        toolSlug: slug,
+      });
+
+      if (!response.ok) {
+        setError(
+          response.code === "not_authenticated"
+            ? tAuthErrors("notAuthenticated")
+            : tAuthErrors("unknown"),
+        );
+        setStatus("idle");
+        return;
+      }
+
+      setResult(response.data);
+      setStatus("done");
+    } catch {
+      setError(tAuthErrors("unknown"));
+      setStatus("idle");
+    }
   }
 
   async function handleCopy(text: string, index: number) {
@@ -114,12 +161,18 @@ export function ToolWorkspace({ slug }: { slug: ToolSlug }) {
           type="button"
           size="lg"
           className="w-full"
-          disabled={!previewUrl || status === "loading"}
+          disabled={!file || status === "loading"}
           onClick={analyze}
         >
           <Sparkles className="h-4 w-4" aria-hidden />
           {status === "loading" ? t("analyzing") : t("analyze")}
         </Button>
+
+        {error && (
+          <p role="alert" className="text-center text-sm text-danger">
+            {error}
+          </p>
+        )}
       </Card>
 
       <div className="space-y-3">
@@ -170,33 +223,39 @@ export function ToolWorkspace({ slug }: { slug: ToolSlug }) {
               </div>
             </Card>
 
-            {suggestions.length > 1 && (
+            {otherReplies.length > 0 && (
               <div className="space-y-2">
                 <p className="px-1 text-xs font-medium uppercase tracking-wide text-subtle">
                   {t("otherReplies")}
                 </p>
-                {suggestions.slice(1).map((suggestion, i) => {
+                {otherReplies.map((reply, i) => {
                   const index = i + 1;
                   return (
                     <Card
                       key={index}
-                      className="animate-fade-up flex items-start justify-between gap-3 p-3.5"
+                      className="animate-fade-up space-y-1.5 p-3.5"
                     >
-                      <p className="text-sm leading-relaxed text-muted">
-                        {suggestion}
-                      </p>
-                      <button
-                        type="button"
-                        onClick={() => handleCopy(suggestion, index)}
-                        aria-label={t("copy")}
-                        className="shrink-0 text-muted transition-colors hover:text-accent"
-                      >
-                        {copiedIndex === index ? (
-                          <Check className="h-4 w-4 text-success" aria-hidden />
-                        ) : (
-                          <Copy className="h-4 w-4" aria-hidden />
-                        )}
-                      </button>
+                      <span className="text-[11px] font-medium text-subtle">
+                        {REPLY_STYLE_EMOJI[reply.style]}{" "}
+                        {t(`replyStyles.${reply.style}`)}
+                      </span>
+                      <div className="flex items-start justify-between gap-3">
+                        <p className="text-sm leading-relaxed text-muted">
+                          {reply.text}
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => handleCopy(reply.text, index)}
+                          aria-label={t("copy")}
+                          className="shrink-0 text-muted transition-colors hover:text-accent"
+                        >
+                          {copiedIndex === index ? (
+                            <Check className="h-4 w-4 text-success" aria-hidden />
+                          ) : (
+                            <Copy className="h-4 w-4" aria-hidden />
+                          )}
+                        </button>
+                      </div>
                     </Card>
                   );
                 })}

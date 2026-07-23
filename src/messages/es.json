@@ -454,22 +454,14 @@
       "regenerate": "Generar de nuevo",
       "bestReplyBadge": "Mejor respuesta",
       "otherReplies": "Otras opciones",
+      "replyStyles": {
+        "funny": "Divertida",
+        "playful": "Provocadora"
+      },
       "followUp": {
         "title": "¿Ella respondió?",
         "instruction": "Haz otra captura.",
         "detail": "La IA te dirá exactamente qué responder."
-      },
-      "examples": {
-        "conversa": [
-          "Lo cuentas riendo, pero apuesto a que ese día no tuvo nada de gracioso. Quiero la versión completa.",
-          "Trato hecho: tú eliges el tema, yo elijo el lugar. ¿De acuerdo?",
-          "Esa respuesta merecía más que un mensaje. ¿Me cuentas el resto en persona?"
-        ],
-        "story": [
-          "Ese lugar está pidiendo a gritos una segunda visita — esta vez con mejor compañía.",
-          "Bueno, esa historia se lleva el premio del día. ¿Qué gano si adivino dónde fue?",
-          "No puedes publicar eso y esperar que nadie pregunte. Cuéntamelo todo."
-        ]
       }
     }
   },

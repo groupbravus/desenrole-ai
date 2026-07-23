@@ -454,22 +454,14 @@
       "regenerate": "Gerar novamente",
       "bestReplyBadge": "Melhor resposta",
       "otherReplies": "Outras opções",
+      "replyStyles": {
+        "funny": "Divertida",
+        "playful": "Provocadora"
+      },
       "followUp": {
         "title": "Ela respondeu?",
         "instruction": "Tire outro print.",
         "detail": "A IA vai dizer exatamente o que responder."
-      },
-      "examples": {
-        "conversa": [
-          "Você conta isso rindo, mas aposto que no dia não teve graça nenhuma. Quero a versão completa.",
-          "Tá certo então: você escolhe o assunto, eu escolho o lugar. Fechado?",
-          "Essa resposta merecia mais que um texto. Me conta o resto pessoalmente?"
-        ],
-        "story": [
-          "Esse lugar tá pedindo uma segunda visita — e dessa vez com companhia melhor.",
-          "Ok, esse story ganhou o prêmio de melhor do dia. O que eu ganho se adivinhar onde foi?",
-          "Você não pode postar isso e achar que ninguém ia perguntar. Me conta tudo."
-        ]
       }
     }
   },

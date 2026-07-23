@@ -454,22 +454,14 @@
       "regenerate": "Generate again",
       "bestReplyBadge": "Risposta migliore",
       "otherReplies": "Altre opzioni",
+      "replyStyles": {
+        "funny": "Divertente",
+        "playful": "Provocante"
+      },
       "followUp": {
         "title": "Lei ha risposto?",
         "instruction": "Fai un altro screenshot.",
         "detail": "L'IA ti dirà esattamente cosa rispondere."
-      },
-      "examples": {
-        "conversa": [
-          "You tell that laughing, but I bet it wasn't funny at all that day. I want the full version.",
-          "Deal then: you pick the topic, I pick the place. Agreed?",
-          "That answer deserved more than a text. Tell me the rest in person?"
-        ],
-        "story": [
-          "That place is begging for a second visit — this time with better company.",
-          "Okay, that story wins best of the day. What do I get if I guess where it was?",
-          "You can't post that and expect nobody to ask. Tell me everything."
-        ]
       }
     }
   },
